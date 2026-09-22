@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "start_date": "2026-09-22",
+  "end_date": "2027-09-21",
+  "simulation_timezone": "Europe/Oslo",
+  "delivery_timezone": "Asia/Manila",
+  "last_completed_date": "2026-09-22",
+  "completed_dates": [
+    "2026-09-22"
+  ],
+  "phase": "onboarding and independent verification",
+  "next_task": "R03: derive and verify sufficient penalty bound",
+  "simulated_deadlines": [
+    "2027-02-26",
+    "2027-06-25",
+    "2027-07-16",
+    "2027-09-17"
+  ],
+  "weekend_seed": 20260922,
+  "selected_weekend_dates": [
+    "2027-02-13",
+    "2027-02-14",
+    "2027-07-03",
+    "2027-07-04",
+    "2027-07-11",
+    "2027-09-05",
+    "2027-09-11",
+    "2027-09-12"
+  ],
+  "weekend_policy": "Conditional on active need; cancel otherwise",
+  "automation_status": "See automation tool confirmation; not inferred from this file"
+}

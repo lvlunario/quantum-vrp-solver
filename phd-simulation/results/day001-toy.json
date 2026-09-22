@@ -1,0 +1,111 @@
+{
+  "status": "EXECUTED_LOCAL_STATEVECTOR",
+  "synthetic": true,
+  "hardware_used": false,
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "source_sha256": "c956621c4d7d3f01d2bc45317a7306ee4e3bfcacb73484daf41c4f15aa09e69c",
+  "model": "3-load single-period capacity-constrained service selection",
+  "warning": "Diagonal oracle toy; not yet a QUBO or realistic power-flow model. No speedup claim.",
+  "objective": "minimize weighted unserved load subject to demand <= 5",
+  "demand": [
+    2,
+    3,
+    4
+  ],
+  "priority": [
+    3,
+    5,
+    6
+  ],
+  "capacity": 5,
+  "exact_feasible_optimum": 6,
+  "exact_feasible_optimal_bits": [
+    [
+      1,
+      1,
+      0
+    ]
+  ],
+  "uniform_feasible_probability": 0.625,
+  "uniform_optimal_feasible_probability": 0.125,
+  "qaoa_depth": 1,
+  "angle_evaluations_per_penalty": 1681,
+  "records": [
+    {
+      "penalty": 0.1,
+      "exact_penalized_min": 1.6,
+      "exact_penalized_argmin": [
+        1,
+        1,
+        1
+      ],
+      "penalized_argmin_feasible": false,
+      "qaoa_expected_energy": 1.9836530795897847,
+      "gamma": 0.30649684425266277,
+      "beta": 2.3753505429581363,
+      "qaoa_feasible_probability": 0.014921098809356019,
+      "qaoa_optimal_feasible_probability": 0.004428243959337934,
+      "probabilities": [
+        0.002150182742090962,
+        0.004536327925992617,
+        0.0016170447842351898,
+        0.004428243959337934,
+        0.002189299397699315,
+        0.008462839456211341,
+        0.13292637334282428,
+        0.8436896883916082
+      ]
+    },
+    {
+      "penalty": 1.0,
+      "exact_penalized_min": 6.0,
+      "exact_penalized_argmin": [
+        1,
+        1,
+        0
+      ],
+      "penalized_argmin_feasible": true,
+      "qaoa_expected_energy": 7.203064495451502,
+      "gamma": 2.6052231761476334,
+      "beta": 2.6052231761476334,
+      "qaoa_feasible_probability": 0.7424871777234391,
+      "qaoa_optimal_feasible_probability": 0.4311928254461398,
+      "probabilities": [
+        0.020908373867642462,
+        0.0951175916265506,
+        0.07945565100006417,
+        0.4311928254461398,
+        0.11581273578304212,
+        0.20192526535533237,
+        0.05173982748899468,
+        0.0038477294322338197
+      ]
+    },
+    {
+      "penalty": 4.0,
+      "exact_penalized_min": 6.0,
+      "exact_penalized_argmin": [
+        1,
+        1,
+        0
+      ],
+      "penalized_argmin_feasible": true,
+      "qaoa_expected_energy": 9.050806963341255,
+      "gamma": 2.6052231761476334,
+      "beta": 2.3753505429581363,
+      "qaoa_feasible_probability": 0.7660461153183354,
+      "qaoa_optimal_feasible_probability": 0.6034552548819112,
+      "probabilities": [
+        0.024161690477857257,
+        0.03834638124340448,
+        0.07123454377518038,
+        0.6034552548819112,
+        0.02884824493998212,
+        0.13354610395725058,
+        0.0851090707064857,
+        0.015298710017927717
+      ]
+    }
+  ]
+}
