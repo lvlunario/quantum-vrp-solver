@@ -1,4 +1,5 @@
 # Daily execution contract
+Project name: **Personal Quantum Research Project**. Frame all future work as an independent personal project with a fictional PhD-style routine. Do not assign or imply a host institution.
 ## Destination and scope
 Repository: lvlunario/quantum-vrp-solver. Branch: main. Work only inside phd-simulation/ except the established root navigation README.
 Simulation window: 2026-09-22 through 2027-09-21 inclusive. Dates and workday episodes use Europe/Oslo. Delivery uses Asia/Manila evening.

@@ -4,7 +4,7 @@ No real person is portrayed as having spoken to Leo. Meetings use roles such as 
 
 | Setting | Imagined research role | Contact cadence within the story |
 |---|---|---|
-| Simula, Norway | Supervisor, software verification and research design | Weekly 30–45 minute supervision; fortnightly lab meeting |
+| Personal project, Norway setting | Supervisor, software verification and research design | Weekly 30–45 minute supervision; fortnightly lab meeting |
 | Aalto University, Finland | Reproducibility and hybrid computing | Monthly |
 | RIKEN, Japan | Circuit execution and noise assumptions | Every 6–8 weeks; morning Oslo call |
 | DTU, Denmark | Power-system modeling critique | Monthly during model design |
@@ -21,9 +21,5 @@ Travel does not imply tickets, registrations, access to facilities or funds were
 Use Europe/Oslo, Asia/Tokyo and America/Los_Angeles timezone conversions for actual story dates, including daylight-saving changes.
 Compensate for a late US call with a later start. Do not schedule all time zones into a single convenient but impossible call.
 
-## Verified setting references
-Simula's Complex SE page describes classical, quantum and hybrid software engineering, including testing and debugging:
-https://www.simula.no/research/research-areas/software-engineering/engineering-complex-software
-Simula's historical Quantum Software Engineering Project page lists March 2022–March 2026 and methods for requirements, modeling, testing and debugging:
-https://www.simula.no/research/projects/quantum-software-engineering-project
-These sources support the broad setting only, not this proposed topic or collaboration network.
+## Project setting
+This personal project uses a fictional research environment. No host institution is assigned.

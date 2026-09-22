@@ -1,7 +1,7 @@
-# A year as a quantum research engineer
+# Personal Quantum Research Project
 **FICTIONAL PhD career simulation, 22 September 2026–21 September 2027.**
 No employment, enrollment, collaboration, funding, peer review, or institutional endorsement is claimed.
-Simula is the imagined host; a degree-granting university and supervisor appointment are unspecified.
+This is an independent personal project using a fictional PhD-style research routine; no host institution is assigned.
 This is a first-year research experience, not a PhD completed in one year.
 
 ## Your research question
@@ -27,7 +27,7 @@ Wednesday: experiments and a rotating collaborator discussion. Thursday: derivat
 Friday: write up evidence, group seminar and plan the next week. These are defaults, not a rigid daily ritual.
 Normal simulated work: roughly 37.5 hours/week, including breaks, admin and seminars; ordinary day 08:30–16:30 with lunch.
 Some days produce only a failed run, a corrected assumption or two paragraphs. A rejected hypothesis counts as progress.
-Deadline weeks can reach 42–48 hours, with 2–4 hours on an occasional weekend. This is a scenario choice, not a claim about Simula's employment terms.
+Deadline weeks can reach 42–48 hours, with 2–4 hours on an occasional weekend. This is a scenario choice, not a claim about any institution's employment terms.
 Leave entries produce short status logs rather than pretend experiments. July is deliberately quieter.
 
 ## Evidence labels

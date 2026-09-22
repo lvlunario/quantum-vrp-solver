@@ -1,5 +1,5 @@
 # A Verification Protocol for Hybrid Quantum Microgrid Optimization
-**Educational working manuscript v0.1. Unsubmitted. No Simula affiliation or coauthors claimed.**
+**Educational working manuscript v0.1. Unsubmitted. Personal project; no institutional affiliation or coauthors claimed.**
 
 ## Abstract — preliminary, not a finished research result
 Hybrid quantum optimization pipelines can produce low objective values while violating the engineering requirements their formulations were intended to encode. This working paper proposes a verification protocol separating model equivalence, circuit correctness, decoding and physical feasibility. A three-load synthetic example illustrates why a penalty objective must be checked against an independent constrained oracle. The current evidence consists of exhaustive enumeration and an ideal three-qubit statevector experiment. General fault-detection effectiveness, realistic grid applicability and quantum computational advantage have not been established.
