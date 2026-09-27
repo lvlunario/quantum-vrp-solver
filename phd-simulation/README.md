@@ -10,7 +10,9 @@ The working theme is *Verification and reproducible benchmarking of quantum opti
 It combines power-system intuition, test engineering, Python and quantum computing. Research success can be a useful test method or a carefully explained negative result; quantum advantage is not promised.
 
 ## Start here
-- [Today: first day at the lab](logs/2026-09-22.md)
+- [Latest: Week 1 catch-up summary, September 22–25](docs/week01-summary.md)
+- Daily journals: [Sep 22](logs/2026-09-22.md), [Sep 23](logs/2026-09-23.md), [Sep 24](logs/2026-09-24.md), [Sep 25](logs/2026-09-25.md)
+- [Important Day 1 correction: a feasible argmin can hide an infeasible tie](docs/penalty-bound.md)
 - [Research charter and experimental protocol](docs/charter.md)
 - [365-day planned calendar](calendar.csv), including weekends and simulated leave
 - [Weekly goals](docs/weekly-plan.md)
@@ -45,3 +47,7 @@ Presentations can be produced later using the available presentation capability,
 Use an isolated Python environment with NumPy 2.3.5 (the version used for the stored run).
 From this folder run `python src/test_toy.py` and `python src/toy_qaoa.py`.
 The result is an exact statevector simulation of a 3-qubit educational model, not execution on a quantum processor.
+
+## Week 1 catch-up — created 27 September 2026
+September 23–25 episodes were reconstructed on request, not completed on their story dates. New executed evidence: [formulation audit](results/week01-formulation-audit.json), nine passing checks, exhaustive six-variable QUBO equivalence, and two deliberate fault injections. Run `python src/verify_formulation.py` from this folder (Python standard library only). The source hash and actual UTC execution timestamp are retained in the output. No six-qubit circuit has been executed.
+

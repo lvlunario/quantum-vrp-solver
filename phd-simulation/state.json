@@ -4,12 +4,15 @@
   "end_date": "2027-09-21",
   "simulation_timezone": "Europe/Oslo",
   "delivery_timezone": "Asia/Manila",
-  "last_completed_date": "2026-09-22",
+  "last_completed_date": "2026-09-25",
   "completed_dates": [
-    "2026-09-22"
+    "2026-09-22",
+    "2026-09-23",
+    "2026-09-24",
+    "2026-09-25"
   ],
   "phase": "onboarding and independent verification",
-  "next_task": "R03: derive and verify sufficient penalty bound",
+  "next_task": "R11: derive and verify QUBO-to-Ising mapping; R05: full-text QAOA reading",
   "simulated_deadlines": [
     "2027-02-26",
     "2027-06-25",
@@ -28,5 +31,14 @@
     "2027-09-12"
   ],
   "weekend_policy": "Conditional on active need; cancel otherwise",
-  "automation_status": "See automation tool confirmation; not inferred from this file"
+  "automation_status": "Confirmed enabled via automation peek on 2026-09-27; no verified explanation for missed weekday publications.",
+  "reconstructed_dates": [
+    "2026-09-23",
+    "2026-09-24",
+    "2026-09-25"
+  ],
+  "catchup_created_date": "2026-09-27",
+  "catchup_reason": "Explicit user request to run the entire missed workweek; all new execution occurred on September 27.",
+  "latest_evidence": "results/week01-formulation-audit.json"
 }
+

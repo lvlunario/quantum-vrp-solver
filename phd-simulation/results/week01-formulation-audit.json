@@ -1,0 +1,1354 @@
+{
+  "status": "EXECUTED_LOCAL_EXACT_ENUMERATION",
+  "executed_at_utc": "2026-09-27T02:35:54.189207+00:00",
+  "python": "3.12.14",
+  "source_sha256": "965ab9cdc96b144b6a1c144e143a6b0fd098041b829edbdb6a6b75170843eb52",
+  "command": "python src/verify_formulation.py",
+  "dependencies": "Python standard library",
+  "data": "Synthetic fixed toy; no external dataset",
+  "randomness": "None; exhaustive deterministic enumeration",
+  "hardware_used": false,
+  "config": {
+    "demands": [
+      2,
+      3,
+      4
+    ],
+    "priorities": [
+      3,
+      5,
+      6
+    ],
+    "capacity": 5,
+    "slack_weights": [
+      1,
+      2,
+      4
+    ],
+    "qubo_lambda": 2
+  },
+  "table": [
+    {
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "demand": 0,
+      "unserved": 14,
+      "feasible": true
+    },
+    {
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "demand": 4,
+      "unserved": 8,
+      "feasible": true
+    },
+    {
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "demand": 3,
+      "unserved": 9,
+      "feasible": true
+    },
+    {
+      "x": [
+        0,
+        1,
+        1
+      ],
+      "demand": 7,
+      "unserved": 3,
+      "feasible": false
+    },
+    {
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "demand": 2,
+      "unserved": 11,
+      "feasible": true
+    },
+    {
+      "x": [
+        1,
+        0,
+        1
+      ],
+      "demand": 6,
+      "unserved": 5,
+      "feasible": false
+    },
+    {
+      "x": [
+        1,
+        1,
+        0
+      ],
+      "demand": 5,
+      "unserved": 6,
+      "feasible": true
+    },
+    {
+      "x": [
+        1,
+        1,
+        1
+      ],
+      "demand": 9,
+      "unserved": 0,
+      "feasible": false
+    }
+  ],
+  "infeasible_threshold_ratios": [
+    {
+      "x": [
+        0,
+        1,
+        1
+      ],
+      "ratio": "3/4"
+    },
+    {
+      "x": [
+        1,
+        0,
+        1
+      ],
+      "ratio": "1"
+    },
+    {
+      "x": [
+        1,
+        1,
+        1
+      ],
+      "ratio": "3/8"
+    }
+  ],
+  "strict_threshold": "1",
+  "penalty_sweep": [
+    {
+      "lambda": "1/10",
+      "minimum": "8/5",
+      "minimizers": [
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "all_feasible": false
+    },
+    {
+      "lambda": "3/4",
+      "minimum": "23/4",
+      "minimizers": [
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "all_feasible": false
+    },
+    {
+      "lambda": "1",
+      "minimum": "6",
+      "minimizers": [
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "all_feasible": false
+    },
+    {
+      "lambda": "101/100",
+      "minimum": "6",
+      "minimizers": [
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "all_feasible": true
+    },
+    {
+      "lambda": "2",
+      "minimum": "6",
+      "minimizers": [
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "all_feasible": true
+    },
+    {
+      "lambda": "7",
+      "minimum": "6",
+      "minimizers": [
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "all_feasible": true
+    }
+  ],
+  "qubo": {
+    "constant": 64,
+    "linear": [
+      -35,
+      -47,
+      -54,
+      -18,
+      -32,
+      -48
+    ],
+    "upper_triangular_cross": [
+      [
+        0,
+        1,
+        24
+      ],
+      [
+        0,
+        2,
+        32
+      ],
+      [
+        0,
+        3,
+        8
+      ],
+      [
+        0,
+        4,
+        16
+      ],
+      [
+        0,
+        5,
+        32
+      ],
+      [
+        1,
+        2,
+        48
+      ],
+      [
+        1,
+        3,
+        12
+      ],
+      [
+        1,
+        4,
+        24
+      ],
+      [
+        1,
+        5,
+        48
+      ],
+      [
+        2,
+        3,
+        16
+      ],
+      [
+        2,
+        4,
+        32
+      ],
+      [
+        2,
+        5,
+        64
+      ],
+      [
+        3,
+        4,
+        8
+      ],
+      [
+        3,
+        5,
+        16
+      ],
+      [
+        4,
+        5,
+        32
+      ]
+    ]
+  },
+  "raw_64_states": [
+    {
+      "z": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "slack": 0,
+      "residual": -5,
+      "energy": 64,
+      "polynomial": 64
+    },
+    {
+      "z": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "slack": 4,
+      "residual": -1,
+      "energy": 16,
+      "polynomial": 16
+    },
+    {
+      "z": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "slack": 2,
+      "residual": -3,
+      "energy": 32,
+      "polynomial": 32
+    },
+    {
+      "z": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "slack": 6,
+      "residual": 1,
+      "energy": 16,
+      "polynomial": 16
+    },
+    {
+      "z": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "slack": 1,
+      "residual": -4,
+      "energy": 46,
+      "polynomial": 46
+    },
+    {
+      "z": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "slack": 5,
+      "residual": 0,
+      "energy": 14,
+      "polynomial": 14
+    },
+    {
+      "z": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "slack": 3,
+      "residual": -2,
+      "energy": 22,
+      "polynomial": 22
+    },
+    {
+      "z": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "slack": 7,
+      "residual": 2,
+      "energy": 22,
+      "polynomial": 22
+    },
+    {
+      "z": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "slack": 0,
+      "residual": -1,
+      "energy": 10,
+      "polynomial": 10
+    },
+    {
+      "z": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "slack": 4,
+      "residual": 3,
+      "energy": 26,
+      "polynomial": 26
+    },
+    {
+      "z": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "slack": 2,
+      "residual": 1,
+      "energy": 10,
+      "polynomial": 10
+    },
+    {
+      "z": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "slack": 6,
+      "residual": 5,
+      "energy": 58,
+      "polynomial": 58
+    },
+    {
+      "z": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "slack": 1,
+      "residual": 0,
+      "energy": 8,
+      "polynomial": 8
+    },
+    {
+      "z": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "slack": 5,
+      "residual": 4,
+      "energy": 40,
+      "polynomial": 40
+    },
+    {
+      "z": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "slack": 3,
+      "residual": 2,
+      "energy": 16,
+      "polynomial": 16
+    },
+    {
+      "z": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "slack": 7,
+      "residual": 6,
+      "energy": 80,
+      "polynomial": 80
+    },
+    {
+      "z": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "slack": 0,
+      "residual": -2,
+      "energy": 17,
+      "polynomial": 17
+    },
+    {
+      "z": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "slack": 4,
+      "residual": 2,
+      "energy": 17,
+      "polynomial": 17
+    },
+    {
+      "z": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "slack": 2,
+      "residual": 0,
+      "energy": 9,
+      "polynomial": 9
+    },
+    {
+      "z": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "slack": 6,
+      "residual": 4,
+      "energy": 41,
+      "polynomial": 41
+    },
+    {
+      "z": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "slack": 1,
+      "residual": -1,
+      "energy": 11,
+      "polynomial": 11
+    },
+    {
+      "z": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "slack": 5,
+      "residual": 3,
+      "energy": 27,
+      "polynomial": 27
+    },
+    {
+      "z": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "slack": 3,
+      "residual": 1,
+      "energy": 11,
+      "polynomial": 11
+    },
+    {
+      "z": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "slack": 7,
+      "residual": 5,
+      "energy": 59,
+      "polynomial": 59
+    },
+    {
+      "z": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "slack": 0,
+      "residual": 2,
+      "energy": 11,
+      "polynomial": 11
+    },
+    {
+      "z": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "slack": 4,
+      "residual": 6,
+      "energy": 75,
+      "polynomial": 75
+    },
+    {
+      "z": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "slack": 2,
+      "residual": 4,
+      "energy": 35,
+      "polynomial": 35
+    },
+    {
+      "z": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "slack": 6,
+      "residual": 8,
+      "energy": 131,
+      "polynomial": 131
+    },
+    {
+      "z": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "slack": 1,
+      "residual": 3,
+      "energy": 21,
+      "polynomial": 21
+    },
+    {
+      "z": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "slack": 5,
+      "residual": 7,
+      "energy": 101,
+      "polynomial": 101
+    },
+    {
+      "z": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "slack": 3,
+      "residual": 5,
+      "energy": 53,
+      "polynomial": 53
+    },
+    {
+      "z": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "slack": 7,
+      "residual": 9,
+      "energy": 165,
+      "polynomial": 165
+    },
+    {
+      "z": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "slack": 0,
+      "residual": -3,
+      "energy": 29,
+      "polynomial": 29
+    },
+    {
+      "z": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "slack": 4,
+      "residual": 1,
+      "energy": 13,
+      "polynomial": 13
+    },
+    {
+      "z": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "slack": 2,
+      "residual": -1,
+      "energy": 13,
+      "polynomial": 13
+    },
+    {
+      "z": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "slack": 6,
+      "residual": 3,
+      "energy": 29,
+      "polynomial": 29
+    },
+    {
+      "z": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "slack": 1,
+      "residual": -2,
+      "energy": 19,
+      "polynomial": 19
+    },
+    {
+      "z": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "slack": 5,
+      "residual": 2,
+      "energy": 19,
+      "polynomial": 19
+    },
+    {
+      "z": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "slack": 3,
+      "residual": 0,
+      "energy": 11,
+      "polynomial": 11
+    },
+    {
+      "z": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "slack": 7,
+      "residual": 4,
+      "energy": 43,
+      "polynomial": 43
+    },
+    {
+      "z": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "slack": 0,
+      "residual": 1,
+      "energy": 7,
+      "polynomial": 7
+    },
+    {
+      "z": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "slack": 4,
+      "residual": 5,
+      "energy": 55,
+      "polynomial": 55
+    },
+    {
+      "z": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "slack": 2,
+      "residual": 3,
+      "energy": 23,
+      "polynomial": 23
+    },
+    {
+      "z": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "slack": 6,
+      "residual": 7,
+      "energy": 103,
+      "polynomial": 103
+    },
+    {
+      "z": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "slack": 1,
+      "residual": 2,
+      "energy": 13,
+      "polynomial": 13
+    },
+    {
+      "z": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "slack": 5,
+      "residual": 6,
+      "energy": 77,
+      "polynomial": 77
+    },
+    {
+      "z": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "slack": 3,
+      "residual": 4,
+      "energy": 37,
+      "polynomial": 37
+    },
+    {
+      "z": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "slack": 7,
+      "residual": 8,
+      "energy": 133,
+      "polynomial": 133
+    },
+    {
+      "z": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "slack": 0,
+      "residual": 0,
+      "energy": 6,
+      "polynomial": 6
+    },
+    {
+      "z": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "slack": 4,
+      "residual": 4,
+      "energy": 38,
+      "polynomial": 38
+    },
+    {
+      "z": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "slack": 2,
+      "residual": 2,
+      "energy": 14,
+      "polynomial": 14
+    },
+    {
+      "z": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "slack": 6,
+      "residual": 6,
+      "energy": 78,
+      "polynomial": 78
+    },
+    {
+      "z": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "slack": 1,
+      "residual": 1,
+      "energy": 8,
+      "polynomial": 8
+    },
+    {
+      "z": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "slack": 5,
+      "residual": 5,
+      "energy": 56,
+      "polynomial": 56
+    },
+    {
+      "z": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "slack": 3,
+      "residual": 3,
+      "energy": 24,
+      "polynomial": 24
+    },
+    {
+      "z": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "slack": 7,
+      "residual": 7,
+      "energy": 104,
+      "polynomial": 104
+    },
+    {
+      "z": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "slack": 0,
+      "residual": 4,
+      "energy": 32,
+      "polynomial": 32
+    },
+    {
+      "z": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "slack": 4,
+      "residual": 8,
+      "energy": 128,
+      "polynomial": 128
+    },
+    {
+      "z": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "slack": 2,
+      "residual": 6,
+      "energy": 72,
+      "polynomial": 72
+    },
+    {
+      "z": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "slack": 6,
+      "residual": 10,
+      "energy": 200,
+      "polynomial": 200
+    },
+    {
+      "z": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "slack": 1,
+      "residual": 5,
+      "energy": 50,
+      "polynomial": 50
+    },
+    {
+      "z": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "slack": 5,
+      "residual": 9,
+      "energy": 162,
+      "polynomial": 162
+    },
+    {
+      "z": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "slack": 3,
+      "residual": 7,
+      "energy": 98,
+      "polynomial": 98
+    },
+    {
+      "z": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "slack": 7,
+      "residual": 11,
+      "energy": 242,
+      "polynomial": 242
+    }
+  ],
+  "reduced_8_states": [
+    {
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "min_over_slack": 14,
+      "direct_penalty": 14
+    },
+    {
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "min_over_slack": 8,
+      "direct_penalty": 8
+    },
+    {
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "min_over_slack": 9,
+      "direct_penalty": 9
+    },
+    {
+      "x": [
+        0,
+        1,
+        1
+      ],
+      "min_over_slack": 11,
+      "direct_penalty": 11
+    },
+    {
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "min_over_slack": 11,
+      "direct_penalty": 11
+    },
+    {
+      "x": [
+        1,
+        0,
+        1
+      ],
+      "min_over_slack": 7,
+      "direct_penalty": 7
+    },
+    {
+      "x": [
+        1,
+        1,
+        0
+      ],
+      "min_over_slack": 6,
+      "direct_penalty": 6
+    },
+    {
+      "x": [
+        1,
+        1,
+        1
+      ],
+      "min_over_slack": 32,
+      "direct_penalty": 32
+    }
+  ],
+  "ground_states": [
+    [
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "fault_injection": {
+    "insufficient_slack": [
+      {
+        "x": [
+          0,
+          0,
+          0
+        ],
+        "faulty_minimum": 22,
+        "correct_minimum": 14
+      }
+    ],
+    "omitted_cross_terms_mismatches": 57,
+    "first_cross_counterexample": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  "checks": [
+    {
+      "name": "manual eight-row oracle",
+      "passed": true
+    },
+    {
+      "name": "strict exact threshold is one",
+      "passed": true
+    },
+    {
+      "name": "lambda one retains infeasible tie",
+      "passed": true
+    },
+    {
+      "name": "lambda above one has only feasible minimizers",
+      "passed": true
+    },
+    {
+      "name": "all 64 expanded energies equal residual energies",
+      "passed": true
+    },
+    {
+      "name": "all eight reduced energies equal original hinge penalty",
+      "passed": true
+    },
+    {
+      "name": "six-bit unique ground state serves first two loads",
+      "passed": true
+    },
+    {
+      "name": "insufficient slack range is detected",
+      "passed": true
+    },
+    {
+      "name": "omitted cross terms are detected",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "One synthetic instance",
+    "No circuits, hardware or QAOA rerun",
+    "No general fault-detection rate or quantum advantage",
+    "Ground-state equivalence does not imply equal sampling dynamics"
+  ]
+}
