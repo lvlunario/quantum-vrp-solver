@@ -1,0 +1,2357 @@
+{
+  "status": "EXECUTED_LOCAL_EXACT_ENUMERATION",
+  "executed_at_utc": "2026-09-30T11:12:18.698909+00:00",
+  "python": "3.12.14",
+  "command": "python src/verify_ising.py",
+  "source_sha256": {
+    "verify_ising.py": "5312ea3a0e471a2926c2541b72727ab9b68979edb8634f80219f0daea43a3944",
+    "verify_formulation.py": "965ab9cdc96b144b6a1c144e143a6b0fd098041b829edbdb6a6b75170843eb52"
+  },
+  "dependencies": "Python standard library",
+  "data": "Existing synthetic toy; no external dataset",
+  "randomness": "None",
+  "quantum_hardware_used": false,
+  "circuit_executed": false,
+  "config": {
+    "demands": [
+      2,
+      3,
+      4
+    ],
+    "priorities": [
+      3,
+      5,
+      6
+    ],
+    "capacity": 5,
+    "penalty": 2,
+    "slack_weights": [
+      1,
+      2,
+      4
+    ],
+    "spin_convention": "s_i=1-2*b_i",
+    "logical_order": [
+      "x0",
+      "x1",
+      "x2",
+      "slack1",
+      "slack2",
+      "slack4"
+    ]
+  },
+  "ising": {
+    "offset": "50",
+    "fields": [
+      "-21/2",
+      "-31/2",
+      "-21",
+      "-6",
+      "-12",
+      "-24"
+    ],
+    "couplings": [
+      [
+        0,
+        1,
+        "6"
+      ],
+      [
+        0,
+        2,
+        "8"
+      ],
+      [
+        0,
+        3,
+        "2"
+      ],
+      [
+        0,
+        4,
+        "4"
+      ],
+      [
+        0,
+        5,
+        "8"
+      ],
+      [
+        1,
+        2,
+        "12"
+      ],
+      [
+        1,
+        3,
+        "3"
+      ],
+      [
+        1,
+        4,
+        "6"
+      ],
+      [
+        1,
+        5,
+        "12"
+      ],
+      [
+        2,
+        3,
+        "4"
+      ],
+      [
+        2,
+        4,
+        "8"
+      ],
+      [
+        2,
+        5,
+        "16"
+      ],
+      [
+        3,
+        4,
+        "2"
+      ],
+      [
+        3,
+        5,
+        "4"
+      ],
+      [
+        4,
+        5,
+        "8"
+      ]
+    ]
+  },
+  "ground_states": [
+    {
+      "bits_q0_first": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "spins": [
+        -1,
+        -1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "index": 3,
+      "display_q5_to_q0": "000011",
+      "decoded": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oracle_energy": 6,
+      "ising_energy": "6",
+      "wrong_field_sign_energy": "80",
+      "no_offset_energy": "-44",
+      "wrong_decode_energy": 16
+    }
+  ],
+  "raw_64_states": [
+    {
+      "bits_q0_first": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "spins": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "index": 0,
+      "display_q5_to_q0": "000000",
+      "decoded": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oracle_energy": 64,
+      "ising_energy": "64",
+      "wrong_field_sign_energy": "242",
+      "no_offset_energy": "14",
+      "wrong_decode_energy": 64
+    },
+    {
+      "bits_q0_first": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "spins": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        -1
+      ],
+      "index": 32,
+      "display_q5_to_q0": "100000",
+      "decoded": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "oracle_energy": 16,
+      "ising_energy": "16",
+      "wrong_field_sign_energy": "98",
+      "no_offset_energy": "-34",
+      "wrong_decode_energy": 29
+    },
+    {
+      "bits_q0_first": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "spins": [
+        1,
+        1,
+        1,
+        1,
+        -1,
+        1
+      ],
+      "index": 16,
+      "display_q5_to_q0": "010000",
+      "decoded": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "oracle_energy": 32,
+      "ising_energy": "32",
+      "wrong_field_sign_energy": "162",
+      "no_offset_energy": "-18",
+      "wrong_decode_energy": 17
+    },
+    {
+      "bits_q0_first": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "spins": [
+        1,
+        1,
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "index": 48,
+      "display_q5_to_q0": "110000",
+      "decoded": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "oracle_energy": 16,
+      "ising_energy": "16",
+      "wrong_field_sign_energy": "50",
+      "no_offset_energy": "-34",
+      "wrong_decode_energy": 6
+    },
+    {
+      "bits_q0_first": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "spins": [
+        1,
+        1,
+        1,
+        -1,
+        1,
+        1
+      ],
+      "index": 8,
+      "display_q5_to_q0": "001000",
+      "decoded": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "oracle_energy": 46,
+      "ising_energy": "46",
+      "wrong_field_sign_energy": "200",
+      "no_offset_energy": "-4",
+      "wrong_decode_energy": 10
+    },
+    {
+      "bits_q0_first": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "spins": [
+        1,
+        1,
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "index": 40,
+      "display_q5_to_q0": "101000",
+      "decoded": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "oracle_energy": 14,
+      "ising_energy": "14",
+      "wrong_field_sign_energy": "72",
+      "no_offset_energy": "-36",
+      "wrong_decode_energy": 7
+    },
+    {
+      "bits_q0_first": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "spins": [
+        1,
+        1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "index": 24,
+      "display_q5_to_q0": "011000",
+      "decoded": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "oracle_energy": 22,
+      "ising_energy": "22",
+      "wrong_field_sign_energy": "128",
+      "no_offset_energy": "-28",
+      "wrong_decode_energy": 11
+    },
+    {
+      "bits_q0_first": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "spins": [
+        1,
+        1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "index": 56,
+      "display_q5_to_q0": "111000",
+      "decoded": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "oracle_energy": 22,
+      "ising_energy": "22",
+      "wrong_field_sign_energy": "32",
+      "no_offset_energy": "-28",
+      "wrong_decode_energy": 32
+    },
+    {
+      "bits_q0_first": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "spins": [
+        1,
+        1,
+        -1,
+        1,
+        1,
+        1
+      ],
+      "index": 4,
+      "display_q5_to_q0": "000100",
+      "decoded": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "oracle_energy": 10,
+      "ising_energy": "10",
+      "wrong_field_sign_energy": "104",
+      "no_offset_energy": "-40",
+      "wrong_decode_energy": 46
+    },
+    {
+      "bits_q0_first": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "spins": [
+        1,
+        1,
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "index": 36,
+      "display_q5_to_q0": "100100",
+      "decoded": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "oracle_energy": 26,
+      "ising_energy": "26",
+      "wrong_field_sign_energy": "24",
+      "no_offset_energy": "-24",
+      "wrong_decode_energy": 19
+    },
+    {
+      "bits_q0_first": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "spins": [
+        1,
+        1,
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "index": 20,
+      "display_q5_to_q0": "010100",
+      "decoded": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "oracle_energy": 10,
+      "ising_energy": "10",
+      "wrong_field_sign_energy": "56",
+      "no_offset_energy": "-40",
+      "wrong_decode_energy": 11
+    },
+    {
+      "bits_q0_first": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "spins": [
+        1,
+        1,
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "index": 52,
+      "display_q5_to_q0": "110100",
+      "decoded": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "oracle_energy": 58,
+      "ising_energy": "58",
+      "wrong_field_sign_energy": "8",
+      "no_offset_energy": "8",
+      "wrong_decode_energy": 8
+    },
+    {
+      "bits_q0_first": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "spins": [
+        1,
+        1,
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "index": 12,
+      "display_q5_to_q0": "001100",
+      "decoded": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "oracle_energy": 8,
+      "ising_energy": "8",
+      "wrong_field_sign_energy": "78",
+      "no_offset_energy": "-42",
+      "wrong_decode_energy": 8
+    },
+    {
+      "bits_q0_first": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "spins": [
+        1,
+        1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "index": 44,
+      "display_q5_to_q0": "101100",
+      "decoded": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "oracle_energy": 40,
+      "ising_energy": "40",
+      "wrong_field_sign_energy": "14",
+      "no_offset_energy": "-10",
+      "wrong_decode_energy": 13
+    },
+    {
+      "bits_q0_first": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "spins": [
+        1,
+        1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "index": 28,
+      "display_q5_to_q0": "011100",
+      "decoded": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "oracle_energy": 16,
+      "ising_energy": "16",
+      "wrong_field_sign_energy": "38",
+      "no_offset_energy": "-34",
+      "wrong_decode_energy": 21
+    },
+    {
+      "bits_q0_first": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "spins": [
+        1,
+        1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "index": 60,
+      "display_q5_to_q0": "111100",
+      "decoded": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "oracle_energy": 80,
+      "ising_energy": "80",
+      "wrong_field_sign_energy": "6",
+      "no_offset_energy": "30",
+      "wrong_decode_energy": 50
+    },
+    {
+      "bits_q0_first": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "spins": [
+        1,
+        -1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "index": 2,
+      "display_q5_to_q0": "000010",
+      "decoded": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oracle_energy": 17,
+      "ising_energy": "17",
+      "wrong_field_sign_energy": "133",
+      "no_offset_energy": "-33",
+      "wrong_decode_energy": 32
+    },
+    {
+      "bits_q0_first": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "spins": [
+        1,
+        -1,
+        1,
+        1,
+        1,
+        -1
+      ],
+      "index": 34,
+      "display_q5_to_q0": "100010",
+      "decoded": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "oracle_energy": 17,
+      "ising_energy": "17",
+      "wrong_field_sign_energy": "37",
+      "no_offset_energy": "-33",
+      "wrong_decode_energy": 13
+    },
+    {
+      "bits_q0_first": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "spins": [
+        1,
+        -1,
+        1,
+        1,
+        -1,
+        1
+      ],
+      "index": 18,
+      "display_q5_to_q0": "010010",
+      "decoded": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "oracle_energy": 9,
+      "ising_energy": "9",
+      "wrong_field_sign_energy": "77",
+      "no_offset_energy": "-41",
+      "wrong_decode_energy": 9
+    },
+    {
+      "bits_q0_first": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "spins": [
+        1,
+        -1,
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "index": 50,
+      "display_q5_to_q0": "110010",
+      "decoded": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "oracle_energy": 41,
+      "ising_energy": "41",
+      "wrong_field_sign_energy": "13",
+      "no_offset_energy": "-9",
+      "wrong_decode_energy": 14
+    },
+    {
+      "bits_q0_first": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "spins": [
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        1
+      ],
+      "index": 10,
+      "display_q5_to_q0": "001010",
+      "decoded": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "oracle_energy": 11,
+      "ising_energy": "11",
+      "wrong_field_sign_energy": "103",
+      "no_offset_energy": "-39",
+      "wrong_decode_energy": 10
+    },
+    {
+      "bits_q0_first": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "spins": [
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "index": 42,
+      "display_q5_to_q0": "101010",
+      "decoded": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "oracle_energy": 27,
+      "ising_energy": "27",
+      "wrong_field_sign_energy": "23",
+      "no_offset_energy": "-23",
+      "wrong_decode_energy": 23
+    },
+    {
+      "bits_q0_first": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "spins": [
+        1,
+        -1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "index": 26,
+      "display_q5_to_q0": "011010",
+      "decoded": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "oracle_energy": 11,
+      "ising_energy": "11",
+      "wrong_field_sign_energy": "55",
+      "no_offset_energy": "-39",
+      "wrong_decode_energy": 35
+    },
+    {
+      "bits_q0_first": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "spins": [
+        1,
+        -1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "index": 58,
+      "display_q5_to_q0": "111010",
+      "decoded": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "oracle_energy": 59,
+      "ising_energy": "59",
+      "wrong_field_sign_energy": "7",
+      "no_offset_energy": "9",
+      "wrong_decode_energy": 72
+    },
+    {
+      "bits_q0_first": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "spins": [
+        1,
+        -1,
+        -1,
+        1,
+        1,
+        1
+      ],
+      "index": 6,
+      "display_q5_to_q0": "000110",
+      "decoded": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "oracle_energy": 11,
+      "ising_energy": "11",
+      "wrong_field_sign_energy": "43",
+      "no_offset_energy": "-39",
+      "wrong_decode_energy": 22
+    },
+    {
+      "bits_q0_first": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "spins": [
+        1,
+        -1,
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "index": 38,
+      "display_q5_to_q0": "100110",
+      "decoded": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "oracle_energy": 75,
+      "ising_energy": "75",
+      "wrong_field_sign_energy": "11",
+      "no_offset_energy": "25",
+      "wrong_decode_energy": 11
+    },
+    {
+      "bits_q0_first": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "spins": [
+        1,
+        -1,
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "index": 22,
+      "display_q5_to_q0": "010110",
+      "decoded": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "oracle_energy": 35,
+      "ising_energy": "35",
+      "wrong_field_sign_energy": "19",
+      "no_offset_energy": "-15",
+      "wrong_decode_energy": 11
+    },
+    {
+      "bits_q0_first": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "spins": [
+        1,
+        -1,
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "index": 54,
+      "display_q5_to_q0": "110110",
+      "decoded": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "oracle_energy": 131,
+      "ising_energy": "131",
+      "wrong_field_sign_energy": "19",
+      "no_offset_energy": "81",
+      "wrong_decode_energy": 24
+    },
+    {
+      "bits_q0_first": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "spins": [
+        1,
+        -1,
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "index": 14,
+      "display_q5_to_q0": "001110",
+      "decoded": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "oracle_energy": 21,
+      "ising_energy": "21",
+      "wrong_field_sign_energy": "29",
+      "no_offset_energy": "-29",
+      "wrong_decode_energy": 16
+    },
+    {
+      "bits_q0_first": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "spins": [
+        1,
+        -1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "index": 46,
+      "display_q5_to_q0": "101110",
+      "decoded": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "oracle_energy": 101,
+      "ising_energy": "101",
+      "wrong_field_sign_energy": "13",
+      "no_offset_energy": "51",
+      "wrong_decode_energy": 37
+    },
+    {
+      "bits_q0_first": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "spins": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "index": 30,
+      "display_q5_to_q0": "011110",
+      "decoded": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "oracle_energy": 53,
+      "ising_energy": "53",
+      "wrong_field_sign_energy": "13",
+      "no_offset_energy": "3",
+      "wrong_decode_energy": 53
+    },
+    {
+      "bits_q0_first": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "spins": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "index": 62,
+      "display_q5_to_q0": "111110",
+      "decoded": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "oracle_energy": 165,
+      "ising_energy": "165",
+      "wrong_field_sign_energy": "29",
+      "no_offset_energy": "115",
+      "wrong_decode_energy": 98
+    },
+    {
+      "bits_q0_first": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "spins": [
+        -1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "index": 1,
+      "display_q5_to_q0": "000001",
+      "decoded": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oracle_energy": 29,
+      "ising_energy": "29",
+      "wrong_field_sign_energy": "165",
+      "no_offset_energy": "-21",
+      "wrong_decode_energy": 16
+    },
+    {
+      "bits_q0_first": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "spins": [
+        -1,
+        1,
+        1,
+        1,
+        1,
+        -1
+      ],
+      "index": 33,
+      "display_q5_to_q0": "100001",
+      "decoded": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "oracle_energy": 13,
+      "ising_energy": "13",
+      "wrong_field_sign_energy": "53",
+      "no_offset_energy": "-37",
+      "wrong_decode_energy": 13
+    },
+    {
+      "bits_q0_first": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "spins": [
+        -1,
+        1,
+        1,
+        1,
+        -1,
+        1
+      ],
+      "index": 17,
+      "display_q5_to_q0": "010001",
+      "decoded": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "oracle_energy": 13,
+      "ising_energy": "13",
+      "wrong_field_sign_energy": "101",
+      "no_offset_energy": "-37",
+      "wrong_decode_energy": 17
+    },
+    {
+      "bits_q0_first": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "spins": [
+        -1,
+        1,
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "index": 49,
+      "display_q5_to_q0": "110001",
+      "decoded": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "oracle_energy": 29,
+      "ising_energy": "29",
+      "wrong_field_sign_energy": "21",
+      "no_offset_energy": "-21",
+      "wrong_decode_energy": 38
+    },
+    {
+      "bits_q0_first": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "spins": [
+        -1,
+        1,
+        1,
+        -1,
+        1,
+        1
+      ],
+      "index": 9,
+      "display_q5_to_q0": "001001",
+      "decoded": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "oracle_energy": 19,
+      "ising_energy": "19",
+      "wrong_field_sign_energy": "131",
+      "no_offset_energy": "-31",
+      "wrong_decode_energy": 26
+    },
+    {
+      "bits_q0_first": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "spins": [
+        -1,
+        1,
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "index": 41,
+      "display_q5_to_q0": "101001",
+      "decoded": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "oracle_energy": 19,
+      "ising_energy": "19",
+      "wrong_field_sign_energy": "35",
+      "no_offset_energy": "-31",
+      "wrong_decode_energy": 55
+    },
+    {
+      "bits_q0_first": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "spins": [
+        -1,
+        1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "index": 25,
+      "display_q5_to_q0": "011001",
+      "decoded": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "oracle_energy": 11,
+      "ising_energy": "11",
+      "wrong_field_sign_energy": "75",
+      "no_offset_energy": "-39",
+      "wrong_decode_energy": 75
+    },
+    {
+      "bits_q0_first": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "spins": [
+        -1,
+        1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "index": 57,
+      "display_q5_to_q0": "111001",
+      "decoded": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "oracle_energy": 43,
+      "ising_energy": "43",
+      "wrong_field_sign_energy": "11",
+      "no_offset_energy": "-7",
+      "wrong_decode_energy": 128
+    },
+    {
+      "bits_q0_first": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "spins": [
+        -1,
+        1,
+        -1,
+        1,
+        1,
+        1
+      ],
+      "index": 5,
+      "display_q5_to_q0": "000101",
+      "decoded": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "oracle_energy": 7,
+      "ising_energy": "7",
+      "wrong_field_sign_energy": "59",
+      "no_offset_energy": "-43",
+      "wrong_decode_energy": 14
+    },
+    {
+      "bits_q0_first": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "spins": [
+        -1,
+        1,
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "index": 37,
+      "display_q5_to_q0": "100101",
+      "decoded": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "oracle_energy": 55,
+      "ising_energy": "55",
+      "wrong_field_sign_energy": "11",
+      "no_offset_energy": "5",
+      "wrong_decode_energy": 19
+    },
+    {
+      "bits_q0_first": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "spins": [
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "index": 21,
+      "display_q5_to_q0": "010101",
+      "decoded": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "oracle_energy": 23,
+      "ising_energy": "23",
+      "wrong_field_sign_energy": "27",
+      "no_offset_energy": "-27",
+      "wrong_decode_energy": 27
+    },
+    {
+      "bits_q0_first": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "spins": [
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "index": 53,
+      "display_q5_to_q0": "110101",
+      "decoded": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "oracle_energy": 103,
+      "ising_energy": "103",
+      "wrong_field_sign_energy": "11",
+      "no_offset_energy": "53",
+      "wrong_decode_energy": 56
+    },
+    {
+      "bits_q0_first": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "spins": [
+        -1,
+        1,
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "index": 13,
+      "display_q5_to_q0": "001101",
+      "decoded": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "oracle_energy": 13,
+      "ising_energy": "13",
+      "wrong_field_sign_energy": "41",
+      "no_offset_energy": "-37",
+      "wrong_decode_energy": 40
+    },
+    {
+      "bits_q0_first": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "spins": [
+        -1,
+        1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "index": 45,
+      "display_q5_to_q0": "101101",
+      "decoded": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "oracle_energy": 77,
+      "ising_energy": "77",
+      "wrong_field_sign_energy": "9",
+      "no_offset_energy": "27",
+      "wrong_decode_energy": 77
+    },
+    {
+      "bits_q0_first": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "spins": [
+        -1,
+        1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "index": 29,
+      "display_q5_to_q0": "011101",
+      "decoded": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "oracle_energy": 37,
+      "ising_energy": "37",
+      "wrong_field_sign_energy": "17",
+      "no_offset_energy": "-13",
+      "wrong_decode_energy": 101
+    },
+    {
+      "bits_q0_first": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "spins": [
+        -1,
+        1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "index": 61,
+      "display_q5_to_q0": "111101",
+      "decoded": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "oracle_energy": 133,
+      "ising_energy": "133",
+      "wrong_field_sign_energy": "17",
+      "no_offset_energy": "83",
+      "wrong_decode_energy": 162
+    },
+    {
+      "bits_q0_first": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "spins": [
+        -1,
+        -1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "index": 3,
+      "display_q5_to_q0": "000011",
+      "decoded": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oracle_energy": 6,
+      "ising_energy": "6",
+      "wrong_field_sign_energy": "80",
+      "no_offset_energy": "-44",
+      "wrong_decode_energy": 16
+    },
+    {
+      "bits_q0_first": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "spins": [
+        -1,
+        -1,
+        1,
+        1,
+        1,
+        -1
+      ],
+      "index": 35,
+      "display_q5_to_q0": "100011",
+      "decoded": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "oracle_energy": 38,
+      "ising_energy": "38",
+      "wrong_field_sign_energy": "16",
+      "no_offset_energy": "-12",
+      "wrong_decode_energy": 29
+    },
+    {
+      "bits_q0_first": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "spins": [
+        -1,
+        -1,
+        1,
+        1,
+        -1,
+        1
+      ],
+      "index": 19,
+      "display_q5_to_q0": "010011",
+      "decoded": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "oracle_energy": 14,
+      "ising_energy": "14",
+      "wrong_field_sign_energy": "40",
+      "no_offset_energy": "-36",
+      "wrong_decode_energy": 41
+    },
+    {
+      "bits_q0_first": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "spins": [
+        -1,
+        -1,
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "index": 51,
+      "display_q5_to_q0": "110011",
+      "decoded": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "oracle_energy": 78,
+      "ising_energy": "78",
+      "wrong_field_sign_energy": "8",
+      "no_offset_energy": "28",
+      "wrong_decode_energy": 78
+    },
+    {
+      "bits_q0_first": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "spins": [
+        -1,
+        -1,
+        1,
+        -1,
+        1,
+        1
+      ],
+      "index": 11,
+      "display_q5_to_q0": "001011",
+      "decoded": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "oracle_energy": 8,
+      "ising_energy": "8",
+      "wrong_field_sign_energy": "58",
+      "no_offset_energy": "-42",
+      "wrong_decode_energy": 58
+    },
+    {
+      "bits_q0_first": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "spins": [
+        -1,
+        -1,
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "index": 43,
+      "display_q5_to_q0": "101011",
+      "decoded": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "oracle_energy": 56,
+      "ising_energy": "56",
+      "wrong_field_sign_energy": "10",
+      "no_offset_energy": "6",
+      "wrong_decode_energy": 103
+    },
+    {
+      "bits_q0_first": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "spins": [
+        -1,
+        -1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "index": 27,
+      "display_q5_to_q0": "011011",
+      "decoded": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "oracle_energy": 24,
+      "ising_energy": "24",
+      "wrong_field_sign_energy": "26",
+      "no_offset_energy": "-26",
+      "wrong_decode_energy": 131
+    },
+    {
+      "bits_q0_first": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "spins": [
+        -1,
+        -1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "index": 59,
+      "display_q5_to_q0": "111011",
+      "decoded": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "oracle_energy": 104,
+      "ising_energy": "104",
+      "wrong_field_sign_energy": "10",
+      "no_offset_energy": "54",
+      "wrong_decode_energy": 200
+    },
+    {
+      "bits_q0_first": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "spins": [
+        -1,
+        -1,
+        -1,
+        1,
+        1,
+        1
+      ],
+      "index": 7,
+      "display_q5_to_q0": "000111",
+      "decoded": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "oracle_energy": 32,
+      "ising_energy": "32",
+      "wrong_field_sign_energy": "22",
+      "no_offset_energy": "-18",
+      "wrong_decode_energy": 22
+    },
+    {
+      "bits_q0_first": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "spins": [
+        -1,
+        -1,
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "index": 39,
+      "display_q5_to_q0": "100111",
+      "decoded": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "oracle_energy": 128,
+      "ising_energy": "128",
+      "wrong_field_sign_energy": "22",
+      "no_offset_energy": "78",
+      "wrong_decode_energy": 43
+    },
+    {
+      "bits_q0_first": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "spins": [
+        -1,
+        -1,
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "index": 23,
+      "display_q5_to_q0": "010111",
+      "decoded": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "oracle_energy": 72,
+      "ising_energy": "72",
+      "wrong_field_sign_energy": "14",
+      "no_offset_energy": "22",
+      "wrong_decode_energy": 59
+    },
+    {
+      "bits_q0_first": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "spins": [
+        -1,
+        -1,
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "index": 55,
+      "display_q5_to_q0": "110111",
+      "decoded": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "oracle_energy": 200,
+      "ising_energy": "200",
+      "wrong_field_sign_energy": "46",
+      "no_offset_energy": "150",
+      "wrong_decode_energy": 104
+    },
+    {
+      "bits_q0_first": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "spins": [
+        -1,
+        -1,
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "index": 15,
+      "display_q5_to_q0": "001111",
+      "decoded": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "oracle_energy": 50,
+      "ising_energy": "50",
+      "wrong_field_sign_energy": "16",
+      "no_offset_energy": "0",
+      "wrong_decode_energy": 80
+    },
+    {
+      "bits_q0_first": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "spins": [
+        -1,
+        -1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "index": 47,
+      "display_q5_to_q0": "101111",
+      "decoded": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "oracle_energy": 162,
+      "ising_energy": "162",
+      "wrong_field_sign_energy": "32",
+      "no_offset_energy": "112",
+      "wrong_decode_energy": 133
+    },
+    {
+      "bits_q0_first": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "spins": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "index": 31,
+      "display_q5_to_q0": "011111",
+      "decoded": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "oracle_energy": 98,
+      "ising_energy": "98",
+      "wrong_field_sign_energy": "16",
+      "no_offset_energy": "48",
+      "wrong_decode_energy": 165
+    },
+    {
+      "bits_q0_first": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "spins": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "index": 63,
+      "display_q5_to_q0": "111111",
+      "decoded": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "oracle_energy": 242,
+      "ising_energy": "242",
+      "wrong_field_sign_energy": "64",
+      "no_offset_energy": "192",
+      "wrong_decode_energy": 242
+    }
+  ],
+  "checks": [
+    {
+      "name": "all 64 Ising energies equal independent residual oracle",
+      "passed": true
+    },
+    {
+      "name": "all 64 displayed strings round-trip to logical bits",
+      "passed": true
+    },
+    {
+      "name": "indices cover each integer 0 through 63 exactly once",
+      "passed": true
+    },
+    {
+      "name": "unique ground state matches hand fixture",
+      "passed": true
+    },
+    {
+      "name": "deliberate field sign fault is detected",
+      "passed": true
+    },
+    {
+      "name": "deliberate display reversal fault is detected",
+      "passed": true
+    },
+    {
+      "name": "missing offset creates same exact error on every basis state",
+      "passed": true
+    },
+    {
+      "name": "omitting offset preserves all minimizers",
+      "passed": true
+    }
+  ],
+  "faults": {
+    "wrong_field_sign_mismatches": 64,
+    "wrong_decode_mismatches": 56,
+    "first_decode_counterexample": {
+      "bits_q0_first": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "spins": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        -1
+      ],
+      "index": 32,
+      "display_q5_to_q0": "100000",
+      "decoded": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "oracle_energy": 16,
+      "ising_energy": "16",
+      "wrong_field_sign_energy": "98",
+      "no_offset_energy": "-34",
+      "wrong_decode_energy": 29
+    }
+  },
+  "limitations": [
+    "One synthetic instance",
+    "No QAOA or quantum SDK execution",
+    "No benchmark speedup or novelty claim",
+    "Display test assumes one six-bit register with q_i mapped to c_i"
+  ]
+}
