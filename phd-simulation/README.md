@@ -10,7 +10,9 @@ The working theme is *Verification and reproducible benchmarking of quantum opti
 It combines power-system intuition, test engineering, Python and quantum computing. Research success can be a useful test method or a carefully explained negative result; quantum advantage is not promised.
 
 ## Start here
-- [Latest: October 5 — recovering evidence and fixing the decoding contract](logs/2026-10-05.md)
+- [Latest: October 6 — auditing diagonal phase evolution](logs/2026-10-06.md)
+- [Phase-evolution convention, nine checks and fault injections](docs/phase-evolution.md)
+- [October 5 — recovering evidence and fixing the decoding contract](logs/2026-10-05.md)
 - [Recovered September 30 episode, first published October 5](logs/2026-09-30.md)
 - [Ising mapping and eight-check audit](docs/ising-mapping.md)
 - [Publication gap and recovery record](docs/recovery-2026-10-05.md)

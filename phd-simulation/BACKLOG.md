@@ -14,7 +14,9 @@
 
 R11: Done for the toy — docs/ising-mapping.md and results/2026-10-05-ising-audit.json; all 64 energies and eight checks pass.
 
-Next R12: verify diagonal cost evolution, including relative phase and sign-fault detection; no circuit result yet.
+R12: In progress — plain-Python diagonal phase audit completed; nine checks pass over 64 states and four angles. See docs/phase-evolution.md and results/2026-10-06-phase-audit.json. SDK statevector, layout and circuit synthesis remain unverified.
+
+Next R12: compare a six-qubit SDK statevector with the oracle up to global phase, then add a mixer only after the interface passes.
 
 Blocker: algebraic QUBO/Ising mapping and a plain-Python bit-order contract are verified. SDK integration, circuit decomposition and six-qubit execution remain unverified.
 Risk: a toy feasibility result may be obvious rather than novel; usefulness must come from a generalizable verification method.
@@ -24,3 +26,6 @@ Story dates September 23–25 reconstructed at the user's explicit request. All 
 
 ## Recovery — 2026-10-05
 September 30 code, raw output and draft survived locally without publication. Re-execution today reproduced all raw states and source hashes; eight checks pass. First publication is October 5. September 28–29 and October 1–2 remain incomplete; no meetings or experiments are claimed for those dates. See docs/recovery-2026-10-05.md. R05 remains planned.
+
+## Phase audit — 2026-10-06
+Executed `src/verify_phase_evolution.py` with the Python standard library on the existing synthetic toy. Nine checks passed. Direct and decomposed phases agree across 256 state-angle pairs; exponent-sign and missing-factor-two faults were detected. The cost layer preserved every basis probability. No SDK circuit, mixer, sampler, optimizer or hardware was executed. R05 remains planned.

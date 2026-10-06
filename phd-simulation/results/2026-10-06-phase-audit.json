@@ -1,0 +1,109 @@
+{
+  "status": "EXECUTED_LOCAL_STANDARD_LIBRARY_PHASE_AUDIT",
+  "executed_at_utc": "2026-10-06T11:52:08.493773+00:00",
+  "python": "3.12.14",
+  "command": "python src/verify_phase_evolution.py",
+  "source_sha256": "5c5f94439e0642dc2878b380e79c1458360278ba377e60f38e367c5ed0d84779",
+  "dependencies": "Python standard library",
+  "data": "Existing synthetic six-variable microgrid toy; no external dataset",
+  "randomness": "None",
+  "quantum_hardware_used": false,
+  "sdk_circuit_executed": false,
+  "optimizer_executed": false,
+  "conventions": {
+    "cost_unitary": "U_C(gamma)=exp(-i*gamma*H_C)",
+    "rz": "RZ(theta)=exp(-i*theta*Z/2)",
+    "rzz": "RZZ(theta)=exp(-i*theta*ZtensorZ/2)",
+    "required_rotation_angle": "theta=2*gamma*coefficient"
+  },
+  "config": {
+    "gammas": [
+      0.0,
+      0.18479956785822313,
+      0.2,
+      0.7
+    ],
+    "fault_gamma": 0.2,
+    "offset": "50",
+    "basis_states": 64,
+    "state_angle_pairs": 256
+  },
+  "checks": [
+    {
+      "name": "all 64 mapped energies equal the independent residual oracle",
+      "passed": true
+    },
+    {
+      "name": "oracle and mapped phases agree for 256 state-angle pairs",
+      "passed": true,
+      "detail": {
+        "max_abs_error": 0.0,
+        "pairs": 256
+      }
+    },
+    {
+      "name": "RZ/RZZ factor-of-two convention reproduces all phases",
+      "passed": true,
+      "detail": {
+        "max_abs_error": 1.0479742340378198e-14,
+        "pairs": 256
+      }
+    },
+    {
+      "name": "dropping the offset changes only the predicted global phase",
+      "passed": true,
+      "detail": {
+        "max_abs_error": 1.423652711764673e-14,
+        "pairs": 256
+      }
+    },
+    {
+      "name": "deliberate exponent-sign fault is detected",
+      "passed": true,
+      "detail": {
+        "gamma": 0.2,
+        "mismatching_states": 64
+      }
+    },
+    {
+      "name": "deliberate missing factor-of-two gate-angle fault is detected",
+      "passed": true,
+      "detail": {
+        "gamma": 0.2,
+        "mismatching_states": 63
+      }
+    },
+    {
+      "name": "diagonal cost evolution preserves statevector norm",
+      "passed": true,
+      "detail": {
+        "absolute_norm_squared_drift": 0.0
+      }
+    },
+    {
+      "name": "diagonal cost evolution preserves every basis probability",
+      "passed": true,
+      "detail": {
+        "max_probability_drift": 1.0408340855860843e-17
+      }
+    },
+    {
+      "name": "nonzero cost evolution changes phases on this fixture",
+      "passed": true,
+      "detail": {
+        "gamma": 0.2,
+        "changed_amplitudes": 64
+      }
+    }
+  ],
+  "faults": {
+    "wrong_exponent_sign_mismatches": 64,
+    "missing_factor_two_angle_mismatches": 63
+  },
+  "limitations": [
+    "One synthetic instance and four chosen gamma values",
+    "No quantum SDK circuit, transpilation, sampling, mixer or optimizer",
+    "Floating-point phase comparisons use absolute tolerance 1e-12",
+    "No speedup, quantum advantage or novelty claim"
+  ]
+}
