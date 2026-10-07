@@ -1,0 +1,113 @@
+{
+  "status": "EXECUTED_LOCAL_NUMPY_ACCEPTANCE_HARNESS_SDK_UNAVAILABLE",
+  "executed_at_utc": "2026-10-07T11:55:35.249916+00:00",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "command": "python src/verify_statevector_interface.py",
+  "source_sha256": "b86d40fefd2d118fbcb37a785d577838447e3ba4a707989ef0479a9d0e49424a",
+  "dependencies": {
+    "numpy": "2.3.5"
+  },
+  "data": "Existing synthetic six-variable microgrid toy; no external dataset",
+  "randomness": "None",
+  "quantum_hardware_used": false,
+  "sdk_circuit_executed": false,
+  "qiskit_available": false,
+  "basis_contract": "statevector index=sum(bits_q0_first[i]*2**i)",
+  "comparison_contract": "infer one unit-modulus global phase from the largest reference amplitude, then compare every component",
+  "config": {
+    "gammas": [
+      0.18479956785822313,
+      0.2,
+      0.7
+    ],
+    "fault_gamma": 0.2,
+    "basis_states": 64,
+    "offset": "50",
+    "absolute_tolerance": 1e-12
+  },
+  "checks": [
+    {
+      "name": "index contract maps index 3 to logical bits 110000",
+      "passed": true,
+      "detail": {
+        "bits_q0_first": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "mapped energies equal the residual oracle for all 64 indices",
+      "passed": true
+    },
+    {
+      "name": "strict statevectors agree when the constant offset is included",
+      "passed": true,
+      "detail": {
+        "max_component_error": 0.0,
+        "angles": 3
+      }
+    },
+    {
+      "name": "offset-free statevectors agree up to global phase",
+      "passed": true,
+      "detail": {
+        "max_component_residual": 1.8419463451146354e-15
+      }
+    },
+    {
+      "name": "recovered global phase equals exp(+i*gamma*offset)",
+      "passed": true,
+      "detail": {
+        "max_phase_error": 1.837746106097754e-15,
+        "offset": "50"
+      }
+    },
+    {
+      "name": "strict comparison would reject the valid offset-free statevectors",
+      "passed": true,
+      "detail": {
+        "component_distances": [
+          0.3013876818406171,
+          0.29024610290747505,
+          0.29530136368880155
+        ]
+      }
+    },
+    {
+      "name": "global-phase comparison rejects the exponent-sign fault",
+      "passed": true,
+      "detail": {
+        "gamma": 0.2,
+        "max_component_residual": 0.2908562031426721
+      }
+    },
+    {
+      "name": "global-phase comparison rejects the reversed-qubit-order fault",
+      "passed": true,
+      "detail": {
+        "gamma": 0.2,
+        "max_component_residual": 0.29279208253210576,
+        "changed_basis_energies": 56
+      }
+    },
+    {
+      "name": "reference statevector remains normalized",
+      "passed": true,
+      "detail": {
+        "norm_squared": 1.0
+      }
+    }
+  ],
+  "limitations": [
+    "NumPy acceptance oracle only; Qiskit is unavailable in the execution environment",
+    "No SDK circuit, transpilation, sampler, mixer, optimizer or hardware execution",
+    "One deterministic synthetic input state and three nonzero angles",
+    "No speedup, quantum advantage or novelty claim"
+  ]
+}

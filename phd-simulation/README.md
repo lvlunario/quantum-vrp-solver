@@ -10,7 +10,9 @@ The working theme is *Verification and reproducible benchmarking of quantum opti
 It combines power-system intuition, test engineering, Python and quantum computing. Research success can be a useful test method or a carefully explained negative result; quantum advantage is not promised.
 
 ## Start here
-- [Latest: October 6 — auditing diagonal phase evolution](logs/2026-10-06.md)
+- [Latest: October 7 — defining global-phase-aware statevector acceptance](logs/2026-10-07.md)
+- [Statevector acceptance contract and SDK blocker](docs/statevector-acceptance.md)
+- [October 6 — auditing diagonal phase evolution](logs/2026-10-06.md)
 - [Phase-evolution convention, nine checks and fault injections](docs/phase-evolution.md)
 - [October 5 — recovering evidence and fixing the decoding contract](logs/2026-10-05.md)
 - [Recovered September 30 episode, first published October 5](logs/2026-09-30.md)

@@ -14,9 +14,9 @@
 
 R11: Done for the toy — docs/ising-mapping.md and results/2026-10-05-ising-audit.json; all 64 energies and eight checks pass.
 
-R12: In progress — plain-Python diagonal phase audit completed; nine checks pass over 64 states and four angles. See docs/phase-evolution.md and results/2026-10-06-phase-audit.json. SDK statevector, layout and circuit synthesis remain unverified.
+R12: In progress — diagonal phase audit and NumPy statevector acceptance harness completed. The October 7 harness passes nine checks, allows only a single global phase, and rejects sign and reversed-order faults. See docs/statevector-acceptance.md and results/2026-10-07-statevector-acceptance.json. Qiskit was unavailable; SDK statevector, layout and circuit synthesis remain unverified.
 
-Next R12: compare a six-qubit SDK statevector with the oracle up to global phase, then add a mixer only after the interface passes.
+Next R12: define a version-locked SDK environment and compare a six-qubit cost-circuit statevector with the committed oracle. Add a mixer only after the interface passes.
 
 Blocker: algebraic QUBO/Ising mapping and a plain-Python bit-order contract are verified. SDK integration, circuit decomposition and six-qubit execution remain unverified.
 Risk: a toy feasibility result may be obvious rather than novel; usefulness must come from a generalizable verification method.
@@ -29,3 +29,6 @@ September 30 code, raw output and draft survived locally without publication. Re
 
 ## Phase audit — 2026-10-06
 Executed `src/verify_phase_evolution.py` with the Python standard library on the existing synthetic toy. Nine checks passed. Direct and decomposed phases agree across 256 state-angle pairs; exponent-sign and missing-factor-two faults were detected. The cost layer preserved every basis probability. No SDK circuit, mixer, sampler, optimizer or hardware was executed. R05 remains planned.
+
+## Statevector acceptance — 2026-10-07
+Executed `src/verify_statevector_interface.py` with NumPy 2.3.5. Nine checks passed. Three offset-free statevectors fail naive strict comparison but agree after removing the predicted global phase; exponent-sign and reversed-order faults remain rejected. Qiskit was unavailable, so this is an acceptance harness, not an SDK circuit result. R05 remains planned.
