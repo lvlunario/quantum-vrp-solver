@@ -1,0 +1,10 @@
+# Resolved 2026-10-08 in a clean Python 3.12.14 virtual environment.
+# Linux x86_64 experiment lock for the bounded six-qubit SDK audit.
+dill==0.4.1
+numpy==2.5.3
+qiskit==2.5.2
+rustworkx==0.18.1
+scipy==1.18.1
+stevedore==5.9.1
+typing_extensions==4.16.0
+

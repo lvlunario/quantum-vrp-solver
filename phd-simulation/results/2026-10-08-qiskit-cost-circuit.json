@@ -1,0 +1,118 @@
+{
+  "status": "EXECUTED_LOCAL_QISKIT_EXACT_STATEVECTOR_AUDIT",
+  "executed_at_utc": "2026-10-08T11:16:43.815684+00:00",
+  "python": "3.12.14",
+  "qiskit": "2.5.2",
+  "numpy": "2.5.3",
+  "command": "python src/verify_qiskit_cost_circuit.py",
+  "source_sha256": "560465bed608c3774dd0f84c636e704ce5b4d8cec9dc7a7e2587d5702c195bda",
+  "environment_lock_sha256": "ccec4a6411323e1aefc368cb746c5aaf1c00c4fc9b295334284b7d796a6260f3",
+  "data": "Existing synthetic six-variable microgrid toy; no external dataset",
+  "randomness": "None",
+  "quantum_hardware_used": false,
+  "sampling_used": false,
+  "optimizer_executed": false,
+  "simulation": "Qiskit exact Statevector.evolve on a six-qubit QuantumCircuit",
+  "basis_contract": "statevector index=sum(bits_q0_first[i]*2**i)",
+  "config": {
+    "gammas": [
+      0.18479956785822313,
+      0.2,
+      0.7
+    ],
+    "fault_gamma": 0.2,
+    "basis_states": 64,
+    "offset": "50",
+    "rz_gates": 6,
+    "rzz_gates": 15,
+    "absolute_tolerance": 1e-12
+  },
+  "checks": [
+    {
+      "name": "Qiskit basis index 3 uses logical q0-first bits 110000",
+      "passed": true,
+      "detail": {
+        "bits_q0_first": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "SDK circuit with global phase matches the oracle strictly",
+      "passed": true,
+      "detail": {
+        "max_component_error": 1.5233361382151284e-15,
+        "angles": 3
+      }
+    },
+    {
+      "name": "SDK circuit without the offset is equivalent up to global phase",
+      "passed": true,
+      "detail": {
+        "equivalent_at_all_angles": [
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "name": "naive strict comparison rejects every offset-free circuit",
+      "passed": true,
+      "detail": {
+        "component_distances": [
+          0.30138768184061715,
+          0.29024610290747505,
+          0.29530136368880183
+        ]
+      }
+    },
+    {
+      "name": "each complete cost circuit contains six RZ and fifteen RZZ gates",
+      "passed": true,
+      "detail": {
+        "operation_counts": {
+          "rzz": 15,
+          "rz": 6
+        }
+      }
+    },
+    {
+      "name": "Statevector.equiv rejects the exponent-sign circuit fault",
+      "passed": true
+    },
+    {
+      "name": "Statevector.equiv rejects the reversed-qubit-order circuit fault",
+      "passed": true
+    },
+    {
+      "name": "Statevector.equiv rejects an omitted RZZ interaction",
+      "passed": true,
+      "detail": {
+        "omitted_coupling": [
+          0,
+          1,
+          "6"
+        ]
+      }
+    },
+    {
+      "name": "SDK output statevector remains normalized",
+      "passed": true,
+      "detail": {
+        "norm_squared": 1.0
+      }
+    }
+  ],
+  "limitations": [
+    "One synthetic instance and one deterministic input state",
+    "Exact local statevector simulation only; no shots, noise, transpilation or hardware",
+    "No mixer, parameter optimization, speedup, quantum advantage or novelty claim",
+    "Pinned environment is specific to this Python 3.12 Linux run"
+  ]
+}

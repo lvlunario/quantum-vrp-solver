@@ -14,9 +14,9 @@
 
 R11: Done for the toy — docs/ising-mapping.md and results/2026-10-05-ising-audit.json; all 64 energies and eight checks pass.
 
-R12: In progress — diagonal phase audit and NumPy statevector acceptance harness completed. The October 7 harness passes nine checks, allows only a single global phase, and rejects sign and reversed-order faults. See docs/statevector-acceptance.md and results/2026-10-07-statevector-acceptance.json. Qiskit was unavailable; SDK statevector, layout and circuit synthesis remain unverified.
+R12: Done for the ideal cost-layer statevector boundary — Qiskit 2.5.2 executed a six-qubit circuit in a pinned environment; nine checks passed across three angles. Sign, reversed-order and omitted-interaction faults were rejected. See docs/qiskit-cost-circuit.md and results/2026-10-08-qiskit-cost-circuit.json. Transpilation, sampling, noise and hardware remain unverified.
 
-Next R12: define a version-locked SDK environment and compare a six-qubit cost-circuit statevector with the committed oracle. Add a mixer only after the interface passes.
+Next R13: define mixer-layer invariants and acceptance criteria before implementing a one-layer QAOA circuit. R05 full-text reading remains open.
 
 Blocker: algebraic QUBO/Ising mapping and a plain-Python bit-order contract are verified. SDK integration, circuit decomposition and six-qubit execution remain unverified.
 Risk: a toy feasibility result may be obvious rather than novel; usefulness must come from a generalizable verification method.
@@ -32,3 +32,6 @@ Executed `src/verify_phase_evolution.py` with the Python standard library on the
 
 ## Statevector acceptance — 2026-10-07
 Executed `src/verify_statevector_interface.py` with NumPy 2.3.5. Nine checks passed. Three offset-free statevectors fail naive strict comparison but agree after removing the predicted global phase; exponent-sign and reversed-order faults remain rejected. Qiskit was unavailable, so this is an acceptance harness, not an SDK circuit result. R05 remains planned.
+
+## Qiskit cost circuit — 2026-10-08
+Created a clean Python 3.12 environment and executed Qiskit 2.5.2 exact statevector evolution. Nine checks passed for a circuit with six RZ and fifteen RZZ gates across three angles. The SDK statevector matched the independent oracle within `1.53e-15`; three deliberate circuit mutations were rejected. No mixer, shots, transpilation, noise model or hardware was used. R05 remains planned.
