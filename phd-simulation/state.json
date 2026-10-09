@@ -4,7 +4,7 @@
   "end_date": "2027-09-21",
   "simulation_timezone": "Europe/Oslo",
   "delivery_timezone": "Asia/Manila",
-  "last_completed_date": "2026-10-08",
+  "last_completed_date": "2026-10-09",
   "completed_dates": [
     "2026-09-22",
     "2026-09-23",
@@ -14,10 +14,11 @@
     "2026-10-05",
     "2026-10-06",
     "2026-10-07",
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-09"
   ],
   "phase": "onboarding and independent verification",
-  "next_task": "Friday recap: draft the cost-layer methods/limitations evidence table and define R13 mixer acceptance; R05 full-text QAOA reading remains open",
+  "next_task": "Implement and execute R13 one-layer mixer invariants without optimizer; preserve the six-qubit ordering contract and reject factor/sign/order mutations",
   "simulated_deadlines": [
     "2027-02-26",
     "2027-06-25",
@@ -44,7 +45,7 @@
   ],
   "catchup_created_date": "2026-09-27",
   "catchup_reason": "Explicit user request to run the entire missed workweek; all new execution occurred on September 27.",
-  "latest_evidence": "results/2026-10-08-qiskit-cost-circuit.json",
+  "latest_evidence": "docs/week03-review.md",
   "publication_recovered_dates": [
     "2026-09-30"
   ],
@@ -54,5 +55,6 @@
     "2026-10-01",
     "2026-10-02"
   ],
-  "recovery_note": "September 30 local work recovered and re-executed October 5; first publication October 5. Missing dates remain incomplete."
+  "recovery_note": "September 30 local work recovered and re-executed October 5; first publication October 5. Missing dates remain incomplete.",
+  "literature_status": "R05 complete for the original QAOA paper full-text reading on 2026-10-09; R06 broader literature map remains planned."
 }
