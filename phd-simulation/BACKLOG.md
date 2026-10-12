@@ -16,7 +16,9 @@ R11: Done for the toy — docs/ising-mapping.md and results/2026-10-05-ising-aud
 
 R12: Done for the ideal cost-layer statevector boundary — Qiskit 2.5.2 executed a six-qubit circuit in a pinned environment; nine checks passed across three angles. Sign, reversed-order and omitted-interaction faults were rejected. See docs/qiskit-cost-circuit.md and results/2026-10-08-qiskit-cost-circuit.json. Transpilation, sampling, noise and hardware remain unverified.
 
-Next R13: implement the one-layer mixer against the acceptance contract in docs/qaoa-reading-notes.md. Required checks include beta-zero identity, gamma-zero uniform probabilities, norm, independent tensor-product agreement, `RX(2*beta)`, circuit order, and deliberate sign/factor/order mutations. **PLANNED/UNEXECUTED.**
+R13: Done for the ideal one-layer mixer boundary — Qiskit 2.5.2 matched an independent amplitude-pairing oracle across three predetermined angle pairs; all ten checks passed. Beta-zero identity and gamma-zero uniform probabilities passed, and factor-two, mixer-sign, and layer-order mutations were rejected. See docs/qiskit-mixer-audit.md and results/2026-10-12-qiskit-mixer.json. No optimizer, shots, transpilation, noise or hardware was used.
+
+Next R14: implement independent expected-energy and feasible-probability readout invariants on fixed p=1 states before any parameter search. **PLANNED/UNEXECUTED.**
 
 Blocker: no current execution blocker. The next evidence boundary is mixer correctness, not parameter optimization.
 Risk: a toy feasibility result may be obvious rather than novel; usefulness must come from a generalizable verification method.
@@ -38,3 +40,6 @@ Created a clean Python 3.12 environment and executed Qiskit 2.5.2 exact statevec
 
 ## Friday synthesis — 2026-10-09
 Closed R05 for the original QAOA paper with full-text, equation-grounded notes and an IBM `RXGate` cross-check. Updated the working manuscript to v0.3 and added a weekly evidence table. No numerical experiment ran today. R13 is defined but remains planned; R06 remains open because a single foundational paper is not a literature map.
+
+## Qiskit mixer audit — 2026-10-12
+Executed `src/verify_qiskit_mixer.py` in a fresh pinned Python 3.12 environment. All ten checks passed across three predetermined angle pairs; the maximum SDK/oracle component error was `1.36e-15`. Missing factor-two, reversed mixer sign and mixer-before-cost faults were rejected. R13 is complete only for local exact statevectors. No parameter search, sampling, transpilation, noise model or hardware was used.

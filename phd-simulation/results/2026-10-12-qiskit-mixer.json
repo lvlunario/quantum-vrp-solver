@@ -1,0 +1,122 @@
+{
+  "status": "EXECUTED_LOCAL_QISKIT_EXACT_STATEVECTOR_MIXER_AUDIT",
+  "executed_at_utc": "2026-10-12T11:30:15.462397+00:00",
+  "python": "3.12.14",
+  "qiskit": "2.5.2",
+  "numpy": "2.5.3",
+  "command": "python src/verify_qiskit_mixer.py --output results/2026-10-12-qiskit-mixer.json",
+  "source_sha256": "600b45ffba9d010dcbd6b2268633c6bb74893c5ce0db9f7a2be789f705a2f064",
+  "environment_lock_sha256": "6a7fe9b7f0e687b772314367c4ec00ea90d308e8ff4b6cd5ae3ddc29b4fcbd33",
+  "data": "Existing synthetic six-variable microgrid toy; no external dataset",
+  "randomness": "None",
+  "quantum_hardware_used": false,
+  "sampling_used": false,
+  "optimizer_executed": false,
+  "transpiler_executed": false,
+  "simulation": "Qiskit exact Statevector.from_instruction for a six-qubit p=1 circuit",
+  "objective_convention": "E is minimized; cost phase is exp(-i*gamma*E)",
+  "basis_contract": "statevector index=sum(bits_q0_first[i]*2**i)",
+  "config": {
+    "angle_pairs": [
+      [
+        0.2,
+        0.31
+      ],
+      [
+        0.18479956785822313,
+        0.63
+      ],
+      [
+        0.7,
+        0.19
+      ]
+    ],
+    "basis_states": 64,
+    "mixer_gate": "RX(2*beta)",
+    "absolute_tolerance": 1e-12
+  },
+  "expected_energies_reported_for_reproduction_not_optimization": [
+    49.26741508546327,
+    60.485315965857325,
+    50.02915563399305
+  ],
+  "checks": [
+    {
+      "name": "basis index 3 retains logical q0-first bits 110000",
+      "passed": true,
+      "detail": {
+        "bits_q0_first": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "Qiskit p=1 states match the independent mixer oracle strictly",
+      "passed": true,
+      "detail": {
+        "max_component_error": 1.360182507175779e-15,
+        "angle_pairs": 3
+      }
+    },
+    {
+      "name": "all p=1 statevectors remain normalized",
+      "passed": true,
+      "detail": {
+        "max_norm_squared_error": 1.5543122344752192e-15
+      }
+    },
+    {
+      "name": "each p=1 circuit has the expected H, cost, and mixer gate counts",
+      "passed": true,
+      "detail": {
+        "operation_counts": {
+          "rzz": 15,
+          "h": 6,
+          "rz": 6,
+          "rx": 6
+        }
+      }
+    },
+    {
+      "name": "beta zero makes the mixer an identity",
+      "passed": true
+    },
+    {
+      "name": "gamma zero leaves all measurement probabilities uniform",
+      "passed": true,
+      "detail": {
+        "max_probability_error": 1.734723475976807e-17
+      }
+    },
+    {
+      "name": "Statevector.equiv rejects RX(beta) missing the factor of two",
+      "passed": true
+    },
+    {
+      "name": "Statevector.equiv rejects the reversed mixer sign",
+      "passed": true
+    },
+    {
+      "name": "Statevector.equiv rejects mixer-before-cost layer order",
+      "passed": true
+    },
+    {
+      "name": "a nonzero mixer redistributes probabilities on the phase-rich fixture",
+      "passed": true,
+      "detail": {
+        "max_probability_change": 0.03787431109323938
+      }
+    }
+  ],
+  "limitations": [
+    "One synthetic instance and three predetermined angle pairs",
+    "Exact local statevector simulation only; no shots, noise, transpilation or hardware",
+    "No parameter search, classical comparison, speedup, quantum advantage or novelty claim",
+    "Selected injected faults do not estimate a general mutation-detection rate"
+  ]
+}

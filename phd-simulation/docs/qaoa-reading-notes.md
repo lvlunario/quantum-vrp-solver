@@ -30,7 +30,7 @@ Primary source: E. Farhi, J. Goldstone, and S. Gutmann, *A Quantum Approximate O
 - Compare statevectors only after removing a predicted global phase when the constant energy offset is intentionally omitted.
 - Do not interpret ideal-statevector agreement as evidence about shots, transpilation, noise, hardware, optimizer performance, or advantage.
 
-## R13 acceptance criteria — PLANNED/UNEXECUTED
+## R13 acceptance criteria — EXECUTED 2026-10-12
 
 1. At `beta = 0`, the mixer is the identity and the post-mixer state matches the cost-layer state.
 2. At `gamma = 0`, the uniform input is an eigenstate of (B); the mixer changes only global phase and measurement probabilities remain uniform.
@@ -40,4 +40,4 @@ Primary source: E. Farhi, J. Goldstone, and S. Gutmann, *A Quantum Approximate O
 6. Circuit order is cost then mixer; a reversed-order mutant is rejected.
 7. The cost layer alone preserves basis probabilities. A nonzero mixer may redistribute them, but no improvement claim is permitted without an executed parameter search and classical baseline.
 
-These criteria define the next implementation boundary. No mixer circuit or new numerical experiment was executed for this reading note.
+These criteria defined the next implementation boundary. They were executed on 2026-10-12 in `src/verify_qiskit_mixer.py`; all ten audit checks passed. See `docs/qiskit-mixer-audit.md` and `results/2026-10-12-qiskit-mixer.json`. That later execution remains limited to local exact statevectors and does not add an optimizer, shots, transpilation, noise or hardware.
