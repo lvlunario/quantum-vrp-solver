@@ -18,9 +18,11 @@ R12: Done for the ideal cost-layer statevector boundary — Qiskit 2.5.2 execute
 
 R13: Done for the ideal one-layer mixer boundary — Qiskit 2.5.2 matched an independent amplitude-pairing oracle across three predetermined angle pairs; all ten checks passed. Beta-zero identity and gamma-zero uniform probabilities passed, and factor-two, mixer-sign, and layer-order mutations were rejected. See docs/qiskit-mixer-audit.md and results/2026-10-12-qiskit-mixer.json. No optimizer, shots, transpilation, noise or hardware was used.
 
-Next R14: implement independent expected-energy and feasible-probability readout invariants on fixed p=1 states before any parameter search. **PLANNED/UNEXECUTED.**
+R14: Done for the fixed synthetic exact-statevector fixture — 26 checks pass; docs/readout-audit.md and results/2026-10-15-readout.json. Physical feasibility and encoding consistency are separately reported; no optimization or shot-based readout verified.
 
-Blocker: no current execution blocker. The next evidence boundary is mixer correctness, not parameter optimization.
+Next R15: bounded search and classical-baseline protocol, including fixed evaluation budget and distinct metrics. **PLANNED/UNEXECUTED.**
+
+Blocker: no current execution blocker. The next evidence boundary is a prespecified baseline/search protocol; mixer and exact readout checks are complete only for the toy.
 Risk: a toy feasibility result may be obvious rather than novel; usefulness must come from a generalizable verification method.
 
 ## Catch-up evidence — 2026-09-27
@@ -43,3 +45,6 @@ Closed R05 for the original QAOA paper with full-text, equation-grounded notes a
 
 ## Qiskit mixer audit — 2026-10-12
 Executed `src/verify_qiskit_mixer.py` in a fresh pinned Python 3.12 environment. All ten checks passed across three predetermined angle pairs; the maximum SDK/oracle component error was `1.36e-15`. Missing factor-two, reversed mixer sign and mixer-before-cost faults were rejected. R13 is complete only for local exact statevectors. No parameter search, sampling, transpilation, noise model or hardware was used.
+
+## Readout audit — 2026-10-15
+New local execution in pinned Qiskit environment; 26 checks pass over all 64 one-hot states and three fixed circuit settings. An initial uniform-mean test expectation of 62 failed and was corrected by derivation to 50. The primary setting has physical mass 0.6330953684437471 and encoding mass 0.01604168028438998. Bit-order, amplitude-weighting and identity-offset reporting faults are detected. October 13–14 local files were not recovered; interruption logs record both days as incomplete. No historical results or meetings were reconstructed. See docs/gap-2026-10-13-14.md.

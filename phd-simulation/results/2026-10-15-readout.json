@@ -1,0 +1,828 @@
+{
+  "status": "EXECUTED_LOCAL_QISKIT_EXACT_READOUT_AUDIT",
+  "executed_at_utc": "2026-10-15T13:55:27.309037+00:00",
+  "command": "python src/verify_readout.py > results/2026-10-15-readout.json",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "qiskit": "2.5.2"
+  },
+  "source_sha256": {
+    "src/verify_readout.py": "3b3611dd624c49bb2a932d27ee936bac1c026040bb095725c0d4b6be5e7d6f40",
+    "src/verify_qiskit_mixer.py": "600b45ffba9d010dcbd6b2268633c6bb74893c5ce0db9f7a2be789f705a2f064",
+    "src/verify_formulation.py": "965ab9cdc96b144b6a1c144e143a6b0fd098041b829edbdb6a6b75170843eb52",
+    "requirements-sdk.txt": "2811f737df7223e8ed695681751bcb2452463242b7e0dc83dc861f3c04f582a5"
+  },
+  "config": {
+    "demands": [
+      2,
+      3,
+      4
+    ],
+    "priorities": [
+      3,
+      5,
+      6
+    ],
+    "capacity": 5,
+    "penalty": 2,
+    "slack_weights": [
+      1,
+      2,
+      4
+    ],
+    "angle_pairs": [
+      [
+        0.2,
+        0.31
+      ],
+      [
+        0.18479956785822313,
+        0.63
+      ],
+      [
+        0.7,
+        0.19
+      ]
+    ],
+    "tolerance": 1e-11
+  },
+  "data": "Fixed synthetic toy; no external data",
+  "randomness": "None",
+  "optimizer_used": false,
+  "shots_used": false,
+  "hardware_used": false,
+  "uniform_reference": {
+    "expected_energy": 50.0,
+    "physical_feasibility": 0.625,
+    "encoding_consistency": 0.078125,
+    "load_marginal": [
+      0.125,
+      0.125,
+      0.125,
+      0.125,
+      0.125,
+      0.125,
+      0.125,
+      0.125
+    ]
+  },
+  "raw_basis": [
+    {
+      "index": 0,
+      "energy": 64,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 1,
+      "energy": 29,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 2,
+      "energy": 17,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 3,
+      "energy": 6,
+      "physical": true,
+      "encoded": true
+    },
+    {
+      "index": 4,
+      "energy": 10,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 5,
+      "energy": 7,
+      "physical": false,
+      "encoded": false
+    },
+    {
+      "index": 6,
+      "energy": 11,
+      "physical": false,
+      "encoded": false
+    },
+    {
+      "index": 7,
+      "energy": 32,
+      "physical": false,
+      "encoded": false
+    },
+    {
+      "index": 8,
+      "energy": 46,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 9,
+      "energy": 19,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 10,
+      "energy": 11,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 11,
+      "energy": 8,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 12,
+      "energy": 8,
+      "physical": true,
+      "encoded": true
+    },
+    {
+      "index": 13,
+      "energy": 13,
+      "physical": false,
+      "encoded": false
+    },
+    {
+      "index": 14,
+      "energy": 21,
+      "physical": false,
+      "encoded": false
+    },
+    {
+      "index": 15,
+      "energy": 50,
+      "physical": false,
+      "encoded": false
+    },
+    {
+      "index": 16,
+      "energy": 32,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 17,
+      "energy": 13,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 18,
+      "energy": 9,
+      "physical": true,
+      "encoded": true
+    },
+    {
+      "index": 19,
+      "energy": 14,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 20,
+      "energy": 10,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 21,
+      "energy": 23,
+      "physical": false,
+      "encoded": false
+    },
+    {
+      "index": 22,
+      "energy": 35,
+      "physical": false,
+      "encoded": false
+    },
+    {
+      "index": 23,
+      "energy": 72,
+      "physical": false,
+      "encoded": false
+    },
+    {
+      "index": 24,
+      "energy": 22,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 25,
+      "energy": 11,
+      "physical": true,
+      "encoded": true
+    },
+    {
+      "index": 26,
+      "energy": 11,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 27,
+      "energy": 24,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 28,
+      "energy": 16,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 29,
+      "energy": 37,
+      "physical": false,
+      "encoded": false
+    },
+    {
+      "index": 30,
+      "energy": 53,
+      "physical": false,
+      "encoded": false
+    },
+    {
+      "index": 31,
+      "energy": 98,
+      "physical": false,
+      "encoded": false
+    },
+    {
+      "index": 32,
+      "energy": 16,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 33,
+      "energy": 13,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 34,
+      "energy": 17,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 35,
+      "energy": 38,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 36,
+      "energy": 26,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 37,
+      "energy": 55,
+      "physical": false,
+      "encoded": false
+    },
+    {
+      "index": 38,
+      "energy": 75,
+      "physical": false,
+      "encoded": false
+    },
+    {
+      "index": 39,
+      "energy": 128,
+      "physical": false,
+      "encoded": false
+    },
+    {
+      "index": 40,
+      "energy": 14,
+      "physical": true,
+      "encoded": true
+    },
+    {
+      "index": 41,
+      "energy": 19,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 42,
+      "energy": 27,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 43,
+      "energy": 56,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 44,
+      "energy": 40,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 45,
+      "energy": 77,
+      "physical": false,
+      "encoded": false
+    },
+    {
+      "index": 46,
+      "energy": 101,
+      "physical": false,
+      "encoded": false
+    },
+    {
+      "index": 47,
+      "energy": 162,
+      "physical": false,
+      "encoded": false
+    },
+    {
+      "index": 48,
+      "energy": 16,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 49,
+      "energy": 29,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 50,
+      "energy": 41,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 51,
+      "energy": 78,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 52,
+      "energy": 58,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 53,
+      "energy": 103,
+      "physical": false,
+      "encoded": false
+    },
+    {
+      "index": 54,
+      "energy": 131,
+      "physical": false,
+      "encoded": false
+    },
+    {
+      "index": 55,
+      "energy": 200,
+      "physical": false,
+      "encoded": false
+    },
+    {
+      "index": 56,
+      "energy": 22,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 57,
+      "energy": 43,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 58,
+      "energy": 59,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 59,
+      "energy": 104,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 60,
+      "energy": 80,
+      "physical": true,
+      "encoded": false
+    },
+    {
+      "index": 61,
+      "energy": 133,
+      "physical": false,
+      "encoded": false
+    },
+    {
+      "index": 62,
+      "energy": 165,
+      "physical": false,
+      "encoded": false
+    },
+    {
+      "index": 63,
+      "energy": 242,
+      "physical": false,
+      "encoded": false
+    }
+  ],
+  "fixed_state_results": [
+    {
+      "gamma": 0.2,
+      "beta": 0.31,
+      "expected_energy": 49.26741508546327,
+      "physical_feasibility": 0.6330953684437471,
+      "encoding_consistency": 0.01604168028438998,
+      "load_marginal": [
+        0.12020108807211238,
+        0.12449659824459933,
+        0.13064368088946116,
+        0.1252864904853161,
+        0.13246751075225818,
+        0.12287121626919635,
+        0.12047319488106378,
+        0.12356022040599111
+      ],
+      "sdk_expected_energy": 49.26741508546327,
+      "probabilities_qiskit_index": [
+        0.023052071375081185,
+        0.006773049472955923,
+        0.04108215718494296,
+        0.007261151078810959,
+        0.029039531517278214,
+        0.009315011117704282,
+        0.006638479564166842,
+        0.0004054087173017515,
+        0.0038837940823251223,
+        0.0312828018427388,
+        0.0006809088751200935,
+        0.007341396870777848,
+        0.0019358287096113557,
+        0.014952885927113904,
+        0.05349931109323938,
+        0.01535021126871509,
+        0.010559153953257,
+        0.0018757591088503632,
+        0.00540757021864208,
+        0.03630507143492323,
+        0.005773841574066773,
+        0.05187065493464207,
+        1.0008501579042182e-05,
+        0.005952295466395076,
+        0.032360895115302706,
+        0.0003003459107155346,
+        0.003596741241774672,
+        0.02681140811558995,
+        0.013501304422483599,
+        0.0038001916441626287,
+        0.019832960451239893,
+        0.02941972461187292,
+        0.006525474069129709,
+        0.002545194757915889,
+        0.03192109022988815,
+        0.003538970182430714,
+        0.04707133568693199,
+        0.015486016338475808,
+        0.017425020968689156,
+        0.004077723035096469,
+        0.0011367843666100516,
+        0.04504741499040327,
+        0.0339991017429077,
+        0.005676267852502728,
+        0.0019510852027445147,
+        0.01188161746261289,
+        0.013315197399414383,
+        0.010234302521237505,
+        0.00012967879568262736,
+        0.0321782860414788,
+        0.0016343919267852185,
+        0.032424735021631235,
+        0.02145179398151677,
+        0.014908580637610632,
+        0.0030456963655222644,
+        0.024285368578670682,
+        0.042553236314723984,
+        0.0044937461195407435,
+        0.012321719469400293,
+        0.005927489928649426,
+        0.011742789657624961,
+        0.0006562582068741349,
+        0.006706520537212821,
+        0.033835186206701624
+      ]
+    },
+    {
+      "gamma": 0.18479956785822313,
+      "beta": 0.63,
+      "expected_energy": 60.485315965857325,
+      "physical_feasibility": 0.609154080389986,
+      "encoding_consistency": 0.05113288100140919,
+      "load_marginal": [
+        0.14792730415148997,
+        0.10175926680686641,
+        0.10627291785535643,
+        0.1548245046680201,
+        0.09837008690825311,
+        0.1549815039371654,
+        0.1346960754748489,
+        0.10116834019799867
+      ],
+      "sdk_expected_energy": 60.48531596585732,
+      "probabilities_qiskit_index": [
+        0.039473895721945686,
+        0.02063535024029373,
+        0.036389289397987724,
+        0.009079027977430489,
+        0.012497755371742723,
+        0.000981443093066962,
+        0.009185055515864562,
+        0.0004958638246512016,
+        0.02695649315722656,
+        0.017341626239118297,
+        0.009887052235715508,
+        0.019476376390525678,
+        0.015388184025371843,
+        0.00100180567405241,
+        0.03342909160764325,
+        0.0008274465049858105,
+        0.03909126185669406,
+        0.000778488310553392,
+        0.0006686870731434651,
+        0.06538069692038005,
+        0.0012345119679103816,
+        0.034965944998364314,
+        0.0001110522868489708,
+        0.003534794137289952,
+        0.010175451323871976,
+        0.019850310745549004,
+        0.01807909656143182,
+        0.024620499153058504,
+        0.003899089768239428,
+        0.01750100290777459,
+        0.00517072413188407,
+        0.007593992897675567,
+        0.004298364586959084,
+        0.011514716579484672,
+        0.013461848985605299,
+        0.0018746924915835424,
+        0.03537562974567535,
+        0.0030556913994301683,
+        0.03313865086045268,
+        0.004818542582838191,
+        0.00614667117991439,
+        0.01766882281357443,
+        0.017502064031256575,
+        0.0037923144514253795,
+        0.026627491132460514,
+        0.0054773449548495,
+        0.04159950216348343,
+        0.0024222940231278982,
+        0.010982687508411321,
+        0.00484616061805361,
+        0.0010754041171818455,
+        0.023937839440816424,
+        0.0011303716572248492,
+        0.03950185636798536,
+        0.0020187136742924796,
+        0.03367840136931395,
+        0.010802478816466881,
+        0.009123791260239269,
+        0.009209475453034202,
+        0.006663057842800038,
+        0.0022170532396280185,
+        0.05249641454164209,
+        0.010043285234379458,
+        0.047797004858116096
+      ]
+    },
+    {
+      "gamma": 0.7,
+      "beta": 0.19,
+      "expected_energy": 50.02915563399305,
+      "physical_feasibility": 0.6092891798595818,
+      "encoding_consistency": 0.07488547323021144,
+      "load_marginal": [
+        0.13817657549739723,
+        0.11790515885270102,
+        0.11924935338110042,
+        0.12693041395655955,
+        0.10702767817182357,
+        0.1383842527260796,
+        0.1330934638462835,
+        0.1192331035680547
+      ],
+      "sdk_expected_energy": 50.02915563399304,
+      "probabilities_qiskit_index": [
+        0.019735109343498935,
+        0.007183987675045689,
+        0.004382500513210566,
+        0.015136965063723258,
+        0.03025895399292685,
+        0.02271779164045527,
+        0.014875628826421182,
+        0.015289882624934772,
+        0.0075283677208899434,
+        0.01415065455768651,
+        0.031121435348109502,
+        0.016864174772863876,
+        0.011157592341944626,
+        0.010103665734965758,
+        0.022496974329365635,
+        0.015212138242792031,
+        0.017345532379088237,
+        0.02289344274962004,
+        0.022007810758155267,
+        0.00550328062336086,
+        0.014654985032315113,
+        0.016990892295749585,
+        0.008909594316336408,
+        0.02078939715274035,
+        0.025456892698344325,
+        0.00937092122208894,
+        0.012512374039598326,
+        0.011642150493062081,
+        0.004646371415040198,
+        0.020467481471865483,
+        0.007769527314111592,
+        0.01877447303840261,
+        0.017741494759835955,
+        0.03929393015725245,
+        0.014453894737186772,
+        0.0071614660490782025,
+        0.01044246942581589,
+        0.010060111949880081,
+        0.018493406875907854,
+        0.02027325433177307,
+        0.01721218384429935,
+        0.005462708937523081,
+        0.007018685122068335,
+        0.03327920932891154,
+        0.0065890652679808405,
+        0.018155493032483573,
+        0.014115629138788536,
+        0.00460539502207366,
+        0.0319270186691867,
+        0.007317695607918268,
+        0.003641197633648527,
+        0.02803183693344391,
+        0.004847054571363951,
+        0.023177251486554,
+        0.035830565084654126,
+        0.010125520962147689,
+        0.00122997608225377,
+        0.012231817945566036,
+        0.02411145522912312,
+        0.009311330692115805,
+        0.024431186124436094,
+        0.016711565114125852,
+        0.010602137960698166,
+        0.01416304219319052
+      ]
+    }
+  ],
+  "mutations": {
+    "reversed_bit_energy": 52.64243820211661,
+    "amplitude_weighted_energy": 358.5162757745817,
+    "offset_free_energy": -0.7325849145366465,
+    "identity_offset": 50.0
+  },
+  "checks": [
+    {
+      "name": "all 64 observable diagonal entries match hand-enumerated load/slack fixture",
+      "passed": true
+    },
+    {
+      "name": "unique encoded energy minimum is index 3 with energy 6",
+      "passed": true
+    },
+    {
+      "name": "all 64 one-hot readouts match physical and encoded labels",
+      "passed": true
+    },
+    {
+      "name": "uniform fixture has physical mass 5/8 and encoded mass 5/64",
+      "passed": true
+    },
+    {
+      "name": "uniform mean energy is independently 50",
+      "passed": true
+    },
+    {
+      "name": "(0.2, 0.31): SDK observable and independent expected energy agree",
+      "passed": true
+    },
+    {
+      "name": "(0.2, 0.31): dictionary labels recover all probabilities",
+      "passed": true
+    },
+    {
+      "name": "(0.2, 0.31): summing slack reproduces physical mass",
+      "passed": true
+    },
+    {
+      "name": "(0.2, 0.31): encoding mass is a subset of physical mass",
+      "passed": true
+    },
+    {
+      "name": "(0.2, 0.31): readout ignores global phase",
+      "passed": true
+    },
+    {
+      "name": "(0.18479956785822313, 0.63): SDK observable and independent expected energy agree",
+      "passed": true
+    },
+    {
+      "name": "(0.18479956785822313, 0.63): dictionary labels recover all probabilities",
+      "passed": true
+    },
+    {
+      "name": "(0.18479956785822313, 0.63): summing slack reproduces physical mass",
+      "passed": true
+    },
+    {
+      "name": "(0.18479956785822313, 0.63): encoding mass is a subset of physical mass",
+      "passed": true
+    },
+    {
+      "name": "(0.18479956785822313, 0.63): readout ignores global phase",
+      "passed": true
+    },
+    {
+      "name": "(0.7, 0.19): SDK observable and independent expected energy agree",
+      "passed": true
+    },
+    {
+      "name": "(0.7, 0.19): dictionary labels recover all probabilities",
+      "passed": true
+    },
+    {
+      "name": "(0.7, 0.19): summing slack reproduces physical mass",
+      "passed": true
+    },
+    {
+      "name": "(0.7, 0.19): encoding mass is a subset of physical mass",
+      "passed": true
+    },
+    {
+      "name": "(0.7, 0.19): readout ignores global phase",
+      "passed": true
+    },
+    {
+      "name": "reversed bit-order energy fault detected on fixed state",
+      "passed": true
+    },
+    {
+      "name": "amplitudes substituted for probabilities detected",
+      "passed": true
+    },
+    {
+      "name": "omitted identity offset changes energy by exactly the offset",
+      "passed": true
+    },
+    {
+      "name": "conflating physical feasibility and encoding consistency detected",
+      "passed": true
+    },
+    {
+      "name": "positive affine energy transform preserves minimizers and transforms mean",
+      "passed": true
+    },
+    {
+      "name": "reject malformed, negative, nonfinite and unnormalized readout",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "One synthetic instance, three fixed angle pairs; no parameter selection or optimization",
+    "Ideal exact statevectors only; no shots, noise, transpilation or hardware",
+    "Selected faults do not estimate a general detection rate",
+    "Not a realistic microgrid benchmark or evidence of quantum advantage"
+  ]
+}
