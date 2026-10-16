@@ -4,7 +4,7 @@
   "end_date": "2027-09-21",
   "simulation_timezone": "Europe/Oslo",
   "delivery_timezone": "Asia/Manila",
-  "last_completed_date": "2026-10-15",
+  "last_completed_date": "2026-10-16",
   "completed_dates": [
     "2026-09-22",
     "2026-09-23",
@@ -17,10 +17,11 @@
     "2026-10-08",
     "2026-10-09",
     "2026-10-12",
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-16"
   ],
   "phase": "onboarding and independent verification",
-  "next_task": "Friday: reconcile manuscript with R14, then preregister R15 bounded search and classical-baseline protocol before parameter selection",
+  "next_task": "Monday October 19: implement R15 frozen 256-candidate exact pilot after regression gates; persist all candidates and independent winner validation; R06 literature map remains open",
   "simulated_deadlines": [
     "2027-02-26",
     "2027-06-25",
@@ -46,7 +47,7 @@
   ],
   "catchup_created_date": "2026-09-27",
   "catchup_reason": "Explicit user request to run the entire missed workweek; all new execution occurred on September 27.",
-  "latest_evidence": "results/2026-10-15-readout.json",
+  "latest_evidence": "results/2026-10-16-baseline-references.json",
   "publication_recovered_dates": [
     "2026-09-30"
   ],
@@ -59,5 +60,13 @@
     "2026-10-14"
   ],
   "recovery_note": "September 30 local work recovered and re-executed October 5; first publication October 5. Missing dates remain incomplete. October 13–14 package not recovered; interruption logs created October 15; new R14 implementation executed October 15, not backdated.",
-  "literature_status": "R05 complete for the original QAOA paper full-text reading on 2026-10-09; R06 broader literature map remains planned."
+  "literature_status": "R05 complete for the original QAOA paper full-text reading on 2026-10-09; R06 broader literature map remains planned.",
+  "pilot_protocol": {
+    "path": "docs/baseline-protocol-v1.md",
+    "version": 1,
+    "frozen_date": "2026-10-16",
+    "search_status": "PLANNED/UNEXECUTED",
+    "max_candidates": 256,
+    "holdout": false
+  }
 }

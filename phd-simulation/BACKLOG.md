@@ -9,7 +9,7 @@
 | R06 | Literature map of quantum testing | Planned | Verified papers and explicit novelty assessment |
 | R07 | Fault catalog and metamorphic tests | Planned | Independent test oracle and faulty cases |
 | R08 | Benchmark protocol and classical solvers | Planned | Fair budget and held-out instance plan |
-| R09 | Paper A complete educational draft | In progress | v0.3 evidence traceability and limits; broader review still open |
+| R09 | Paper A complete educational draft | In progress | v0.4 mixer/readout reconciliation and baseline references; broader review still open |
 | R10 | First-year review | Planned | Report, slides and year-two decision |
 
 R11: Done for the toy — docs/ising-mapping.md and results/2026-10-05-ising-audit.json; all 64 energies and eight checks pass.
@@ -20,9 +20,9 @@ R13: Done for the ideal one-layer mixer boundary — Qiskit 2.5.2 matched an ind
 
 R14: Done for the fixed synthetic exact-statevector fixture — 26 checks pass; docs/readout-audit.md and results/2026-10-15-readout.json. Physical feasibility and encoding consistency are separately reported; no optimization or shot-based readout verified.
 
-Next R15: bounded search and classical-baseline protocol, including fixed evaluation budget and distinct metrics. **PLANNED/UNEXECUTED.**
+R15: Protocol v1 frozen locally in docs/baseline-protocol-v1.md; classical reference audit executed October 16 with 11 passing checks. Six-qubit 256-candidate search remains **PLANNED/UNEXECUTED**. Completion requires all candidate outputs, independent winner validation and honest metric comparison.
 
-Blocker: no current execution blocker. The next evidence boundary is a prespecified baseline/search protocol; mixer and exact readout checks are complete only for the toy.
+Blocker: no current execution blocker. The next evidence boundary is execution of the committed v1 pilot contract after regression gates; mixer and exact readout checks are complete only for the toy.
 Risk: a toy feasibility result may be obvious rather than novel; usefulness must come from a generalizable verification method.
 
 ## Catch-up evidence — 2026-09-27
@@ -48,3 +48,6 @@ Executed `src/verify_qiskit_mixer.py` in a fresh pinned Python 3.12 environment.
 
 ## Readout audit — 2026-10-15
 New local execution in pinned Qiskit environment; 26 checks pass over all 64 one-hot states and three fixed circuit settings. An initial uniform-mean test expectation of 62 failed and was corrected by derivation to 50. The primary setting has physical mass 0.6330953684437471 and encoding mass 0.01604168028438998. Bit-order, amplitude-weighting and identity-offset reporting faults are detected. October 13–14 local files were not recovered; interruption logs record both days as incomplete. No historical results or meetings were reconstructed. See docs/gap-2026-10-13-14.md.
+
+## Friday synthesis — 2026-10-16
+Manuscript v0.4 reconciles R13/R14 and corrects a broken October 7 evidence filename. Prospective local R15 protocol fixes 256 candidate evaluations, deterministic energy selection, failure handling and separate physical/encoded metrics. A new exact-rational classical reference audit passes 11 checks across eight load decisions and 64 encoded states; the simple greedy rule finds the toy optimum. No QAOA search or new SDK execution occurred. Broader R08 benchmarking and R06 novelty review remain open; there is no held-out evidence. Weekend October 17–18 is rest; next active story date October 19.
