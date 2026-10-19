@@ -1,0 +1,55 @@
+{
+  "status": "EXECUTED_WITH_PROTOCOL_DEVIATION",
+  "date": "2026-10-19",
+  "protocol": "docs/baseline-protocol-v1.md",
+  "frozen_protocol_modified": false,
+  "aggregate_search_circuit_evaluations": 512,
+  "aggregate_independent_winner_validations": 2,
+  "regression_suites_executed": 2,
+  "deviation": "The complete grid was run twice, exceeding the prospective aggregate 256-search-evaluation budget. No angles, objective, tie rule or secondary selection criteria were changed.",
+  "reason": "The first materialization of GitHub files accidentally appended one trailing newline to each input. After a passing run, byte-identity checks found this. Input bytes were restored exactly and the full grid was replayed. The same output pathname overwrote the first full JSON. This is an evidence-retention failure, not a numerical failure.",
+  "first_run": {
+    "status": "EXECUTED_COMPLETE",
+    "raw_evidence_retained": false,
+    "raw_evidence_sha256": "756cea1c2124bb201b5dbf22680fa0bff61b7faa1d328a4242ecba82185c396b",
+    "source_sha256": {
+      "requirements-sdk.txt": "53b45baf4c93b2bf9cbb77127b8d77f3e3f9cc92c63023a9be407287c61f1ab5",
+      "src/run_pilot_v1.py": "8d4d6200635f4b8db8979fc723724746365c042b10d22c37e1ce908ab23d3081",
+      "src/verify_phase_evolution.py": "0d8cd0fc860673cc81aa761e0a0b87a80bc23c73940fbb6f18159a2956291ecd",
+      "src/verify_qiskit_cost_circuit.py": "40c3020bde03052eed1fa9a65073ade00f45e0c8debc485a4b1253519ae78ad5",
+      "src/verify_formulation.py": "83d86599001e37cb43232fe875dd60c80a137740e62759df4c6ad0045a1785ca",
+      "src/verify_statevector_interface.py": "b8d8abd9e597332209544d659d125f1ac062e04f4761e7fd331395e231e2bf87",
+      "src/verify_readout.py": "3a64896948d5aac49e2b453accc4e0726b0fea452c2160a7231b148ed808ebcf",
+      "src/verify_qiskit_mixer.py": "513c9fa374730df3e1f3576b4a8c2581cb3fc49151e6e4814b712e202a568c3a",
+      "src/verify_baseline_references.py": "5760e15a4fdc68fbc8748e848841549ea3d6c2e28776e1be4dc95b47709b9799",
+      "src/verify_ising.py": "b0d1f2a4f5616e853156f4fb2b422e9477b7b417e9642325307862baff8b661d",
+      "docs/baseline-protocol-v1.md": "5436ab5af3f566f3466463da146979655c5f8fb1d4187b6d3336f42382f9187a",
+      "results/2026-10-15-readout.json": "b74911c9388aae3fb6cdce832b3599fc9229daae67944940dfcc05d5aa922b6a"
+    },
+    "observed_console_summary": {
+      "search_attempted": 256,
+      "search_completed": 256,
+      "independent_winner_validations": 1,
+      "selected_ordinal": 99,
+      "tied_ordinals": [
+        99,
+        173
+      ],
+      "mean_energy": 26.75684120462827,
+      "search_seconds": 0.8017108930000063,
+      "total_seconds": 1.0862644089999662,
+      "winner_state_error": 3.1312988881233425e-15,
+      "winner_metric_error": 7.815970093361102e-14
+    },
+    "evidence_basis": "Actual first execution console output and file digest captured before replay; not a reconstructed full candidate dataset."
+  },
+  "second_run": {
+    "status": "EXECUTED_COMPLETE",
+    "path": "results/2026-10-19-pilot-v1.json",
+    "all_256_distributions_retained": true,
+    "repository_inputs_byte_identical": true
+  },
+  "comparison": "Recorded winner, tie set and winner metrics agree. First full candidate output is unavailable, so full run-to-run equality is NOT claimed.",
+  "release_decision": "Publish qualified exploratory evidence. R15 numerical implementation is complete on the toy; strict v1 budget and complete run-retention acceptance are not met.",
+  "next_action": "Add output-collision refusal and a run ledger before any new experiment. Do not rerun today to repair missing first-run evidence; do not retroactively amend the frozen v1 budget."
+}

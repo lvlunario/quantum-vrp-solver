@@ -20,9 +20,9 @@ R13: Done for the ideal one-layer mixer boundary — Qiskit 2.5.2 matched an ind
 
 R14: Done for the fixed synthetic exact-statevector fixture — 26 checks pass; docs/readout-audit.md and results/2026-10-15-readout.json. Physical feasibility and encoding consistency are separately reported; no optimization or shot-based readout verified.
 
-R15: Protocol v1 frozen locally in docs/baseline-protocol-v1.md; classical reference audit executed October 16 with 11 passing checks. Six-qubit 256-candidate search remains **PLANNED/UNEXECUTED**. Completion requires all candidate outputs, independent winner validation and honest metric comparison.
+R15: Numerical pilot executed October 19, **WITH PROTOCOL DEVIATION**; see docs/pilot-v1-results.md and results/2026-10-19-run-ledger.json. Two unchanged full grids were run (512 search evaluations aggregate); provenance repair replay overwrote the first raw JSON. The second complete grid, all 256 probability vectors and independent winner validation are retained. Numerical checks pass, but strict aggregate budget and complete run-retention acceptance are NOT met. Do not mark unqualified Done.
 
-Blocker: no current execution blocker. The next evidence boundary is execution of the committed v1 pilot contract after regression gates; mixer and exact readout checks are complete only for the toy.
+Blocker: output collision/overwrite protection and explicit cumulative run accounting must be implemented before new parameter experiments. No SDK execution blocker. The fixed pilot is exploratory evidence, not a compliant benchmark or held-out result.
 Risk: a toy feasibility result may be obvious rather than novel; usefulness must come from a generalizable verification method.
 
 ## Catch-up evidence — 2026-09-27
@@ -51,3 +51,6 @@ New local execution in pinned Qiskit environment; 26 checks pass over all 64 one
 
 ## Friday synthesis — 2026-10-16
 Manuscript v0.4 reconciles R13/R14 and corrects a broken October 7 evidence filename. Prospective local R15 protocol fixes 256 candidate evaluations, deterministic energy selection, failure handling and separate physical/encoded metrics. A new exact-rational classical reference audit passes 11 checks across eight load decisions and 64 encoded states; the simple greedy rule finds the toy optimum. No QAOA search or new SDK execution occurred. Broader R08 benchmarking and R06 novelty review remain open; there is no held-out evidence. Weekend October 17–18 is rest; next active story date October 19.
+
+## Monday pilot — 2026-10-19
+Eight regression modules pass 91 underlying checks per run; thirteen runner gates pass. The retained grid completed 256 candidates with no failed evaluations; maximum SDK/oracle error 1.31e-14. Energy-only selection chooses ordinal 99 (tie with 173): mean energy 26.756841 versus uniform 50; physical feasibility 0.977671 versus 0.625, but optimal-load probability 0.083381 versus 0.125 and conditional service loss 10.931974 versus 9.6. Mixed outcome; greedy already gives the exact optimum. Actual aggregate execution was TWO grids plus two winner validations; initial materialization appended newlines, and repair/replay overwrote first full evidence. Only its observed summary and hashes survive. Frozen v1 remains unchanged; R15 procedural acceptance is not met. Next: refuse output collisions and retain run ledgers before further experiments, then start R06. No hardware, shots, noise, adaptive optimization, real meeting or submission occurred.

@@ -4,7 +4,7 @@
   "end_date": "2027-09-21",
   "simulation_timezone": "Europe/Oslo",
   "delivery_timezone": "Asia/Manila",
-  "last_completed_date": "2026-10-16",
+  "last_completed_date": "2026-10-19",
   "completed_dates": [
     "2026-09-22",
     "2026-09-23",
@@ -18,10 +18,11 @@
     "2026-10-09",
     "2026-10-12",
     "2026-10-15",
-    "2026-10-16"
+    "2026-10-16",
+    "2026-10-19"
   ],
   "phase": "onboarding and independent verification",
-  "next_task": "Monday October 19: implement R15 frozen 256-candidate exact pilot after regression gates; persist all candidates and independent winner validation; R06 literature map remains open",
+  "next_task": "October 20: add output-collision refusal and explicit run accounting, test without another grid; begin R06 source-verified quantum software-testing literature map. No further search until retention is hardened.",
   "simulated_deadlines": [
     "2027-02-26",
     "2027-06-25",
@@ -47,7 +48,7 @@
   ],
   "catchup_created_date": "2026-09-27",
   "catchup_reason": "Explicit user request to run the entire missed workweek; all new execution occurred on September 27.",
-  "latest_evidence": "results/2026-10-16-baseline-references.json",
+  "latest_evidence": "results/2026-10-19-pilot-v1.json",
   "publication_recovered_dates": [
     "2026-09-30"
   ],
@@ -65,8 +66,12 @@
     "path": "docs/baseline-protocol-v1.md",
     "version": 1,
     "frozen_date": "2026-10-16",
-    "search_status": "PLANNED/UNEXECUTED",
+    "search_status": "EXECUTED_WITH_PROTOCOL_DEVIATION",
     "max_candidates": 256,
-    "holdout": false
+    "holdout": false,
+    "results": "results/2026-10-19-pilot-v1.json",
+    "run_ledger": "results/2026-10-19-run-ledger.json",
+    "aggregate_search_evaluations": 512,
+    "protocol_acceptance": "NOT_MET: full grid repeated for input-byte provenance repair; first full JSON overwritten; second full grid retained. Numerical verification passes, no tuning or advantage claim."
   }
 }
