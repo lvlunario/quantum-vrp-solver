@@ -1,0 +1,39 @@
+{
+  "status": "PASSED",
+  "started_at_utc": "2026-10-20T11:44:49.646883+00:00",
+  "finished_at_utc": "2026-10-20T11:44:49.764432+00:00",
+  "python": "3.12.14",
+  "command": "python src/verify_evidence_store.py",
+  "parent_commit": "4397409396b7b15c60db18c80f7ebdbceeb6cfb2",
+  "test_count": 14,
+  "passed": [
+    "__main__.RetentionTests.test_candidate_raw_payload_retained",
+    "__main__.RetentionTests.test_cli_collision_refused_without_sdk_execution",
+    "__main__.RetentionTests.test_eight_concurrent_launches_only_one_callback",
+    "__main__.RetentionTests.test_event_collision_refused",
+    "__main__.RetentionTests.test_exception_retains_attempt",
+    "__main__.RetentionTests.test_existing_bytes_preserved_before_callback",
+    "__main__.RetentionTests.test_existing_reservation_refused",
+    "__main__.RetentionTests.test_failed_result_preserved",
+    "__main__.RetentionTests.test_interruption_cannot_reuse",
+    "__main__.RetentionTests.test_late_output_collision_preserves_external_bytes",
+    "__main__.RetentionTests.test_nonfinite_json_rejected",
+    "__main__.RetentionTests.test_success_digest",
+    "__main__.RetentionTests.test_symlink_target_untouched",
+    "__main__.RetentionTests.test_two_runs_aggregate_without_replacement"
+  ],
+  "failures": [],
+  "source_sha256": {
+    "evidence_store.py": "29385f3d037affa5c1afe45d7e5d63dd5f8e619635fc27d9ec60114c3605addf",
+    "run_pilot_v1.py": "cb61f39e06f30793e53415343335e92514741ce34e1dfcca6f97319acec51ad8",
+    "verify_evidence_store.py": "9e78b0606d086b18cbd1d38265fa900df15e2177dc8efaea96dfeefea44050fb"
+  },
+  "data": "Synthetic file fixtures and stub callbacks in temporary directories",
+  "quantum_search_evaluations": 0,
+  "sdk_circuits_executed": 0,
+  "limitations": [
+    "No new quantum numerical regression or grid",
+    "No power-loss, disk-full, distributed filesystem or adversarial filesystem test",
+    "Inventory counts retained event directories only, not undiscovered historical runs"
+  ]
+}

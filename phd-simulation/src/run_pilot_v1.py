@@ -17,12 +17,7 @@ import traceback
 from datetime import datetime, timezone
 from pathlib import Path
 
-import numpy as np
-import qiskit
-from qiskit.quantum_info import Statevector
-from verify_qiskit_mixer import qaoa_circuit, independent_state, apply_independent_mixer
-from verify_readout import summarize, fixture, LOADS, LOSSES
-from verify_baseline_references import decision
+from evidence_store import execute
 
 TOL = 1e-11
 ROOT = Path(__file__).resolve().parent.parent
@@ -73,11 +68,18 @@ def timeout_handler(signum, frame):
     raise TimeoutError('Frozen 30-second search safety limit reached')
 
 
-def run():
+def run(event=lambda *args, **kwargs: None):
+    global np, qiskit, Statevector, qaoa_circuit, independent_state
+    global apply_independent_mixer, summarize, LOADS, LOSSES, decision
+    import numpy as np
+    import qiskit
+    from qiskit.quantum_info import Statevector
+    from verify_qiskit_mixer import qaoa_circuit, independent_state, apply_independent_mixer
+    from verify_readout import summarize, LOADS, LOSSES
+    from verify_baseline_references import decision
     started = time.perf_counter()
     result = dict(status='RUNNING', executed_at_utc=datetime.now(timezone.utc).isoformat(),
-                  command='python src/run_pilot_v1.py --output results/2026-10-19-pilot-v1.json',
-                  parent_commit='71b7fa40abf03abe5d8dd0677d2bfd0b685b9ac8',
+                  invocation_note='Actual command and declared parent are in execution metadata when run through the guarded CLI',
                   data='Fixed synthetic six-qubit development fixture; no holdout or external dataset',
                   versions=dict(python=platform.python_version(), numpy=np.__version__, qiskit=qiskit.__version__),
                   dependencies={name: importlib.metadata.version(name) for name in
@@ -130,6 +132,7 @@ def run():
                     gamma, beta = 2*math.pi*j/16, math.pi*k/16
                     row = dict(ordinal=16*j+k, j=j, k=k, gamma=gamma, beta=beta, status='ATTEMPTED')
                     result['candidates'].append(row)
+                    event('candidate_attempt', ordinal=16*j+k, gamma=gamma, beta=beta)
                     result['counts']['search_attempted'] += 1
                     t = time.perf_counter(); circuit = qaoa_circuit(gamma,beta)
                     result['timings_seconds']['construction'] += time.perf_counter()-t
@@ -145,6 +148,7 @@ def run():
                         row['status'] = 'FAILED'; raise ValueError('SDK/oracle or norm gate')
                     p = np.abs(sdk)**2
                     row.update(metrics=metrics(p), probabilities_qiskit_index=p.tolist(), status='PASSED')
+                    event('candidate_complete', row=row)
                     result['timings_seconds']['readout_checks'] += time.perf_counter()-t
                     cached_states.append(sdk)
                     result['counts']['search_completed'] += 1
@@ -158,6 +162,7 @@ def run():
         result['selection'] = dict(primary='minimum mean energy; absolute tie tolerance then smallest ordinal',
                                    ordinal=ordinal, tied_ordinals=tied, numerical_minimum=minimum)
         validation_start = time.perf_counter()
+        event('winner_validation_attempt', ordinal=ordinal)
         result['counts']['winner_oracle_validations'] += 1
         independent_energies = np.array([decision(i%8)[1]+2*(decision(i%8)[0]+i//8-5)**2 for i in range(64)])
         reference = apply_independent_mixer(np.exp(-1j*winner['gamma']*independent_energies)/8, winner['beta'])
@@ -196,8 +201,10 @@ def run():
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(); parser.add_argument('--output', required=True, type=Path)
-    args = parser.parse_args(); result = run()
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(result, indent=2)+'\n', encoding='utf-8')
+    parser.add_argument('--parent-commit', required=True)
+    args = parser.parse_args()
+    result = execute(args.output, run, dict(argv=sys.argv, parent_commit=args.parent_commit,
+                     source_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()))
     print(json.dumps({k:result[k] for k in ('status','counts','selection','winner_validation','difference_from_uniform','timings_seconds','failure') if k in result}, indent=2))
     sys.exit(0 if result['status'] == 'EXECUTED_COMPLETE' else 1)
+

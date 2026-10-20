@@ -1,4 +1,7 @@
 # Research backlog
+## October 20 retention update
+14 workflow tests passed; results/2026-10-20-retention-audit.json. New source: src/evidence_store.py and src/verify_evidence_store.py; pilot CLI instrumented. Existing-output refusal precedes SDK imports. Event files retain full completed-candidate rows; inventory counts retained attempts and missing terminal records, not unknown past runs. Zero new SDK circuits or quantum search evaluations. Historical 512 evaluations and NOT MET R15 acceptance are unchanged. See docs/run-retention.md. R06 seed map started, not completed. Next: one fixed SDK point and injected failure, not another grid.
+
 | ID | Work | Status | Acceptance evidence |
 |---|---|---|---|
 | R01 | Charter and year calendar | Done | README, charter and 365 calendar rows |
@@ -6,7 +9,7 @@
 | R03 | Derive a sufficient penalty bound on the toy | Done | docs/penalty-bound.md; exact all-minimizer audit |
 | R04 | QUBO with slack-variable encoding | Done (toy formulation only) | docs/qubo-equivalence.md; all 64 energies and eight reduced decisions verified |
 | R05 | Read original QAOA paper beyond abstract | Done (foundational source only) | docs/qaoa-reading-notes.md; equation-grounded conventions and limitations |
-| R06 | Literature map of quantum testing | Planned | Verified papers and explicit novelty assessment |
+| R06 | Literature map of quantum testing | In progress | docs/quantum-testing-literature-map.md: three verified seeds; targeted reading versus abstract screening explicit. Citation chaining and novelty comparison remain open. |
 | R07 | Fault catalog and metamorphic tests | Planned | Independent test oracle and faulty cases |
 | R08 | Benchmark protocol and classical solvers | Planned | Fair budget and held-out instance plan |
 | R09 | Paper A complete educational draft | In progress | v0.4 mixer/readout reconciliation and baseline references; broader review still open |
@@ -22,7 +25,7 @@ R14: Done for the fixed synthetic exact-statevector fixture — 26 checks pass; 
 
 R15: Numerical pilot executed October 19, **WITH PROTOCOL DEVIATION**; see docs/pilot-v1-results.md and results/2026-10-19-run-ledger.json. Two unchanged full grids were run (512 search evaluations aggregate); provenance repair replay overwrote the first raw JSON. The second complete grid, all 256 probability vectors and independent winner validation are retained. Numerical checks pass, but strict aggregate budget and complete run-retention acceptance are NOT met. Do not mark unqualified Done.
 
-Blocker: output collision/overwrite protection and explicit cumulative run accounting must be implemented before new parameter experiments. No SDK execution blocker. The fixed pilot is exploratory evidence, not a compliant benchmark or held-out result.
+Blocker update October 20: collision refusal, per-candidate append-only events and retained-directory inventory implemented; 14 synthetic workflow tests pass. Real SDK callback integration remains untested after instrumentation; no new parameter search until a bounded fixed-point/failure integration check and ledger reconciliation. No SDK availability blocker. The fixed pilot is exploratory evidence, not a compliant benchmark or held-out result.
 Risk: a toy feasibility result may be obvious rather than novel; usefulness must come from a generalizable verification method.
 
 ## Catch-up evidence — 2026-09-27
@@ -54,3 +57,4 @@ Manuscript v0.4 reconciles R13/R14 and corrects a broken October 7 evidence file
 
 ## Monday pilot — 2026-10-19
 Eight regression modules pass 91 underlying checks per run; thirteen runner gates pass. The retained grid completed 256 candidates with no failed evaluations; maximum SDK/oracle error 1.31e-14. Energy-only selection chooses ordinal 99 (tie with 173): mean energy 26.756841 versus uniform 50; physical feasibility 0.977671 versus 0.625, but optimal-load probability 0.083381 versus 0.125 and conditional service loss 10.931974 versus 9.6. Mixed outcome; greedy already gives the exact optimum. Actual aggregate execution was TWO grids plus two winner validations; initial materialization appended newlines, and repair/replay overwrote first full evidence. Only its observed summary and hashes survive. Frozen v1 remains unchanged; R15 procedural acceptance is not met. Next: refuse output collisions and retain run ledgers before further experiments, then start R06. No hardware, shots, noise, adaptive optimization, real meeting or submission occurred.
+
