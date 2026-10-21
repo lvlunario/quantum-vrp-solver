@@ -1,0 +1,8 @@
+{
+  "kind": "aborted",
+  "at_utc": "2026-10-21T11:10:21.799072+00:00",
+  "payload": {
+    "exception_type": "AssertionError",
+    "message": "injected half-angle mixer rejected; max error 0.085549682860477261"
+  }
+}

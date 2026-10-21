@@ -1,0 +1,117 @@
+{
+  "status": "EXECUTED_FIXED_POINT_RETENTION_INTEGRATION",
+  "executed_at_utc": "2026-10-21T11:10:21.808268+00:00",
+  "command": ".venv-q/bin/python verify_fixed_point_retention.py",
+  "parent_commit": "d527d061e7b92cf5c440df2cdaac95df6806b15a",
+  "versions": {
+    "python": "3.12.14",
+    "qiskit": "2.5.2",
+    "numpy": "2.5.3"
+  },
+  "source_sha256": "3c83db4436ef78f531129de26f69aa4bf709c663cd09643834c27e33d4060647",
+  "config": {
+    "gamma": 0.2,
+    "beta": 0.31,
+    "tolerance": 1e-12
+  },
+  "success": {
+    "status": "EXECUTED_FIXED_POINT_SUCCESS",
+    "executed_at_utc": "2026-10-21T11:10:21.768616+00:00",
+    "counts": {
+      "search_attempted": 1,
+      "search_completed": 1,
+      "winner_oracle_validations": 1
+    },
+    "gamma": 0.2,
+    "beta": 0.31,
+    "max_component_error": 4.0531694296714425e-16,
+    "norm_squared_error": 1.5543122344752192e-15,
+    "probability_sum": 0.9999999999999983,
+    "checks": [
+      {
+        "name": "SDK state matches independent amplitude-pairing oracle",
+        "passed": true
+      },
+      {
+        "name": "state remains normalized",
+        "passed": true
+      }
+    ],
+    "search_performed": false,
+    "hardware_used": false,
+    "shots_used": false,
+    "transpilation_used": false,
+    "limitations": [
+      "One predetermined synthetic point",
+      "Exact local statevector only",
+      "No optimization, sampling, noise, hardware, speedup or advantage claim"
+    ],
+    "execution": {
+      "kind": "fixed-point-success",
+      "parent_commit": "d527d061e7b92cf5c440df2cdaac95df6806b15a",
+      "python": "3.12.14",
+      "qiskit": "2.5.2",
+      "numpy": "2.5.3",
+      "data": "Fixed synthetic six-qubit development fixture",
+      "randomness": "None"
+    }
+  },
+  "injected_failure": {
+    "exception": "injected half-angle mixer rejected; max error 0.085549682860477261",
+    "events": [
+      {
+        "kind": "candidate_attempt",
+        "at_utc": "2026-10-21T11:10:21.781158+00:00",
+        "payload": {
+          "ordinal": 0,
+          "gamma": 0.2,
+          "beta": 0.31,
+          "injected_fault": "RX(beta) replaces RX(2*beta)"
+        }
+      },
+      {
+        "kind": "fault_observed",
+        "at_utc": "2026-10-21T11:10:21.785927+00:00",
+        "payload": {
+          "max_component_error": 0.08554968286047726,
+          "tolerance": 1e-12,
+          "rejected": true
+        }
+      },
+      {
+        "kind": "aborted",
+        "at_utc": "2026-10-21T11:10:21.799072+00:00",
+        "payload": {
+          "exception_type": "AssertionError",
+          "message": "injected half-angle mixer rejected; max error 0.085549682860477261"
+        }
+      }
+    ]
+  },
+  "checks": [
+    {
+      "name": "success output and terminal retained",
+      "passed": true
+    },
+    {
+      "name": "failure output absent and reservation retained",
+      "passed": true
+    },
+    {
+      "name": "failure attempt, observed fault and abort retained",
+      "passed": true
+    },
+    {
+      "name": "injected fault rejected above tolerance",
+      "passed": true
+    }
+  ],
+  "actual_sdk_circuits_executed": 2,
+  "search_evaluations": 0,
+  "data": "Fixed synthetic six-qubit development fixture",
+  "limitations": [
+    "Application-level local retention, not immutable storage",
+    "One success and one intentional failure at a predetermined point",
+    "No grid, optimizer, shots, noise, transpilation, cloud service or hardware"
+  ]
+}

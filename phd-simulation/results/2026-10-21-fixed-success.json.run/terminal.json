@@ -1,0 +1,10 @@
+{
+  "status": "EXECUTED_FIXED_POINT_SUCCESS",
+  "finished_at_utc": "2026-10-21T11:10:21.770655+00:00",
+  "output_sha256": "18dfdcb4a0ff68c45b040c6647acbc10ea3df7b35ea0c3f25cf3b5e00b02f17f",
+  "counts": {
+    "search_attempted": 1,
+    "search_completed": 1,
+    "winner_oracle_validations": 1
+  }
+}

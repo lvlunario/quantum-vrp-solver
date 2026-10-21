@@ -1,0 +1,42 @@
+{
+  "status": "EXECUTED_FIXED_POINT_SUCCESS",
+  "executed_at_utc": "2026-10-21T11:10:21.768616+00:00",
+  "counts": {
+    "search_attempted": 1,
+    "search_completed": 1,
+    "winner_oracle_validations": 1
+  },
+  "gamma": 0.2,
+  "beta": 0.31,
+  "max_component_error": 4.0531694296714425e-16,
+  "norm_squared_error": 1.5543122344752192e-15,
+  "probability_sum": 0.9999999999999983,
+  "checks": [
+    {
+      "name": "SDK state matches independent amplitude-pairing oracle",
+      "passed": true
+    },
+    {
+      "name": "state remains normalized",
+      "passed": true
+    }
+  ],
+  "search_performed": false,
+  "hardware_used": false,
+  "shots_used": false,
+  "transpilation_used": false,
+  "limitations": [
+    "One predetermined synthetic point",
+    "Exact local statevector only",
+    "No optimization, sampling, noise, hardware, speedup or advantage claim"
+  ],
+  "execution": {
+    "kind": "fixed-point-success",
+    "parent_commit": "d527d061e7b92cf5c440df2cdaac95df6806b15a",
+    "python": "3.12.14",
+    "qiskit": "2.5.2",
+    "numpy": "2.5.3",
+    "data": "Fixed synthetic six-qubit development fixture",
+    "randomness": "None"
+  }
+}

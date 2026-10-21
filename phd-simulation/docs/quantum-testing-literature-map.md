@@ -41,3 +41,7 @@ source, inspect mutation/metamorphic testing and differential-testing papers,
 then create a fault-to-oracle matrix. Record oracle assumptions, phase blindness,
 sampling budgets, mutant selection and limitations before claiming any gap.
 Keep R06 open until citation chaining and a direct novelty comparison exist.
+
+## 2026-10-21 extension: fault-to-oracle routing
+
+Added [fault-to-oracle-matrix.md](fault-to-oracle-matrix.md). The map separates formulation enumeration, phase-sensitive exact-state comparison, readout/application checks, input-generation/coverage approaches, differential/metamorphic platform checks, and evidence retention. MorphQ (https://arxiv.org/abs/2206.01111), QDiff (https://doi.org/10.1109/ASE51524.2021.9678792), and Quito (https://doi.org/10.1109/ICST49551.2021.00014) were added as verified primary publication records. Their placement is a project interpretation, not a reproduced comparison. Quito and QDiff full-text method extraction plus backward/forward citation chaining remain open. Today's half-angle fault is one predetermined acceptance case, not a mutation-score experiment.

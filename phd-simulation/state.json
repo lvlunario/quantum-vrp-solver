@@ -4,7 +4,7 @@
   "end_date": "2027-09-21",
   "simulation_timezone": "Europe/Oslo",
   "delivery_timezone": "Asia/Manila",
-  "last_completed_date": "2026-10-20",
+  "last_completed_date": "2026-10-21",
   "completed_dates": [
     "2026-09-22",
     "2026-09-23",
@@ -20,10 +20,11 @@
     "2026-10-15",
     "2026-10-16",
     "2026-10-19",
-    "2026-10-20"
+    "2026-10-20",
+    "2026-10-21"
   ],
   "phase": "onboarding and independent verification",
-  "next_task": "October 21: one-fixed-point SDK integration and injected failure through retention guard, using unique paths and retaining all artifacts; no full grid. Extend R06 fault-to-oracle comparison. Historical R15 procedural acceptance remains NOT MET.",
+  "next_task": "October 22: extract Quito and QDiff oracle assumptions from primary full texts and define a prospective mutant-to-layer table before any new grid. Historical R15 procedural acceptance remains NOT MET.",
   "simulated_deadlines": [
     "2027-02-26",
     "2027-06-25",
@@ -49,7 +50,7 @@
   ],
   "catchup_created_date": "2026-09-27",
   "catchup_reason": "Explicit user request to run the entire missed workweek; all new execution occurred on September 27.",
-  "latest_evidence": "results/2026-10-20-retention-audit.json",
+  "latest_evidence": "results/2026-10-21-fixed-point-retention.json",
   "publication_recovered_dates": [
     "2026-09-30"
   ],
@@ -62,7 +63,7 @@
     "2026-10-14"
   ],
   "recovery_note": "September 30 local work recovered and re-executed October 5; first publication October 5. Missing dates remain incomplete. October 13–14 package not recovered; interruption logs created October 15; new R14 implementation executed October 15, not backdated.",
-  "literature_status": "R05 foundational reading complete. R06 IN PROGRESS: three verified seeds, one targeted full-text reading and two abstract screens; docs/quantum-testing-literature-map.md. Citation chaining and novelty assessment incomplete.",
+  "literature_status": "R06 IN PROGRESS: fault-to-oracle matrix added with five source-checked method families; one targeted full-text reading and four metadata/abstract-level screens. Quito/QDiff full-text extraction and citation chaining remain incomplete.",
   "pilot_protocol": {
     "path": "docs/baseline-protocol-v1.md",
     "version": 1,
@@ -76,11 +77,11 @@
     "protocol_acceptance": "NOT_MET: full grid repeated for input-byte provenance repair; first full JSON overwritten; second full grid retained. Numerical verification passes, no tuning or advantage claim."
   },
   "retention_guard": {
-    "status": "14_WORKFLOW_TESTS_PASSED_SDK_INTEGRATION_PENDING",
-    "evidence": "results/2026-10-20-retention-audit.json",
+    "status": "FIXED_POINT_SUCCESS_AND_INJECTED_FAILURE_INTEGRATION_PASSED",
+    "evidence": "results/2026-10-21-fixed-point-retention.json",
     "documentation": "docs/run-retention.md",
     "new_quantum_search_evaluations": 0,
-    "limitations": "Local application-level append-only events, not immutable storage or global budget enforcement. No power-loss/disk-full/distributed-filesystem testing. Historical ledger reconciled separately."
+    "limitations": "Local application-level append-only events, not immutable storage or global budget enforcement. No power-loss/disk-full/distributed-filesystem testing. Historical ledger reconciled separately.",
+    "integration": "Two exact-statevector SDK circuits at one predetermined point: correct circuit retained; injected RX(beta) fault rejected and abort evidence retained. Not a grid or protocol repair."
   }
 }
-

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "started_at_utc": "2026-10-21T11:10:21.707444+00:00",
+  "output": "/workspace/scratch/18ac77dd0dbe/integration-output/2026-10-21-fixed-success.json",
+  "metadata": {
+    "kind": "fixed-point-success",
+    "parent_commit": "d527d061e7b92cf5c440df2cdaac95df6806b15a",
+    "python": "3.12.14",
+    "qiskit": "2.5.2",
+    "numpy": "2.5.3",
+    "data": "Fixed synthetic six-qubit development fixture",
+    "randomness": "None"
+  },
+  "status": "STARTED"
+}
