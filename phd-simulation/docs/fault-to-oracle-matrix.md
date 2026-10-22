@@ -63,3 +63,16 @@ generality or novelty. Before a new grid, R06 needs direct full-text extraction
 for Quito and QDiff, backward/forward citation chaining, and a prospective
 mutant table that states which layer should kill each mutant. The fault set must
 not be selected after observing which checks pass.
+
+
+## 2026-10-22 prospective routing freeze
+
+The source assumptions and twelve predeclared project mutants are now frozen in
+[oracle-assumptions-and-mutant-plan.md](oracle-assumptions-and-mutant-plan.md).
+The plan includes two deliberate survivors/blind spots: a global-phase-only
+change should survive a phase-aligned physical-equivalence check, and a
+probability-preserving phase fault should survive a pre-mixer
+computational-basis probability check while being rejected by the exact
+statevector layer. All entries are **PLANNED/UNEXECUTED**. The table fixes the
+expected killing layer before observations and does not constitute a mutation
+score.

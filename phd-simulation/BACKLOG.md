@@ -1,4 +1,7 @@
 # Research backlog
+## October 22 oracle-assumption extraction
+Direct full-text extraction completed for the original Quito ICST study, the Quito tool paper, and QDiff. Quito requires a user-supplied program specification for correctness oracles; its WOO rejects specified-zero outputs, while OPO treats statistical non-rejection as inconclusive rather than a pass. QDiff compares supposedly unitary-equivalent variants against an average empirical distribution, so divergence is evidence of inconsistency, not a standalone ground truth. A 12-mutant prospective routing table is frozen in docs/oracle-assumptions-and-mutant-plan.md; all mutants are UNEXECUTED and no mutation score exists. No circuit, search, sampling, hardware, or noise experiment ran. R06 remains open for citation chaining and novelty comparison.
+
 ## October 20 retention update
 14 workflow tests passed; results/2026-10-20-retention-audit.json. New source: src/evidence_store.py and src/verify_evidence_store.py; pilot CLI instrumented. Existing-output refusal precedes SDK imports. Event files retain full completed-candidate rows; inventory counts retained attempts and missing terminal records, not unknown past runs. Zero new SDK circuits or quantum search evaluations. Historical 512 evaluations and NOT MET R15 acceptance are unchanged. See docs/run-retention.md. R06 seed map started, not completed. Next: one fixed SDK point and injected failure, not another grid.
 
@@ -9,7 +12,7 @@
 | R03 | Derive a sufficient penalty bound on the toy | Done | docs/penalty-bound.md; exact all-minimizer audit |
 | R04 | QUBO with slack-variable encoding | Done (toy formulation only) | docs/qubo-equivalence.md; all 64 energies and eight reduced decisions verified |
 | R05 | Read original QAOA paper beyond abstract | Done (foundational source only) | docs/qaoa-reading-notes.md; equation-grounded conventions and limitations |
-| R06 | Literature map of quantum testing | In progress | docs/quantum-testing-literature-map.md: three verified seeds; targeted reading versus abstract screening explicit. Citation chaining and novelty comparison remain open. |
+| R06 | Literature map of quantum testing | In progress | Direct full-text extraction for Quito and QDiff plus a frozen 12-mutant prospective routing table; docs/quantum-testing-literature-map.md and docs/oracle-assumptions-and-mutant-plan.md. Citation chaining and novelty comparison remain open. |
 | R07 | Fault catalog and metamorphic tests | Planned | Independent test oracle and faulty cases |
 | R08 | Benchmark protocol and classical solvers | Planned | Fair budget and held-out instance plan |
 | R09 | Paper A complete educational draft | In progress | v0.4 mixer/readout reconciliation and baseline references; broader review still open |

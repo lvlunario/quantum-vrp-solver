@@ -45,3 +45,30 @@ Keep R06 open until citation chaining and a direct novelty comparison exist.
 ## 2026-10-21 extension: fault-to-oracle routing
 
 Added [fault-to-oracle-matrix.md](fault-to-oracle-matrix.md). The map separates formulation enumeration, phase-sensitive exact-state comparison, readout/application checks, input-generation/coverage approaches, differential/metamorphic platform checks, and evidence retention. MorphQ (https://arxiv.org/abs/2206.01111), QDiff (https://doi.org/10.1109/ASE51524.2021.9678792), and Quito (https://doi.org/10.1109/ICST49551.2021.00014) were added as verified primary publication records. Their placement is a project interpretation, not a reproduced comparison. Quito and QDiff full-text method extraction plus backward/forward citation chaining remain open. Today's half-angle fault is one predetermined acceptance case, not a mutation-score experiment.
+
+
+## 2026-10-22 direct full-text extraction
+
+Reading depth was upgraded from metadata/abstract screening to targeted full-text
+extraction for the original Quito ICST paper, its ASE tool paper, and QDiff.
+The detailed assumptions and frozen prospective routing table are recorded in
+[oracle-assumptions-and-mutant-plan.md](oracle-assumptions-and-mutant-plan.md).
+
+The key boundary is now explicit. Quito's correctness assessment depends on a
+user-supplied program specification: WOO rejects an observed output assigned
+zero probability, while OPO statistically compares repeated observed
+frequencies with specified probabilities. Failure to reject is inconclusive,
+not proof of correctness. The published study is black-box, measurement-output
+focused and explicitly does not cover phase; its reported experiment used
+ideal simulator qubits without hardware errors.
+
+QDiff uses no independent expected distribution. It first assumes its gate
+rewrites preserve the unitary, then treats the average empirical distribution
+of the variant group as a reference and reports members that diverge beyond a
+chosen threshold. K-S and cross-entropy comparisons require a distance
+threshold, confidence target, and platform-calibrated measurement estimate.
+This can expose stack inconsistency but remains vulnerable to common-mode error.
+
+R06 is still **IN PROGRESS**. Backward and forward citation chaining, a broader
+novelty comparison, and reproduction of any cited tool remain uncompleted.
+No numerical result or mutation score was produced on October 22.
