@@ -1,8 +1,8 @@
 # A Verification Protocol for Hybrid Quantum Microgrid Optimization
-**Educational working manuscript v0.4. Unsubmitted. Personal project; no institutional affiliation or coauthors claimed.**
+**Educational working manuscript v0.5. Unsubmitted. Personal project; no institutional affiliation or coauthors claimed.**
 
 ## Abstract — preliminary, not a finished research result
-Hybrid quantum optimization pipelines can produce low objective values while violating the engineering requirements their formulations were intended to encode. This working paper proposes a verification protocol separating model equivalence, circuit correctness, decoding and physical feasibility. A three-load synthetic example illustrates why a penalty objective must be checked against an independent constrained oracle. Current evidence consists of exhaustive six-variable formulation audits, ideal six-qubit Qiskit cost-plus-mixer checks, and independent exact readout checks. Physical feasibility, auxiliary encoding consistency and optimal-load probability are distinguished. Parameter optimization, realistic grid applicability and quantum computational advantage have not been verified.
+Hybrid quantum optimization pipelines can produce low objective values while violating the engineering requirements their formulations were intended to encode. This working paper proposes a verification protocol separating model equivalence, circuit correctness, decoding and physical feasibility. A three-load synthetic example illustrates why a penalty objective must be checked against an independent constrained oracle. Current evidence consists of exhaustive six-variable formulation audits, ideal six-qubit Qiskit cost-plus-mixer checks, independent exact readout checks, and one exploratory 256-candidate parameter grid whose execution violated its aggregate-budget and retention protocol. Physical feasibility, auxiliary encoding consistency and optimal-load probability are distinguished. A twelve-mutant layered pilot is prospectively specified but unexecuted. Realistic grid applicability and quantum computational advantage have not been verified.
 
 ## 1. Introduction
 Engineering validation asks whether a returned decision satisfies the original requirement. Optimization of a transformed objective alone cannot answer that question. A pipeline can correctly minimize an incorrectly weighted objective, faithfully returning an operationally unacceptable answer. We investigate test methods intended to reveal such failures before comparative solver results are interpreted.
@@ -26,14 +26,18 @@ Serving loads 0 and 1 uses all five capacity units and leaves priority cost 6. A
 
 The 8 October execution built the six-qubit ideal cost layer with six RZ and fifteen RZZ gates in Qiskit 2.5.2. Across three angles, nine checks passed and the SDK statevector agreed with an independent oracle to maximum strict error (1.53\times10^{-15}). Sign, reversed-order and omitted-interaction mutations were rejected. These selected faults demonstrate sensitivity, not a general detection rate.
 
-## 5. Planned evaluation
-The ideal mixer and fixed-state readout gates have passed (Section 10). Before a six-qubit search, freeze candidate budgets, objective direction, all-minimizer references, metrics and failure handling. The prospective local pilot contract is docs/baseline-protocol-v1.md, frozen 16 October. It prespecifies a 16-by-16 grid (256 exact candidate evaluations), energy-only selection with deterministic ties and independent winner validation. No search has yet run. Broader comparisons require a fault catalog, held-out instances and appropriate classical solvers; R08 remains open.
+## 5. Exploratory search and planned evaluation
+The ideal mixer and fixed-state readout gates passed (Section 10). The local search contract in docs/baseline-protocol-v1.md froze a 16-by-16 grid, energy-only selection, deterministic ties and independent winner validation. On 19 October the retained run evaluated all 256 candidates, but a provenance-repair workflow repeated the full grid and overwrote the first raw result. Aggregate execution was therefore 512 candidate evaluations, and strict protocol acceptance is **NOT MET**.
+
+The retained candidate reduced mean energy from the uniform value 50 to 26.756841 and raised physical-feasibility mass from 0.625 to 0.977671, but reduced optimal-load probability from 0.125 to 0.083381. This mixed result is exploratory, not held out, and the simple greedy rule already solves the fixture exactly. Broader solver comparison remains R08.
+
+The next study is not another parameter grid. docs/mutation-pilot-protocol-v1.md prospectively fixes twelve single mutants, their deciding layers, three circuit cases, numerical tolerances, a hard execution budget, equivalent/blind controls and fail-closed retention rules. All twelve remain **PLANNED/UNEXECUTED**.
 
 ## 6. Threats to validity
-The instance is extremely small and synthetic. It omits grid physics, dynamics and realistic uncertainty. Exact statevector simulation is classical and scales exponentially. Selected mutation tests cannot estimate general fault-detection power. The ideal mixer has been checked at three fixed parameter pairs, but finite-shot sampling, transpilation, noise models and hardware have not been verified. The original angle grid may miss better parameters. A weak-penalty failure is unsurprising and establishes neither novelty nor advantage.
+The instance is extremely small and synthetic. It omits grid physics, dynamics and realistic uncertainty. Exact statevector simulation is classical and scales exponentially. Selected mutations cannot estimate general fault-detection power, and the prospective set was hand-designed on one development fixture. The ideal mixer has been checked at three fixed parameter pairs, but finite-shot sampling, transpilation, noise models and hardware have not been verified. The October 19 grid was repeated and incompletely retained, so its procedural acceptance failed. The angle grid may miss better parameters. A weak-penalty failure is unsurprising and establishes neither novelty nor advantage.
 
 ## 7. Current conclusion
-The evidence supports a narrow engineering claim: formulation, diagonal-phase, ideal SDK cost-plus-mixer and independent readout checks can be separated and independently audited on this toy. It does not yet show that a QAOA circuit finds good schedules or improves on classical methods. Whether the protocol generalizes usefully remains open.
+The evidence supports a narrow engineering claim: formulation, diagonal-phase, ideal SDK cost-plus-mixer, readout, application metrics and evidence retention can be separated and audited on this toy. The exploratory search lowered mean encoded energy without improving every engineering metric, and its workflow violated the frozen aggregate budget. The evidence does not show improvement over classical methods. Whether the layered protocol detects the prospectively declared mutants or generalizes usefully remains open.
 
 ## References
 [1] E. Farhi, J. Goldstone, S. Gutmann, *A Quantum Approximate Optimization Algorithm*, 2014. https://arxiv.org/abs/1411.4028
@@ -89,3 +93,42 @@ The next pilot will minimize mean E with fixed budget and report physical optima
 
 ### Revision record
 v0.4 removes stale statements that the mixer was unexecuted, incorporates R13/R14 with dated evidence, corrects the October 7 evidence filename and adds the prospective pilot boundary. No historical evidence file is overwritten.
+
+
+## 11. Oracle boundary and mutation protocol — 2026-10-23
+
+Targeted full-text reading of Quito and QDiff sharpened the protocol boundary.
+Quito assumes a user-supplied specification of valid inputs and output
+probabilities. Its wrong-output oracle can reject specified-zero outcomes, while
+its statistical probability oracle treats non-rejection as inconclusive. QDiff
+compares supposedly equivalent variants against a collective empirical
+reference; divergence supports inconsistency, but common-mode agreement is not
+independent ground truth. These methods inform future sampled and stack-level
+work but do not replace the exact fixture oracles used here.
+
+The project therefore predeclares five layers: exact formulation enumeration,
+global-phase-aligned complex-state comparison, readout invariants, separately
+named physical/application metrics, and evidence retention. Retention makes a
+decision auditable but cannot establish scientific correctness.
+
+The October 22 table declared twelve mutants. Review on October 23 corrected M02
+before execution: swapping slack weights 1 and 4 preserves the representable
+slack set and may survive reduction over slack, while violating the labeled
+bit-to-weight contract. Protocol v1 now fixes this as a split-oracle control.
+Eleven mutants are predeclared killable; M11 is an expected global-phase
+survivor. M02's reduced oracle, M11's phase-aligned comparison and M12's
+pre-mixer probability check are reported as separate expected survivals.
+
+The hard budget is two exhaustive 64-state formulation passes and fifteen SDK
+statevector constructions, with in-memory postprocessing for the remaining
+mutants. No search, shots, optimizer, transpilation, noise, cloud service or
+hardware is authorized. An exception is an invalid run rather than a kill;
+baseline or provenance failure aborts the whole pilot. All results remain
+**PLANNED/UNEXECUTED**.
+
+### Revision record
+
+v0.5 reconciles the manuscript with the October 19 exploratory pilot and its
+protocol deviation, incorporates the Quito/QDiff oracle assumptions, and links
+the frozen bounded mutation protocol. No numerical experiment ran for this
+revision, and no mutation outcome or score is claimed.

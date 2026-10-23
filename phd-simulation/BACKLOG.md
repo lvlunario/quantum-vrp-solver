@@ -1,4 +1,7 @@
 # Research backlog
+## October 23 Friday synthesis
+Working manuscript v0.5 now reconciles the October 19 exploratory search with its protocol deviation and adds the Quito/QDiff oracle boundary. The prospective mutation protocol is frozen in docs/mutation-pilot-protocol-v1.md. M02 was clarified before execution: swapping slack weights (1,2,4) to (4,2,1) changes labeled-state energies but can survive minimum-over-slack reduction, so it is a split-oracle control. All twelve mutants remain UNEXECUTED; no mutation score, new circuit, grid, sampling, hardware or noise experiment ran. R06 remains open for citation chaining and novelty comparison. R07 has a protocol but no prospective execution.
+
 ## October 22 oracle-assumption extraction
 Direct full-text extraction completed for the original Quito ICST study, the Quito tool paper, and QDiff. Quito requires a user-supplied program specification for correctness oracles; its WOO rejects specified-zero outputs, while OPO treats statistical non-rejection as inconclusive rather than a pass. QDiff compares supposedly unitary-equivalent variants against an average empirical distribution, so divergence is evidence of inconsistency, not a standalone ground truth. A 12-mutant prospective routing table is frozen in docs/oracle-assumptions-and-mutant-plan.md; all mutants are UNEXECUTED and no mutation score exists. No circuit, search, sampling, hardware, or noise experiment ran. R06 remains open for citation chaining and novelty comparison.
 
@@ -13,9 +16,9 @@ Direct full-text extraction completed for the original Quito ICST study, the Qui
 | R04 | QUBO with slack-variable encoding | Done (toy formulation only) | docs/qubo-equivalence.md; all 64 energies and eight reduced decisions verified |
 | R05 | Read original QAOA paper beyond abstract | Done (foundational source only) | docs/qaoa-reading-notes.md; equation-grounded conventions and limitations |
 | R06 | Literature map of quantum testing | In progress | Direct full-text extraction for Quito and QDiff plus a frozen 12-mutant prospective routing table; docs/quantum-testing-literature-map.md and docs/oracle-assumptions-and-mutant-plan.md. Citation chaining and novelty comparison remain open. |
-| R07 | Fault catalog and metamorphic tests | Planned | Independent test oracle and faulty cases |
+| R07 | Fault catalog and metamorphic tests | Protocol frozen; execution planned | docs/oracle-assumptions-and-mutant-plan.md and docs/mutation-pilot-protocol-v1.md; all 12 mutants remain UNEXECUTED |
 | R08 | Benchmark protocol and classical solvers | Planned | Fair budget and held-out instance plan |
-| R09 | Paper A complete educational draft | In progress | v0.4 mixer/readout reconciliation and baseline references; broader review still open |
+| R09 | Paper A complete educational draft | In progress | v0.5 reconciles the exploratory pilot/protocol deviation and adds the layered oracle boundary; broader review still open |
 | R10 | First-year review | Planned | Report, slides and year-two decision |
 
 R11: Done for the toy — docs/ising-mapping.md and results/2026-10-05-ising-audit.json; all 64 energies and eight checks pass.

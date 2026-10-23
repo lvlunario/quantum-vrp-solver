@@ -4,7 +4,7 @@
   "end_date": "2027-09-21",
   "simulation_timezone": "Europe/Oslo",
   "delivery_timezone": "Asia/Manila",
-  "last_completed_date": "2026-10-22",
+  "last_completed_date": "2026-10-23",
   "completed_dates": [
     "2026-09-22",
     "2026-09-23",
@@ -22,10 +22,11 @@
     "2026-10-19",
     "2026-10-20",
     "2026-10-21",
-    "2026-10-22"
+    "2026-10-22",
+    "2026-10-23"
   ],
   "phase": "onboarding and independent verification",
-  "next_task": "October 23: Friday synthesis—revise the educational manuscript with the Quito/QDiff oracle boundary, review the frozen prospective mutant plan, and specify a bounded mutation-pilot protocol without executing a new grid.",
+  "next_task": "October 26: Monday review of mutation-protocol v1 as an implementation contract; design a fail-closed bounded harness and dry-run tests. Do not execute the prospective mutants until the harness, provenance, and budget counter are versioned.",
   "simulated_deadlines": [
     "2027-02-26",
     "2027-06-25",
@@ -51,7 +52,7 @@
   ],
   "catchup_created_date": "2026-09-27",
   "catchup_reason": "Explicit user request to run the entire missed workweek; all new execution occurred on September 27.",
-  "latest_evidence": "docs/oracle-assumptions-and-mutant-plan.md",
+  "latest_evidence": "docs/mutation-pilot-protocol-v1.md",
   "publication_recovered_dates": [
     "2026-09-30"
   ],
@@ -64,7 +65,7 @@
     "2026-10-14"
   ],
   "recovery_note": "September 30 local work recovered and re-executed October 5; first publication October 5. Missing dates remain incomplete. October 13–14 package not recovered; interruption logs created October 15; new R14 implementation executed October 15, not backdated.",
-  "literature_status": "R06 IN PROGRESS: direct full-text extraction completed for the original Quito ICST study, Quito tool paper, and QDiff. A 12-mutant prospective layer-routing table is frozen before execution. Backward/forward citation chaining and novelty comparison remain incomplete.",
+  "literature_status": "R06 IN PROGRESS: direct full-text extraction completed for Quito and QDiff; manuscript v0.5 incorporates their oracle boundary. Backward/forward citation chaining and broader novelty comparison remain incomplete.",
   "pilot_protocol": {
     "path": "docs/baseline-protocol-v1.md",
     "version": 1,
@@ -86,11 +87,22 @@
     "integration": "Two exact-statevector SDK circuits at one predetermined point: correct circuit retained; injected RX(beta) fault rejected and abort evidence retained. Not a grid or protocol repair."
   },
   "mutant_plan": {
-    "status": "FROZEN_UNEXECUTED",
+    "status": "PROTOCOL_FROZEN_UNEXECUTED",
     "path": "docs/oracle-assumptions-and-mutant-plan.md",
+    "protocol_path": "docs/mutation-pilot-protocol-v1.md",
     "frozen_date": "2026-10-22",
+    "protocol_frozen_date": "2026-10-23",
     "mutant_count": 12,
     "executions": 0,
-    "limitation": "Prospective routing hypotheses only; no mutation score, new circuit, grid, sampling, hardware, or noise experiment."
+    "sdk_circuit_budget": 15,
+    "search_evaluation_budget": 0,
+    "amendment": "M02 fixed as slack weights (4,2,1): labeled-state oracle should kill; reduced minimum-over-slack oracle should survive.",
+    "limitation": "Prospective protocol only; no mutation score, new circuit, grid, sampling, hardware, transpilation, noise, or optimizer experiment."
+  },
+  "manuscript": {
+    "path": "papers/01-verification-protocol.md",
+    "version": "0.5",
+    "status": "EDUCATIONAL_UNSUBMITTED",
+    "latest_revision_date": "2026-10-23"
   }
 }

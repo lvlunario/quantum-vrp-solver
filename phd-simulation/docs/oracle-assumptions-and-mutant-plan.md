@@ -82,7 +82,7 @@ entry below has been executed as part of this plan.
 | ID | Predeclared mutation | Primary layer expected to decide | Expected observation |
 |---|---|---|---|
 | M01 | Reduce the capacity-penalty coefficient below the sufficient bound | L1 formulation enumeration | Killed: at least one invalid state becomes an unintended minimizer or tie |
-| M02 | Reverse one slack-bit binary weight | L1 formulation enumeration | Killed: reduced encoded energy disagrees with the constrained objective |
+| M02 | Swap declared slack weights from (1,2,4) to (4,2,1) while external bit labels remain unchanged | L1 labeled-state enumeration, with reduced-decision oracle as a blind control | Killed: labeled 64-state energies disagree; survives minimum-over-slack reduction because the representable slack set is unchanged |
 | M03 | Reverse the cost-layer exponent sign | L2 exact statevector | Killed: relative complex amplitudes disagree after global-phase alignment |
 | M04 | Omit the factor of two in one RZZ angle | L2 exact statevector | Killed: component error exceeds the frozen tolerance |
 | M05 | Apply mixer before cost | L2 exact statevector | Killed at nontrivial predetermined angles |
@@ -110,3 +110,17 @@ No new grid is authorized by this document.
 This is a targeted reading, not a systematic review. Backward/forward citation
 chaining, tool reproduction, stack-level differential execution, sampling,
 noise, transpilation, and hardware remain outside today's evidence.
+
+
+## 2026-10-23 prospective amendment and protocol freeze
+
+Before any pilot execution, review found M02's original wording ambiguous and
+its reduced-energy prediction incorrect for a pure swap of weights 1 and 4.
+The row above now fixes the mutation as `(4,2,1)` with unchanged external bit
+labels. The labeled 64-state contract is expected to kill it, while the
+minimum-over-slack oracle is an intentional blind control.
+
+The remaining mutant identities are unchanged. Exact cases, thresholds, budget,
+scoring, equivalent-mutant handling and abort rules are frozen in
+[mutation-pilot-protocol-v1.md](mutation-pilot-protocol-v1.md). All twelve
+mutants remain **PLANNED/UNEXECUTED**; this amendment reports no mutation result.
