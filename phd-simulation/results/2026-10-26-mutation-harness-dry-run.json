@@ -1,0 +1,40 @@
+{
+  "status": "PASSED",
+  "evidence_label": "EXECUTED LOCAL DRY-RUN TESTS",
+  "started_at_utc": "2026-10-26T11:41:08.633258+00:00",
+  "finished_at_utc": "2026-10-26T11:41:08.684456+00:00",
+  "python": "3.12.14",
+  "command": "python src/verify_mutation_harness.py",
+  "parent_commit": "41ce4232a3ecd9ab146f59a86335a4be0b74b53f",
+  "test_count": 12,
+  "passed": [
+    "__main__.HarnessTests.test_all_forbidden_resource_caps_are_zero",
+    "__main__.HarnessTests.test_baseline_terminal_has_digest",
+    "__main__.HarnessTests.test_budget_counts_attempts_not_completions",
+    "__main__.HarnessTests.test_dry_run_uses_no_protocol_budget",
+    "__main__.HarnessTests.test_duplicate_mutant_id_preserves_first_record",
+    "__main__.HarnessTests.test_duplicate_pilot_directory_refused",
+    "__main__.HarnessTests.test_failed_baseline_aborts_and_blocks_mutants",
+    "__main__.HarnessTests.test_missing_provenance_refused_before_reservation",
+    "__main__.HarnessTests.test_mutant_before_baseline_refused_without_callback",
+    "__main__.HarnessTests.test_sdk_overflow_refused_before_callback",
+    "__main__.HarnessTests.test_unknown_mutant_refused",
+    "__main__.HarnessTests.test_zero_search_budget_is_enforced"
+  ],
+  "failures": [],
+  "source_sha256": {
+    "mutation_harness.py": "f4f57d6249a85c2fb45ee0d4b3bc6727e2795a9d4ebe670b123f5ef7568295ad",
+    "verify_mutation_harness.py": "93832e7567e5d3f59cb8b106e35941cd549c8a3ca47b97d78d1a95332dabf622"
+  },
+  "data": "Synthetic temporary-directory fixtures and stub callbacks only",
+  "protocol_mutants_executed": 0,
+  "sdk_statevectors_executed": 0,
+  "search_evaluations": 0,
+  "shots": 0,
+  "hardware_jobs": 0,
+  "limitations": [
+    "Tests orchestration and retention logic, not scientific mutant oracles",
+    "Local filesystem behavior only; no power-loss or distributed-filesystem test",
+    "The prospective M01-M12 pilot remains unexecuted"
+  ]
+}

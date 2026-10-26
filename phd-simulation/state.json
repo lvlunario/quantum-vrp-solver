@@ -4,7 +4,7 @@
   "end_date": "2027-09-21",
   "simulation_timezone": "Europe/Oslo",
   "delivery_timezone": "Asia/Manila",
-  "last_completed_date": "2026-10-23",
+  "last_completed_date": "2026-10-26",
   "completed_dates": [
     "2026-09-22",
     "2026-09-23",
@@ -23,10 +23,11 @@
     "2026-10-20",
     "2026-10-21",
     "2026-10-22",
-    "2026-10-23"
+    "2026-10-23",
+    "2026-10-26"
   ],
   "phase": "onboarding and independent verification",
-  "next_task": "October 26: Monday review of mutation-protocol v1 as an implementation contract; design a fail-closed bounded harness and dry-run tests. Do not execute the prospective mutants until the harness, provenance, and budget counter are versioned.",
+  "next_task": "October 27: build and test a plan-only M01-M12 manifest that maps every mutant to its frozen oracle and resource claim, reconciles exactly to the protocol caps, and executes no scientific mutant.",
   "simulated_deadlines": [
     "2027-02-26",
     "2027-06-25",
@@ -52,7 +53,7 @@
   ],
   "catchup_created_date": "2026-09-27",
   "catchup_reason": "Explicit user request to run the entire missed workweek; all new execution occurred on September 27.",
-  "latest_evidence": "docs/mutation-pilot-protocol-v1.md",
+  "latest_evidence": "results/2026-10-26-mutation-harness-dry-run.json",
   "publication_recovered_dates": [
     "2026-09-30"
   ],
@@ -87,7 +88,7 @@
     "integration": "Two exact-statevector SDK circuits at one predetermined point: correct circuit retained; injected RX(beta) fault rejected and abort evidence retained. Not a grid or protocol repair."
   },
   "mutant_plan": {
-    "status": "PROTOCOL_FROZEN_UNEXECUTED",
+    "status": "HARNESS_DRY_RUN_PASSED_PROTOCOL_UNEXECUTED",
     "path": "docs/oracle-assumptions-and-mutant-plan.md",
     "protocol_path": "docs/mutation-pilot-protocol-v1.md",
     "frozen_date": "2026-10-22",
@@ -97,7 +98,17 @@
     "sdk_circuit_budget": 15,
     "search_evaluation_budget": 0,
     "amendment": "M02 fixed as slack weights (4,2,1): labeled-state oracle should kill; reduced minimum-over-slack oracle should survive.",
-    "limitation": "Prospective protocol only; no mutation score, new circuit, grid, sampling, hardware, transpilation, noise, or optimizer experiment."
+    "limitation": "Prospective protocol only; no mutation score, new circuit, grid, sampling, hardware, transpilation, noise, or optimizer experiment.",
+    "harness": {
+      "implementation": "src/mutation_harness.py",
+      "contract": "docs/mutation-harness-contract.md",
+      "dry_run_result": "results/2026-10-26-mutation-harness-dry-run.json",
+      "verified_date": "2026-10-26",
+      "tests_passed": 12,
+      "protocol_mutants_executed": 0,
+      "sdk_statevectors_executed": 0,
+      "search_evaluations": 0
+    }
   },
   "manuscript": {
     "path": "papers/01-verification-protocol.md",

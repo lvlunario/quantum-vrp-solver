@@ -1,4 +1,7 @@
 # Research backlog
+## October 26 mutation-harness dry-run
+A fail-closed orchestration harness is versioned in `src/mutation_harness.py`. Twelve executed standard-library dry-run tests passed for provenance refusal, baseline gating, append-only attempt counting, digest retention, duplicate-ID refusal and hard budget enforcement. The tests used synthetic stub callbacks only: M01–M12 remain UNEXECUTED, with zero SDK statevectors, search evaluations, shots, optimizers, transpilers, cloud calls or hardware jobs. See `docs/mutation-harness-contract.md` and `results/2026-10-26-mutation-harness-dry-run.json`. Next: validate a complete plan-only M01–M12 resource manifest before authorizing any scientific mutant.
+
 ## October 23 Friday synthesis
 Working manuscript v0.5 now reconciles the October 19 exploratory search with its protocol deviation and adds the Quito/QDiff oracle boundary. The prospective mutation protocol is frozen in docs/mutation-pilot-protocol-v1.md. M02 was clarified before execution: swapping slack weights (1,2,4) to (4,2,1) changes labeled-state energies but can survive minimum-over-slack reduction, so it is a split-oracle control. All twelve mutants remain UNEXECUTED; no mutation score, new circuit, grid, sampling, hardware or noise experiment ran. R06 remains open for citation chaining and novelty comparison. R07 has a protocol but no prospective execution.
 
