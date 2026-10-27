@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "status": "PLANNED_UNEXECUTED",
+  "protocol": {
+    "path": "docs/mutation-pilot-protocol-v1.md",
+    "git_blob_sha": "18e1f779b2f0d50245ab92707575afb14f65b35b"
+  },
+  "parent_commit": "32d48b677f96c664a32556f3b94e4c2bc8f247a0",
+  "fixture": "Synthetic six-variable microgrid: demands (2,3,4), priorities (3,5,6), capacity 5, lambda 2, slack weights (1,2,4)",
+  "angle_pairs": [[0.2, 0.31], [0.18479956785822313, 0.63], [0.7, 0.19]],
+  "thresholds": {"statevector": 1e-12, "readout": 1e-11},
+  "records": [
+    {
+      "id": "baseline", "kind": "baseline", "layer": "L1-L4 reference bundle",
+      "oracle": "unmutated formulation, exact complex statevector, readout and application invariants",
+      "expected": "PASS_OR_ABORT_PILOT",
+      "consumption": {"baseline_bundles": 1, "sdk_statevectors": 3}
+    },
+    {
+      "id": "M01", "kind": "mutant", "layer": "L1 formulation",
+      "oracle": "all global minimizers remain physically feasible at lambda=1",
+      "expected": "KILLED", "consumption": {"mutant_attempts": 1, "formulation_passes": 1}
+    },
+    {
+      "id": "M02", "kind": "mutant", "layer": "L1 labeled-state formulation",
+      "oracle": "64 labeled energies differ; eight reduced minima are a blind control",
+      "expected": "KILLED_WITH_REDUCED_ORACLE_SURVIVAL_CONTROL",
+      "consumption": {"mutant_attempts": 1, "formulation_passes": 1}
+    },
+    {
+      "id": "M03", "kind": "mutant", "layer": "L2 exact statevector",
+      "oracle": "global-phase-aligned component error for reversed cost sign",
+      "expected": "KILLED", "consumption": {"mutant_attempts": 1, "sdk_statevectors": 3}
+    },
+    {
+      "id": "M04", "kind": "mutant", "layer": "L2 exact statevector",
+      "oracle": "global-phase-aligned component error for one half-angle RZZ",
+      "expected": "KILLED", "consumption": {"mutant_attempts": 1, "sdk_statevectors": 3}
+    },
+    {
+      "id": "M05", "kind": "mutant", "layer": "L2 exact statevector",
+      "oracle": "global-phase-aligned component error for mixer-before-cost",
+      "expected": "KILLED", "consumption": {"mutant_attempts": 1, "sdk_statevectors": 3}
+    },
+    {
+      "id": "M06", "kind": "mutant", "layer": "L2 exact statevector",
+      "oracle": "global-phase-aligned component error for RX(beta)",
+      "expected": "KILLED", "consumption": {"mutant_attempts": 1, "sdk_statevectors": 3}
+    },
+    {
+      "id": "M07", "kind": "mutant", "layer": "L3 readout",
+      "oracle": "hand-enumerated little-endian energy and load mapping",
+      "expected": "KILLED", "consumption": {"mutant_attempts": 1}
+    },
+    {
+      "id": "M08", "kind": "mutant", "layer": "L3 readout",
+      "oracle": "probability normalization and expected-energy invariants",
+      "expected": "KILLED", "consumption": {"mutant_attempts": 1}
+    },
+    {
+      "id": "M09", "kind": "mutant", "layer": "L3 readout",
+      "oracle": "reported energy includes the Ising identity offset",
+      "expected": "KILLED", "consumption": {"mutant_attempts": 1}
+    },
+    {
+      "id": "M10", "kind": "mutant", "layer": "L4 application",
+      "oracle": "physical feasibility and auxiliary consistency remain separate metrics",
+      "expected": "KILLED", "consumption": {"mutant_attempts": 1}
+    },
+    {
+      "id": "M11", "kind": "mutant", "layer": "L2 exact statevector",
+      "oracle": "global-phase-aligned equivalence for exp(0.73i)",
+      "expected": "SURVIVED_EQUIVALENT_CONTROL", "consumption": {"mutant_attempts": 1}
+    },
+    {
+      "id": "M12", "kind": "mutant", "layer": "L2 exact statevector",
+      "oracle": "relative complex phase at basis index 3; pre-mixer probability is a blind control",
+      "expected": "KILLED_WITH_PROBABILITY_SURVIVAL_CONTROL", "consumption": {"mutant_attempts": 1}
+    }
+  ],
+  "declared_totals": {
+    "formulation_passes": 2,
+    "sdk_statevectors": 15,
+    "baseline_bundles": 1,
+    "mutant_attempts": 12,
+    "search_evaluations": 0,
+    "shots": 0,
+    "optimizer_calls": 0,
+    "transpiler_runs": 0,
+    "cloud_calls": 0,
+    "hardware_jobs": 0
+  },
+  "execution_authorized": false,
+  "limitations": [
+    "This manifest is a plan, not evidence that any mutant was executed or classified.",
+    "Resource declarations still require reconciliation with append-only attempt events after execution.",
+    "No parameter search, sampling, noise, transpilation, cloud service or quantum hardware is authorized."
+  ]
+}

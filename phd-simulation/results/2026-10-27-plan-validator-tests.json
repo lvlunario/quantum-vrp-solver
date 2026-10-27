@@ -1,0 +1,32 @@
+{
+  "status": "PASSED",
+  "evidence_label": "EXECUTED LOCAL VALIDATOR NEGATIVE-CONTROL TESTS",
+  "started_at_utc": "2026-10-27T11:04:33.266747+00:00",
+  "finished_at_utc": "2026-10-27T11:04:33.269305+00:00",
+  "python": "3.12.14",
+  "command": "python src/verify_mutation_plan_validator.py",
+  "test_count": 7,
+  "passed": [
+    "__main__.ValidatorTests.test_changed_split_oracle_prediction_fails",
+    "__main__.ValidatorTests.test_duplicate_identity_fails",
+    "__main__.ValidatorTests.test_execution_authorization_fails",
+    "__main__.ValidatorTests.test_frozen_plan_passes",
+    "__main__.ValidatorTests.test_missing_control_record_fails_without_exception",
+    "__main__.ValidatorTests.test_nonzero_search_claim_fails",
+    "__main__.ValidatorTests.test_sdk_work_moved_to_in_memory_mutant_fails"
+  ],
+  "failures": [],
+  "source_sha256": {
+    "verify_mutation_plan_validator.py": "b393c8e8ee9e95819eff33556f8a68d4a6594ac71a3709dd599d2e9bbcc458b1",
+    "validate_mutation_plan.py": "6eb95384c21fd5e90c8d277a75657c0f042ec138e14a55eb5916271518eb1bb9"
+  },
+  "protocol_mutants_executed": 0,
+  "sdk_statevectors_executed": 0,
+  "search_evaluations": 0,
+  "shots": 0,
+  "hardware_jobs": 0,
+  "data": "Deep-copied malformed variants of the static prospective manifest",
+  "limitations": [
+    "Tests validator rejection behavior, not scientific oracles"
+  ]
+}

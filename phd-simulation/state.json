@@ -4,7 +4,7 @@
   "end_date": "2027-09-21",
   "simulation_timezone": "Europe/Oslo",
   "delivery_timezone": "Asia/Manila",
-  "last_completed_date": "2026-10-26",
+  "last_completed_date": "2026-10-27",
   "completed_dates": [
     "2026-09-22",
     "2026-09-23",
@@ -24,10 +24,11 @@
     "2026-10-21",
     "2026-10-22",
     "2026-10-23",
-    "2026-10-26"
+    "2026-10-26",
+    "2026-10-27"
   ],
   "phase": "onboarding and independent verification",
-  "next_task": "October 27: build and test a plan-only M01-M12 manifest that maps every mutant to its frozen oracle and resource claim, reconciles exactly to the protocol caps, and executes no scientific mutant.",
+  "next_task": "October 28: build and test an aggregate reader against synthetic retained records; reject missing terminals, changed result bytes, undeclared IDs, and ledger/result counter disagreement. Execute no scientific mutant.",
   "simulated_deadlines": [
     "2027-02-26",
     "2027-06-25",
@@ -53,7 +54,7 @@
   ],
   "catchup_created_date": "2026-09-27",
   "catchup_reason": "Explicit user request to run the entire missed workweek; all new execution occurred on September 27.",
-  "latest_evidence": "results/2026-10-26-mutation-harness-dry-run.json",
+  "latest_evidence": "results/2026-10-27-mutation-plan-validation.json",
   "publication_recovered_dates": [
     "2026-09-30"
   ],
@@ -88,7 +89,7 @@
     "integration": "Two exact-statevector SDK circuits at one predetermined point: correct circuit retained; injected RX(beta) fault rejected and abort evidence retained. Not a grid or protocol repair."
   },
   "mutant_plan": {
-    "status": "HARNESS_DRY_RUN_PASSED_PROTOCOL_UNEXECUTED",
+    "status": "PLAN_VALIDATED_PROTOCOL_UNEXECUTED",
     "path": "docs/oracle-assumptions-and-mutant-plan.md",
     "protocol_path": "docs/mutation-pilot-protocol-v1.md",
     "frozen_date": "2026-10-22",
@@ -105,6 +106,19 @@
       "dry_run_result": "results/2026-10-26-mutation-harness-dry-run.json",
       "verified_date": "2026-10-26",
       "tests_passed": 12,
+      "protocol_mutants_executed": 0,
+      "sdk_statevectors_executed": 0,
+      "search_evaluations": 0
+    },
+    "plan_validation": {
+      "manifest": "docs/mutation-pilot-plan-v1.json",
+      "documentation": "docs/mutation-plan-validation.md",
+      "result": "results/2026-10-27-mutation-plan-validation.json",
+      "negative_control_result": "results/2026-10-27-plan-validator-tests.json",
+      "validated_date": "2026-10-27",
+      "plan_checks_passed": 22,
+      "validator_tests_passed": 7,
+      "declared_future_sdk_statevectors": 15,
       "protocol_mutants_executed": 0,
       "sdk_statevectors_executed": 0,
       "search_evaluations": 0

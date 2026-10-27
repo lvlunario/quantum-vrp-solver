@@ -1,4 +1,7 @@
 # Research backlog
+## October 27 prospective-plan validation
+The machine-readable `docs/mutation-pilot-plan-v1.json` now maps one baseline and M01–M12 to frozen oracles, outcomes and resource claims. Executed standard-library validation passed 22 plan checks and seven validator regression tests, including malformed controls for a missing record, duplicate ID, nonzero search request, misplaced SDK work and altered control prediction. Computed future allocation exactly matches the caps: two formulation passes, fifteen SDK statevectors, one baseline bundle and twelve mutant attempts; prohibited counters remain zero. No scientific mutant, circuit, search, shot, optimizer, transpiler, cloud call or hardware job ran. Next: test independent aggregate reconstruction from synthetic retained records before wiring scientific callbacks.
+
 ## October 26 mutation-harness dry-run
 A fail-closed orchestration harness is versioned in `src/mutation_harness.py`. Twelve executed standard-library dry-run tests passed for provenance refusal, baseline gating, append-only attempt counting, digest retention, duplicate-ID refusal and hard budget enforcement. The tests used synthetic stub callbacks only: M01–M12 remain UNEXECUTED, with zero SDK statevectors, search evaluations, shots, optimizers, transpilers, cloud calls or hardware jobs. See `docs/mutation-harness-contract.md` and `results/2026-10-26-mutation-harness-dry-run.json`. Next: validate a complete plan-only M01–M12 resource manifest before authorizing any scientific mutant.
 

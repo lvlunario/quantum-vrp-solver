@@ -1,0 +1,166 @@
+{
+  "status": "PASSED",
+  "evidence_label": "EXECUTED LOCAL PLAN VALIDATION",
+  "executed_at_utc": "2026-10-27T11:04:30.529313+00:00",
+  "python": "3.12.14",
+  "command": "python src/validate_mutation_plan.py --plan docs/mutation-pilot-plan-v1.json --output results/2026-10-27-mutation-plan-validation.json",
+  "parent_commit": "32d48b677f96c664a32556f3b94e4c2bc8f247a0",
+  "plan_sha256": "d4abbc8f4fd76c066be98f52f8a5fbe024f717c0bfc465e23e53b015251ba03b",
+  "source_sha256": "6eb95384c21fd5e90c8d277a75657c0f042ec138e14a55eb5916271518eb1bb9",
+  "protocol_git_blob_sha": "18e1f779b2f0d50245ab92707575afb14f65b35b",
+  "check_count": 22,
+  "checks": [
+    {
+      "name": "plan is explicitly unexecuted",
+      "passed": true
+    },
+    {
+      "name": "execution is not authorized",
+      "passed": true
+    },
+    {
+      "name": "record identities and order are exact",
+      "passed": true,
+      "detail": {
+        "ids": [
+          "baseline",
+          "M01",
+          "M02",
+          "M03",
+          "M04",
+          "M05",
+          "M06",
+          "M07",
+          "M08",
+          "M09",
+          "M10",
+          "M11",
+          "M12"
+        ]
+      }
+    },
+    {
+      "name": "record identities are unique",
+      "passed": true
+    },
+    {
+      "name": "one baseline plus twelve mutants",
+      "passed": true
+    },
+    {
+      "name": "all mutant layers match the frozen routing",
+      "passed": true
+    },
+    {
+      "name": "every record names an oracle and expected outcome",
+      "passed": true
+    },
+    {
+      "name": "only baseline and M03-M06 claim SDK statevectors",
+      "passed": true
+    },
+    {
+      "name": "only M01-M02 claim formulation passes",
+      "passed": true
+    },
+    {
+      "name": "M07-M12 claim no SDK statevectors",
+      "passed": true
+    },
+    {
+      "name": "each mutant claims exactly one attempt",
+      "passed": true
+    },
+    {
+      "name": "baseline claims one bundle and no mutant attempt",
+      "passed": true
+    },
+    {
+      "name": "all consumption values are nonnegative integers",
+      "passed": true
+    },
+    {
+      "name": "all consumption keys are protocol counters",
+      "passed": true
+    },
+    {
+      "name": "computed totals equal declared totals",
+      "passed": true,
+      "detail": {
+        "formulation_passes": 2,
+        "sdk_statevectors": 15,
+        "baseline_bundles": 1,
+        "mutant_attempts": 12,
+        "search_evaluations": 0,
+        "shots": 0,
+        "optimizer_calls": 0,
+        "transpiler_runs": 0,
+        "cloud_calls": 0,
+        "hardware_jobs": 0
+      }
+    },
+    {
+      "name": "computed totals exactly equal frozen caps",
+      "passed": true,
+      "detail": {
+        "formulation_passes": 2,
+        "sdk_statevectors": 15,
+        "baseline_bundles": 1,
+        "mutant_attempts": 12,
+        "search_evaluations": 0,
+        "shots": 0,
+        "optimizer_calls": 0,
+        "transpiler_runs": 0,
+        "cloud_calls": 0,
+        "hardware_jobs": 0
+      }
+    },
+    {
+      "name": "all prohibited-resource totals remain zero",
+      "passed": true
+    },
+    {
+      "name": "three fixed angle pairs are present",
+      "passed": true
+    },
+    {
+      "name": "thresholds remain frozen",
+      "passed": true
+    },
+    {
+      "name": "M02 split-oracle control remains explicit",
+      "passed": true
+    },
+    {
+      "name": "M11 is the equivalent survivor",
+      "passed": true
+    },
+    {
+      "name": "M12 probability blind control remains explicit",
+      "passed": true
+    }
+  ],
+  "computed_totals": {
+    "formulation_passes": 2,
+    "sdk_statevectors": 15,
+    "baseline_bundles": 1,
+    "mutant_attempts": 12,
+    "search_evaluations": 0,
+    "shots": 0,
+    "optimizer_calls": 0,
+    "transpiler_runs": 0,
+    "cloud_calls": 0,
+    "hardware_jobs": 0
+  },
+  "protocol_mutants_executed": 0,
+  "sdk_statevectors_executed": 0,
+  "search_evaluations": 0,
+  "shots": 0,
+  "hardware_jobs": 0,
+  "data": "Static prospective manifest for the fixed synthetic fixture",
+  "limitations": [
+    "Validates plan structure and declared budgets, not mutant behavior",
+    "Does not import Qiskit or invoke scientific callbacks",
+    "Future execution must reconcile declared counters with append-only attempt records"
+  ]
+}
