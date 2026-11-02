@@ -4,7 +4,7 @@
   "end_date": "2027-09-21",
   "simulation_timezone": "Europe/Oslo",
   "delivery_timezone": "Asia/Manila",
-  "last_completed_date": "2026-10-27",
+  "last_completed_date": "2026-11-02",
   "completed_dates": [
     "2026-09-22",
     "2026-09-23",
@@ -25,10 +25,11 @@
     "2026-10-22",
     "2026-10-23",
     "2026-10-26",
-    "2026-10-27"
+    "2026-10-27",
+    "2026-11-02"
   ],
   "phase": "onboarding and independent verification",
-  "next_task": "October 28: build and test an aggregate reader against synthetic retained records; reject missing terminals, changed result bytes, undeclared IDs, and ledger/result counter disagreement. Execute no scientific mutant.",
+  "next_task": "November 3: define thin L1-L4 scientific-adapter interfaces and test them with stub data only; then perform an environment/source-hash preflight before any real baseline bundle.",
   "simulated_deadlines": [
     "2027-02-26",
     "2027-06-25",
@@ -54,7 +55,7 @@
   ],
   "catchup_created_date": "2026-09-27",
   "catchup_reason": "Explicit user request to run the entire missed workweek; all new execution occurred on September 27.",
-  "latest_evidence": "results/2026-10-27-mutation-plan-validation.json",
+  "latest_evidence": "results/2026-11-02-aggregate-reconstruction-tests.json",
   "publication_recovered_dates": [
     "2026-09-30"
   ],
@@ -64,9 +65,12 @@
     "2026-10-01",
     "2026-10-02",
     "2026-10-13",
-    "2026-10-14"
+    "2026-10-14",
+    "2026-10-28",
+    "2026-10-29",
+    "2026-10-30"
   ],
-  "recovery_note": "September 30 local work recovered and re-executed October 5; first publication October 5. Missing dates remain incomplete. October 13–14 package not recovered; interruption logs created October 15; new R14 implementation executed October 15, not backdated.",
+  "recovery_note": "September 30 local work recovered and re-executed October 5; first publication October 5. Missing dates remain incomplete. October 13–14 package not recovered; interruption logs created October 15; new R14 implementation executed October 15, not backdated. October 28-30 have no journals or evidence and were recorded as incomplete on November 2; no reconstruction was claimed.",
   "literature_status": "R06 IN PROGRESS: direct full-text extraction completed for Quito and QDiff; manuscript v0.5 incorporates their oracle boundary. Backward/forward citation chaining and broader novelty comparison remain incomplete.",
   "pilot_protocol": {
     "path": "docs/baseline-protocol-v1.md",
@@ -89,7 +93,7 @@
     "integration": "Two exact-statevector SDK circuits at one predetermined point: correct circuit retained; injected RX(beta) fault rejected and abort evidence retained. Not a grid or protocol repair."
   },
   "mutant_plan": {
-    "status": "PLAN_VALIDATED_PROTOCOL_UNEXECUTED",
+    "status": "AGGREGATE_DRY_RUN_PASSED_PROTOCOL_UNEXECUTED",
     "path": "docs/oracle-assumptions-and-mutant-plan.md",
     "protocol_path": "docs/mutation-pilot-protocol-v1.md",
     "frozen_date": "2026-10-22",
@@ -119,6 +123,16 @@
       "plan_checks_passed": 22,
       "validator_tests_passed": 7,
       "declared_future_sdk_statevectors": 15,
+      "protocol_mutants_executed": 0,
+      "sdk_statevectors_executed": 0,
+      "search_evaluations": 0
+    },
+    "aggregate_reconstruction": {
+      "implementation": "src/aggregate_mutation_evidence.py",
+      "documentation": "docs/aggregate-reconstruction.md",
+      "result": "results/2026-11-02-aggregate-reconstruction-tests.json",
+      "verified_date": "2026-11-02",
+      "tests_passed": 7,
       "protocol_mutants_executed": 0,
       "sdk_statevectors_executed": 0,
       "search_evaluations": 0
