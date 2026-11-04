@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "name": "all_13_plan_records_route_to_exact_stub_layers",
+      "passed": true
+    },
+    {
+      "name": "identity_mismatch",
+      "passed": true,
+      "reason": "record identity does not match frozen plan"
+    },
+    {
+      "name": "layer_mismatch",
+      "passed": true,
+      "reason": "adapter layers/order do not match frozen plan"
+    },
+    {
+      "name": "stub_verdict_refused",
+      "passed": true,
+      "reason": "stub interface test cannot emit a scientific verdict"
+    },
+    {
+      "name": "stub_sdk_consumption_refused",
+      "passed": true,
+      "reason": "stub interface test consumed protocol resources"
+    },
+    {
+      "name": "stub_enumeration_refused",
+      "passed": true,
+      "reason": "L1 stub performed enumeration"
+    },
+    {
+      "name": "stub_statevector_metric_refused",
+      "passed": true,
+      "reason": "L2 stub contains statevector evidence"
+    },
+    {
+      "name": "stub_readout_metric_refused",
+      "passed": true,
+      "reason": "L3 stub contains readout evidence"
+    },
+    {
+      "name": "conflated_application_metrics_refused",
+      "passed": true,
+      "reason": "L4 stub conflates or populates application metrics"
+    },
+    {
+      "name": "changed_future_budget_refused",
+      "passed": true,
+      "reason": "future consumption does not match frozen plan"
+    },
+    {
+      "name": "incomplete_baseline_bundle_refused",
+      "passed": true,
+      "reason": "adapter layers/order do not match frozen plan"
+    }
+  ],
+  "command": "python src/verify_scientific_adapters.py",
+  "created_at_utc": "2026-11-04T11:15:02.326507+00:00",
+  "limitations": [
+    "These tests verify interface shape and fail-closed stub behavior only.",
+    "No formulation, statevector, probability, application metric, mutant, or baseline was evaluated.",
+    "Scientific adapters and the final environment/source-hash preflight remain unexecuted."
+  ],
+  "mode": "STUB_INTERFACE_TEST",
+  "provenance": {
+    "adapter_source_sha256": "a1fde625678c562e3b5b1594df2843c07a7f0ca961730575c9f033a2c388298f",
+    "plan_canonical_json_sha256": "afeb41d8ed5153d8f5f03ce22a6d1ae2c646ad7052bf75c3ae7b9b2008b5b1ff"
+  },
+  "python": "3.12.14",
+  "schema_version": 1,
+  "status": "PASSED",
+  "summary": {
+    "checks_passed": 11,
+    "checks_total": 11,
+    "formulation_passes_executed": 0,
+    "hardware_jobs": 0,
+    "negative_controls_rejected": 10,
+    "protocol_mutants_executed": 0,
+    "sdk_statevectors_executed": 0,
+    "search_evaluations": 0,
+    "shots": 0,
+    "valid_plan_records_routed": 13
+  }
+}

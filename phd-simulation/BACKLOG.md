@@ -1,4 +1,7 @@
 # Research backlog
+## November 4 scientific-adapter interface gate
+After recording November 3 as incomplete, the project resumed from the November 2 commit. A standard-library stub-only boundary now routes the baseline and M01–M12 to the exact frozen L1–L4 layers while separating declared future allocation from zero actual consumption. Eleven executed checks passed: the complete 13-record fixture was accepted and ten malformed fixtures were rejected, including fake verdict, resource-consumption, populated-metric, wrong-layer and incomplete-baseline controls. No formulation pass, statevector, probability calculation, mutant, search, shot or hardware job ran. Next: a fail-closed environment/source-hash preflight before any real baseline bundle.
+
 ## November 2 aggregate-evidence reconstruction
 After an explicit October 28-30 publication gap, the project resumed from the October 27 commit. A standard-library aggregate reader now rebuilds record identity, attempt-ledger totals, terminal completeness and SHA-256 agreement from retained bytes. Seven executed synthetic tests passed: the complete 13-record fixture was accepted, while missing terminal, changed result bytes, undeclared M13, counter mismatch, missing attempt and wrong-mode faults were rejected. The fixtures contained no scientific verdicts; zero mutants, Qiskit statevectors, searches, shots or hardware jobs ran. Next: define L1-L4 adapter interfaces with stub data and complete a final provenance/environment preflight before any baseline execution.
 
