@@ -1,0 +1,197 @@
+{
+  "actual_environment_preflight": {
+    "baseline_reserved": false,
+    "blockers": [
+      "installed package metadata exactly matches lock",
+      "scientific execution is explicitly authorized"
+    ],
+    "checked_at_utc": "2026-11-05T11:48:27.287960+00:00",
+    "checks": [
+      {
+        "detail": {
+          "schema_version": 1,
+          "status": "FROZEN_PREFLIGHT_INPUT"
+        },
+        "name": "schema and frozen-input status",
+        "passed": true
+      },
+      {
+        "detail": {
+          "parent_commit": "b1496bdf23f90951828121c845f9fb2ee5ea0ab4"
+        },
+        "name": "parent commit is an immutable Git identity",
+        "passed": true
+      },
+      {
+        "detail": {
+          "paths": [
+            "requirements-sdk.txt",
+            "docs/mutation-pilot-plan-v1.json",
+            "docs/mutation-pilot-protocol-v1.md",
+            "src/mutation_harness.py",
+            "src/scientific_adapters.py",
+            "src/verify_formulation.py",
+            "src/verify_qiskit_mixer.py",
+            "src/verify_readout.py"
+          ]
+        },
+        "name": "source inventory is exact and unique",
+        "passed": true
+      },
+      {
+        "detail": {
+          "invalid_paths": []
+        },
+        "name": "every source has a valid content-addressed Git blob identity",
+        "passed": true
+      },
+      {
+        "detail": {
+          "observed": "3.12.14",
+          "required": "3.12.14"
+        },
+        "name": "Python version exactly matches lock",
+        "passed": true
+      },
+      {
+        "detail": {
+          "mismatches": {
+            "dill": {
+              "observed": null,
+              "required": "0.4.1"
+            },
+            "numpy": {
+              "observed": "2.3.5",
+              "required": "2.5.3"
+            },
+            "qiskit": {
+              "observed": null,
+              "required": "2.5.2"
+            },
+            "rustworkx": {
+              "observed": null,
+              "required": "0.18.1"
+            },
+            "scipy": {
+              "observed": "1.17.0",
+              "required": "1.18.1"
+            },
+            "stevedore": {
+              "observed": null,
+              "required": "5.9.1"
+            }
+          }
+        },
+        "name": "installed package metadata exactly matches lock",
+        "passed": false
+      },
+      {
+        "detail": {
+          "execution_authorized": false
+        },
+        "name": "scientific execution is explicitly authorized",
+        "passed": false
+      }
+    ],
+    "formulation_passes_executed": 0,
+    "hardware_jobs": 0,
+    "protocol_mutants_executed": 0,
+    "sdk_statevectors_executed": 0,
+    "search_evaluations": 0,
+    "shots": 0,
+    "status": "BLOCKED_BEFORE_BASELINE_RESERVATION"
+  },
+  "command": "python src/verify_mutation_preflight.py",
+  "decision": "Do not create a pilot run directory. Keep execution_authorized false. Recreate the published lock or version an explicit replacement lock, then rerun preflight.",
+  "executed_at_utc": "2026-11-05T11:48:27.288185+00:00",
+  "limitations": [
+    "Git blob identities were resolved from GitHub before execution; this local script validates the frozen manifest shape.",
+    "Installed distributions are inspected through package metadata only; Qiskit and NumPy are not imported.",
+    "A future READY result would authorize only the frozen baseline bundle, never M01-M12 automatically."
+  ],
+  "negative_controls": [
+    {
+      "blockers": [],
+      "name": "exact synthetic environment plus explicit authorization can reach baseline-only gate",
+      "observed_status": "READY_FOR_BASELINE_ONLY",
+      "passed": true
+    },
+    {
+      "blockers": [
+        "installed package metadata exactly matches lock"
+      ],
+      "name": "package-version mismatch blocks",
+      "observed_status": "BLOCKED_BEFORE_BASELINE_RESERVATION",
+      "passed": true
+    },
+    {
+      "blockers": [
+        "every source has a valid content-addressed Git blob identity"
+      ],
+      "name": "malformed source identity blocks",
+      "observed_status": "BLOCKED_BEFORE_BASELINE_RESERVATION",
+      "passed": true
+    },
+    {
+      "blockers": [
+        "source inventory is exact and unique"
+      ],
+      "name": "missing scientific source blocks",
+      "observed_status": "BLOCKED_BEFORE_BASELINE_RESERVATION",
+      "passed": true
+    },
+    {
+      "blockers": [
+        "source inventory is exact and unique"
+      ],
+      "name": "undeclared extra source blocks",
+      "observed_status": "BLOCKED_BEFORE_BASELINE_RESERVATION",
+      "passed": true
+    },
+    {
+      "blockers": [
+        "parent commit is an immutable Git identity"
+      ],
+      "name": "mutable parent reference blocks",
+      "observed_status": "BLOCKED_BEFORE_BASELINE_RESERVATION",
+      "passed": true
+    },
+    {
+      "blockers": [
+        "scientific execution is explicitly authorized"
+      ],
+      "name": "frozen authorization false blocks",
+      "observed_status": "BLOCKED_BEFORE_BASELINE_RESERVATION",
+      "passed": true
+    }
+  ],
+  "provenance": {
+    "manifest_sha256": "a41e8c564ed53a6fbba2835481f45ad738c1caac37b85d4b2ceceda574008ecc",
+    "parent_commit": "b1496bdf23f90951828121c845f9fb2ee5ea0ab4",
+    "preflight_source_sha256": "483dbf334b9756f284c48dd176f53356d8167d9a64b87bf02a0f4c6f156a3119",
+    "source_git_blob_identities": {
+      "docs/mutation-pilot-plan-v1.json": "d13b525e7647c55abc379b0307150920e6ed078b",
+      "docs/mutation-pilot-protocol-v1.md": "18e1f779b2f0d50245ab92707575afb14f65b35b",
+      "requirements-sdk.txt": "56ee76d415405c27b57814605549cdc981187faa",
+      "src/mutation_harness.py": "ff375bddc5e5e7a8cc8e9a6c1560798e7e8ffd41",
+      "src/scientific_adapters.py": "51e17ceacb940c83b3b7c44eb51f9f2d84a60aff",
+      "src/verify_formulation.py": "aa7dff3cc5fb8c5c53c46a5f09118a8f11e2ed10",
+      "src/verify_qiskit_mixer.py": "c8145376b695fac468fa1a7c2169bcc45cd60470",
+      "src/verify_readout.py": "7a69747e76eb3eacd723e89aaafeb399fa52ba26"
+    }
+  },
+  "python": "3.12.14",
+  "schema_version": 1,
+  "status": "PREFLIGHT_BLOCKED_AS_DESIGNED",
+  "summary": {
+    "baseline_reserved": false,
+    "formulation_passes_executed": 0,
+    "hardware_jobs": 0,
+    "negative_controls_passed": 7,
+    "negative_controls_total": 7,
+    "protocol_mutants_executed": 0,
+    "sdk_statevectors_executed": 0,
+    "search_evaluations": 0,
+    "shots": 0
+  }
+}

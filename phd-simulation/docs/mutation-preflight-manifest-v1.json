@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "status": "FROZEN_PREFLIGHT_INPUT",
+  "parent_commit": "b1496bdf23f90951828121c845f9fb2ee5ea0ab4",
+  "execution_authorized": false,
+  "protocol": "mutation-pilot-protocol-v1",
+  "required_python": "3.12.14",
+  "required_packages": {
+    "dill": "0.4.1",
+    "numpy": "2.5.3",
+    "qiskit": "2.5.2",
+    "rustworkx": "0.18.1",
+    "scipy": "1.18.1",
+    "stevedore": "5.9.1",
+    "typing_extensions": "4.16.0"
+  },
+  "sources": [
+    {"path": "requirements-sdk.txt", "git_blob_sha": "56ee76d415405c27b57814605549cdc981187faa"},
+    {"path": "docs/mutation-pilot-plan-v1.json", "git_blob_sha": "d13b525e7647c55abc379b0307150920e6ed078b"},
+    {"path": "docs/mutation-pilot-protocol-v1.md", "git_blob_sha": "18e1f779b2f0d50245ab92707575afb14f65b35b"},
+    {"path": "src/mutation_harness.py", "git_blob_sha": "ff375bddc5e5e7a8cc8e9a6c1560798e7e8ffd41"},
+    {"path": "src/scientific_adapters.py", "git_blob_sha": "51e17ceacb940c83b3b7c44eb51f9f2d84a60aff"},
+    {"path": "src/verify_formulation.py", "git_blob_sha": "aa7dff3cc5fb8c5c53c46a5f09118a8f11e2ed10"},
+    {"path": "src/verify_qiskit_mixer.py", "git_blob_sha": "c8145376b695fac468fa1a7c2169bcc45cd60470"},
+    {"path": "src/verify_readout.py", "git_blob_sha": "7a69747e76eb3eacd723e89aaafeb399fa52ba26"}
+  ],
+  "source_resolution": "GitHub contents API on branch main, read before execution on 2026-11-05; blob IDs are content-addressed Git object identities.",
+  "limitations": [
+    "This manifest does not authorize the scientific pilot.",
+    "A READY preflight would permit only the separately frozen baseline bundle, not M01-M12.",
+    "The current environment must match exactly or a replacement lock must be versioned before execution."
+  ]
+}

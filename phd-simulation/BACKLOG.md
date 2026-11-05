@@ -1,4 +1,7 @@
 # Research backlog
+## November 5 fail-closed mutation preflight
+The source/environment gate resolved eight critical repository objects at immutable commit `b1496bdf23f90951828121c845f9fb2ee5ea0ab4` and executed seven bounded controls. All controls passed, but the actual preflight correctly returned BLOCKED before baseline reservation: Python 3.12.14 matched, while Qiskit and several locked packages were absent, NumPy/SciPy differed, and the frozen plan still had `execution_authorized: false`. No run directory, baseline, formulation pass, statevector, mutant, search, shot or hardware job was created. Next: Friday synthesis and a minimal isolated environment-recreation plan; do not authorize or run the baseline.
+
 ## November 4 scientific-adapter interface gate
 After recording November 3 as incomplete, the project resumed from the November 2 commit. A standard-library stub-only boundary now routes the baseline and M01–M12 to the exact frozen L1–L4 layers while separating declared future allocation from zero actual consumption. Eleven executed checks passed: the complete 13-record fixture was accepted and ten malformed fixtures were rejected, including fake verdict, resource-consumption, populated-metric, wrong-layer and incomplete-baseline controls. No formulation pass, statevector, probability calculation, mutant, search, shot or hardware job ran. Next: a fail-closed environment/source-hash preflight before any real baseline bundle.
 

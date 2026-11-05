@@ -4,7 +4,7 @@
   "end_date": "2027-09-21",
   "simulation_timezone": "Europe/Oslo",
   "delivery_timezone": "Asia/Manila",
-  "last_completed_date": "2026-11-04",
+  "last_completed_date": "2026-11-05",
   "completed_dates": [
     "2026-09-22",
     "2026-09-23",
@@ -27,10 +27,11 @@
     "2026-10-26",
     "2026-10-27",
     "2026-11-02",
-    "2026-11-04"
+    "2026-11-04",
+    "2026-11-05"
   ],
   "phase": "onboarding and independent verification",
-  "next_task": "November 5: perform a fail-closed environment and source-hash preflight against the frozen plan, protocol, lock, adapter, and scientific sources before any real baseline bundle.",
+  "next_task": "November 6: synthesize the week's adapter/preflight evidence into the educational manuscript and define a minimal isolated environment-recreation task for Monday; do not authorize or execute the baseline.",
   "simulated_deadlines": [
     "2027-02-26",
     "2027-06-25",
@@ -56,7 +57,7 @@
   ],
   "catchup_created_date": "2026-09-27",
   "catchup_reason": "Explicit user request to run the entire missed workweek; all new execution occurred on September 27.",
-  "latest_evidence": "results/2026-11-04-scientific-adapter-interface-tests.json",
+  "latest_evidence": "results/2026-11-05-mutation-preflight.json",
   "publication_recovered_dates": [
     "2026-09-30"
   ],
@@ -95,7 +96,7 @@
     "integration": "Two exact-statevector SDK circuits at one predetermined point: correct circuit retained; injected RX(beta) fault rejected and abort evidence retained. Not a grid or protocol repair."
   },
   "mutant_plan": {
-    "status": "ADAPTER_STUB_TESTS_PASSED_PROTOCOL_UNEXECUTED",
+    "status": "PREFLIGHT_BLOCKED_PROTOCOL_UNEXECUTED",
     "path": "docs/oracle-assumptions-and-mutant-plan.md",
     "protocol_path": "docs/mutation-pilot-protocol-v1.md",
     "frozen_date": "2026-10-22",
@@ -147,6 +148,24 @@
       "checks_passed": 11,
       "plan_records_routed": 13,
       "negative_controls_rejected": 10,
+      "protocol_mutants_executed": 0,
+      "formulation_passes_executed": 0,
+      "sdk_statevectors_executed": 0,
+      "search_evaluations": 0
+    },
+    "preflight": {
+      "manifest": "docs/mutation-preflight-manifest-v1.json",
+      "implementation": "src/preflight_mutation_pilot.py",
+      "documentation": "docs/mutation-preflight.md",
+      "result": "results/2026-11-05-mutation-preflight.json",
+      "verified_date": "2026-11-05",
+      "status": "BLOCKED_BEFORE_BASELINE_RESERVATION",
+      "blockers": [
+        "installed package metadata exactly matches lock",
+        "scientific execution is explicitly authorized"
+      ],
+      "negative_controls_passed": 7,
+      "baseline_reserved": false,
       "protocol_mutants_executed": 0,
       "formulation_passes_executed": 0,
       "sdk_statevectors_executed": 0,
