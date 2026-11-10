@@ -1,0 +1,1236 @@
+{
+  "checks": [
+    {
+      "detail": {
+        "loads": [
+          0,
+          2,
+          3,
+          5,
+          4,
+          6,
+          7,
+          9
+        ]
+      },
+      "name": "hand-enumerated eight-load table matches",
+      "passed": true
+    },
+    {
+      "name": "physical feasibility matches the direct capacity requirement",
+      "passed": true
+    },
+    {
+      "name": "capacity boundary is feasible with zero headroom",
+      "passed": true
+    },
+    {
+      "name": "overload margins are exact for all infeasible decisions",
+      "passed": true
+    },
+    {
+      "name": "physical verdict is invariant across all eight auxiliary encodings",
+      "passed": true
+    },
+    {
+      "detail": {
+        "disagreement_count": 35,
+        "first_indices": [
+          0,
+          1,
+          2,
+          4,
+          8,
+          9,
+          10,
+          11
+        ]
+      },
+      "name": "encoding consistency is not a physical-feasibility proxy",
+      "passed": true
+    },
+    {
+      "detail": {
+        "rejected": 4
+      },
+      "name": "empty, wrong-length, nonbinary and Boolean decisions are rejected",
+      "passed": true
+    },
+    {
+      "detail": {
+        "rejected": 3
+      },
+      "name": "negative and noninteger model data are rejected",
+      "passed": true
+    }
+  ],
+  "command": "python src/verify_independent_feasibility.py",
+  "config": {
+    "capacity": 5,
+    "demands": [
+      2,
+      3,
+      4
+    ]
+  },
+  "data": "Fixed synthetic three-load fixture; no external dataset",
+  "decision_rows": [
+    {
+      "capacity": 5,
+      "decisions": [
+        0,
+        0,
+        0
+      ],
+      "feasible": true,
+      "headroom": 5,
+      "index": 0,
+      "load": 0,
+      "overload": 0
+    },
+    {
+      "capacity": 5,
+      "decisions": [
+        1,
+        0,
+        0
+      ],
+      "feasible": true,
+      "headroom": 3,
+      "index": 1,
+      "load": 2,
+      "overload": 0
+    },
+    {
+      "capacity": 5,
+      "decisions": [
+        0,
+        1,
+        0
+      ],
+      "feasible": true,
+      "headroom": 2,
+      "index": 2,
+      "load": 3,
+      "overload": 0
+    },
+    {
+      "capacity": 5,
+      "decisions": [
+        1,
+        1,
+        0
+      ],
+      "feasible": true,
+      "headroom": 0,
+      "index": 3,
+      "load": 5,
+      "overload": 0
+    },
+    {
+      "capacity": 5,
+      "decisions": [
+        0,
+        0,
+        1
+      ],
+      "feasible": true,
+      "headroom": 1,
+      "index": 4,
+      "load": 4,
+      "overload": 0
+    },
+    {
+      "capacity": 5,
+      "decisions": [
+        1,
+        0,
+        1
+      ],
+      "feasible": false,
+      "headroom": 0,
+      "index": 5,
+      "load": 6,
+      "overload": 1
+    },
+    {
+      "capacity": 5,
+      "decisions": [
+        0,
+        1,
+        1
+      ],
+      "feasible": false,
+      "headroom": 0,
+      "index": 6,
+      "load": 7,
+      "overload": 2
+    },
+    {
+      "capacity": 5,
+      "decisions": [
+        1,
+        1,
+        1
+      ],
+      "feasible": false,
+      "headroom": 0,
+      "index": 7,
+      "load": 9,
+      "overload": 4
+    }
+  ],
+  "encoded_rows": [
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "decision_bits": [
+        0,
+        0,
+        0
+      ],
+      "encoding_consistent": false,
+      "index": 0,
+      "physical_feasible": true,
+      "slack": 0
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "decision_bits": [
+        1,
+        0,
+        0
+      ],
+      "encoding_consistent": false,
+      "index": 1,
+      "physical_feasible": true,
+      "slack": 0
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "decision_bits": [
+        0,
+        1,
+        0
+      ],
+      "encoding_consistent": false,
+      "index": 2,
+      "physical_feasible": true,
+      "slack": 0
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "decision_bits": [
+        1,
+        1,
+        0
+      ],
+      "encoding_consistent": true,
+      "index": 3,
+      "physical_feasible": true,
+      "slack": 0
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "decision_bits": [
+        0,
+        0,
+        1
+      ],
+      "encoding_consistent": false,
+      "index": 4,
+      "physical_feasible": true,
+      "slack": 0
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "decision_bits": [
+        1,
+        0,
+        1
+      ],
+      "encoding_consistent": false,
+      "index": 5,
+      "physical_feasible": false,
+      "slack": 0
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "decision_bits": [
+        0,
+        1,
+        1
+      ],
+      "encoding_consistent": false,
+      "index": 6,
+      "physical_feasible": false,
+      "slack": 0
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "decision_bits": [
+        1,
+        1,
+        1
+      ],
+      "encoding_consistent": false,
+      "index": 7,
+      "physical_feasible": false,
+      "slack": 0
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "decision_bits": [
+        0,
+        0,
+        0
+      ],
+      "encoding_consistent": false,
+      "index": 8,
+      "physical_feasible": true,
+      "slack": 1
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "decision_bits": [
+        1,
+        0,
+        0
+      ],
+      "encoding_consistent": false,
+      "index": 9,
+      "physical_feasible": true,
+      "slack": 1
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "decision_bits": [
+        0,
+        1,
+        0
+      ],
+      "encoding_consistent": false,
+      "index": 10,
+      "physical_feasible": true,
+      "slack": 1
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "decision_bits": [
+        1,
+        1,
+        0
+      ],
+      "encoding_consistent": false,
+      "index": 11,
+      "physical_feasible": true,
+      "slack": 1
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "decision_bits": [
+        0,
+        0,
+        1
+      ],
+      "encoding_consistent": true,
+      "index": 12,
+      "physical_feasible": true,
+      "slack": 1
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "decision_bits": [
+        1,
+        0,
+        1
+      ],
+      "encoding_consistent": false,
+      "index": 13,
+      "physical_feasible": false,
+      "slack": 1
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "decision_bits": [
+        0,
+        1,
+        1
+      ],
+      "encoding_consistent": false,
+      "index": 14,
+      "physical_feasible": false,
+      "slack": 1
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "decision_bits": [
+        1,
+        1,
+        1
+      ],
+      "encoding_consistent": false,
+      "index": 15,
+      "physical_feasible": false,
+      "slack": 1
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "decision_bits": [
+        0,
+        0,
+        0
+      ],
+      "encoding_consistent": false,
+      "index": 16,
+      "physical_feasible": true,
+      "slack": 2
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "decision_bits": [
+        1,
+        0,
+        0
+      ],
+      "encoding_consistent": false,
+      "index": 17,
+      "physical_feasible": true,
+      "slack": 2
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "decision_bits": [
+        0,
+        1,
+        0
+      ],
+      "encoding_consistent": true,
+      "index": 18,
+      "physical_feasible": true,
+      "slack": 2
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "decision_bits": [
+        1,
+        1,
+        0
+      ],
+      "encoding_consistent": false,
+      "index": 19,
+      "physical_feasible": true,
+      "slack": 2
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "decision_bits": [
+        0,
+        0,
+        1
+      ],
+      "encoding_consistent": false,
+      "index": 20,
+      "physical_feasible": true,
+      "slack": 2
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "decision_bits": [
+        1,
+        0,
+        1
+      ],
+      "encoding_consistent": false,
+      "index": 21,
+      "physical_feasible": false,
+      "slack": 2
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "decision_bits": [
+        0,
+        1,
+        1
+      ],
+      "encoding_consistent": false,
+      "index": 22,
+      "physical_feasible": false,
+      "slack": 2
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "decision_bits": [
+        1,
+        1,
+        1
+      ],
+      "encoding_consistent": false,
+      "index": 23,
+      "physical_feasible": false,
+      "slack": 2
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "decision_bits": [
+        0,
+        0,
+        0
+      ],
+      "encoding_consistent": false,
+      "index": 24,
+      "physical_feasible": true,
+      "slack": 3
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "decision_bits": [
+        1,
+        0,
+        0
+      ],
+      "encoding_consistent": true,
+      "index": 25,
+      "physical_feasible": true,
+      "slack": 3
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "decision_bits": [
+        0,
+        1,
+        0
+      ],
+      "encoding_consistent": false,
+      "index": 26,
+      "physical_feasible": true,
+      "slack": 3
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "decision_bits": [
+        1,
+        1,
+        0
+      ],
+      "encoding_consistent": false,
+      "index": 27,
+      "physical_feasible": true,
+      "slack": 3
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "decision_bits": [
+        0,
+        0,
+        1
+      ],
+      "encoding_consistent": false,
+      "index": 28,
+      "physical_feasible": true,
+      "slack": 3
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "decision_bits": [
+        1,
+        0,
+        1
+      ],
+      "encoding_consistent": false,
+      "index": 29,
+      "physical_feasible": false,
+      "slack": 3
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "decision_bits": [
+        0,
+        1,
+        1
+      ],
+      "encoding_consistent": false,
+      "index": 30,
+      "physical_feasible": false,
+      "slack": 3
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "decision_bits": [
+        1,
+        1,
+        1
+      ],
+      "encoding_consistent": false,
+      "index": 31,
+      "physical_feasible": false,
+      "slack": 3
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "decision_bits": [
+        0,
+        0,
+        0
+      ],
+      "encoding_consistent": false,
+      "index": 32,
+      "physical_feasible": true,
+      "slack": 4
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "decision_bits": [
+        1,
+        0,
+        0
+      ],
+      "encoding_consistent": false,
+      "index": 33,
+      "physical_feasible": true,
+      "slack": 4
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "decision_bits": [
+        0,
+        1,
+        0
+      ],
+      "encoding_consistent": false,
+      "index": 34,
+      "physical_feasible": true,
+      "slack": 4
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "decision_bits": [
+        1,
+        1,
+        0
+      ],
+      "encoding_consistent": false,
+      "index": 35,
+      "physical_feasible": true,
+      "slack": 4
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "decision_bits": [
+        0,
+        0,
+        1
+      ],
+      "encoding_consistent": false,
+      "index": 36,
+      "physical_feasible": true,
+      "slack": 4
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "decision_bits": [
+        1,
+        0,
+        1
+      ],
+      "encoding_consistent": false,
+      "index": 37,
+      "physical_feasible": false,
+      "slack": 4
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "decision_bits": [
+        0,
+        1,
+        1
+      ],
+      "encoding_consistent": false,
+      "index": 38,
+      "physical_feasible": false,
+      "slack": 4
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "decision_bits": [
+        1,
+        1,
+        1
+      ],
+      "encoding_consistent": false,
+      "index": 39,
+      "physical_feasible": false,
+      "slack": 4
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "decision_bits": [
+        0,
+        0,
+        0
+      ],
+      "encoding_consistent": true,
+      "index": 40,
+      "physical_feasible": true,
+      "slack": 5
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "decision_bits": [
+        1,
+        0,
+        0
+      ],
+      "encoding_consistent": false,
+      "index": 41,
+      "physical_feasible": true,
+      "slack": 5
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "decision_bits": [
+        0,
+        1,
+        0
+      ],
+      "encoding_consistent": false,
+      "index": 42,
+      "physical_feasible": true,
+      "slack": 5
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "decision_bits": [
+        1,
+        1,
+        0
+      ],
+      "encoding_consistent": false,
+      "index": 43,
+      "physical_feasible": true,
+      "slack": 5
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "decision_bits": [
+        0,
+        0,
+        1
+      ],
+      "encoding_consistent": false,
+      "index": 44,
+      "physical_feasible": true,
+      "slack": 5
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "decision_bits": [
+        1,
+        0,
+        1
+      ],
+      "encoding_consistent": false,
+      "index": 45,
+      "physical_feasible": false,
+      "slack": 5
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "decision_bits": [
+        0,
+        1,
+        1
+      ],
+      "encoding_consistent": false,
+      "index": 46,
+      "physical_feasible": false,
+      "slack": 5
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "decision_bits": [
+        1,
+        1,
+        1
+      ],
+      "encoding_consistent": false,
+      "index": 47,
+      "physical_feasible": false,
+      "slack": 5
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "decision_bits": [
+        0,
+        0,
+        0
+      ],
+      "encoding_consistent": false,
+      "index": 48,
+      "physical_feasible": true,
+      "slack": 6
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "decision_bits": [
+        1,
+        0,
+        0
+      ],
+      "encoding_consistent": false,
+      "index": 49,
+      "physical_feasible": true,
+      "slack": 6
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "decision_bits": [
+        0,
+        1,
+        0
+      ],
+      "encoding_consistent": false,
+      "index": 50,
+      "physical_feasible": true,
+      "slack": 6
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "decision_bits": [
+        1,
+        1,
+        0
+      ],
+      "encoding_consistent": false,
+      "index": 51,
+      "physical_feasible": true,
+      "slack": 6
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "decision_bits": [
+        0,
+        0,
+        1
+      ],
+      "encoding_consistent": false,
+      "index": 52,
+      "physical_feasible": true,
+      "slack": 6
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "decision_bits": [
+        1,
+        0,
+        1
+      ],
+      "encoding_consistent": false,
+      "index": 53,
+      "physical_feasible": false,
+      "slack": 6
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "decision_bits": [
+        0,
+        1,
+        1
+      ],
+      "encoding_consistent": false,
+      "index": 54,
+      "physical_feasible": false,
+      "slack": 6
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "decision_bits": [
+        1,
+        1,
+        1
+      ],
+      "encoding_consistent": false,
+      "index": 55,
+      "physical_feasible": false,
+      "slack": 6
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "decision_bits": [
+        0,
+        0,
+        0
+      ],
+      "encoding_consistent": false,
+      "index": 56,
+      "physical_feasible": true,
+      "slack": 7
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "decision_bits": [
+        1,
+        0,
+        0
+      ],
+      "encoding_consistent": false,
+      "index": 57,
+      "physical_feasible": true,
+      "slack": 7
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "decision_bits": [
+        0,
+        1,
+        0
+      ],
+      "encoding_consistent": false,
+      "index": 58,
+      "physical_feasible": true,
+      "slack": 7
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "decision_bits": [
+        1,
+        1,
+        0
+      ],
+      "encoding_consistent": false,
+      "index": 59,
+      "physical_feasible": true,
+      "slack": 7
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "decision_bits": [
+        0,
+        0,
+        1
+      ],
+      "encoding_consistent": false,
+      "index": 60,
+      "physical_feasible": true,
+      "slack": 7
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "decision_bits": [
+        1,
+        0,
+        1
+      ],
+      "encoding_consistent": false,
+      "index": 61,
+      "physical_feasible": false,
+      "slack": 7
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "decision_bits": [
+        0,
+        1,
+        1
+      ],
+      "encoding_consistent": false,
+      "index": 62,
+      "physical_feasible": false,
+      "slack": 7
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "decision_bits": [
+        1,
+        1,
+        1
+      ],
+      "encoding_consistent": false,
+      "index": 63,
+      "physical_feasible": false,
+      "slack": 7
+    }
+  ],
+  "executed_at_utc": "2026-11-10T11:58:20.483067+00:00",
+  "limitations": [
+    "One deterministic synthetic capacity constraint only.",
+    "The 64-state auxiliary-invariance audit is development evidence, not M01 or M02 execution.",
+    "No objective quality, resilience physics, uncertainty, circuit, solver, or quantum advantage is tested."
+  ],
+  "python": "3.12.14",
+  "randomness": "None; exhaustive deterministic enumeration",
+  "schema_version": 1,
+  "scope": "DEVELOPMENT_TEST_OUTSIDE_FROZEN_MUTATION_PILOT",
+  "source_sha256": "bfa727118846b27c08da34cae6f910da0f5edd1c94c859ab9190a10453376a3a",
+  "status": "EXECUTED_DEVELOPMENT_FEASIBILITY_AUDIT",
+  "summary": {
+    "checks_passed": 8,
+    "checks_total": 8,
+    "encoded_states_examined_for_auxiliary_invariance": 64,
+    "encoding_proxy_disagreements": 35,
+    "hardware_jobs": 0,
+    "load_decisions_examined": 8,
+    "physical_feasible_decisions": 5,
+    "pilot_baseline_reserved": false,
+    "protocol_formulation_passes_executed": 0,
+    "protocol_mutants_executed": 0,
+    "sdk_statevectors_executed": 0,
+    "search_evaluations": 0,
+    "shots": 0
+  }
+}

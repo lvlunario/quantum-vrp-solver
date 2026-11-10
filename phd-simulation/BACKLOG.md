@@ -1,4 +1,7 @@
 # Research backlog
+## November 10 independent physical-feasibility oracle
+After recording November 6 and 9 as incomplete (with November 7-8 remaining ordinary rest days), a standard-library oracle now evaluates the original capacity inequality without consulting QUBO energy, slack bits, statevectors or optimizer output. Eight executed checks passed across all eight load decisions and all 64 auxiliary encodings. Five decisions are physically feasible; overload margins are 1, 2 and 4; a deliberately wrong encoding-consistency proxy disagrees with physical feasibility on 35 encoded states. This is development evidence outside the frozen mutation pilot: no baseline reservation, protocol formulation pass, mutant, statevector, search, shot or hardware job occurred. Next: compose physical feasibility and auxiliary consistency as separate named development metrics.
+
 ## November 5 fail-closed mutation preflight
 The source/environment gate resolved eight critical repository objects at immutable commit `b1496bdf23f90951828121c845f9fb2ee5ea0ab4` and executed seven bounded controls. All controls passed, but the actual preflight correctly returned BLOCKED before baseline reservation: Python 3.12.14 matched, while Qiskit and several locked packages were absent, NumPy/SciPy differed, and the frozen plan still had `execution_authorized: false`. No run directory, baseline, formulation pass, statevector, mutant, search, shot or hardware job was created. Next: Friday synthesis and a minimal isolated environment-recreation plan; do not authorize or run the baseline.
 
