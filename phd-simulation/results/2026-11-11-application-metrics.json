@@ -1,0 +1,1328 @@
+{
+  "checks": [
+    {
+      "name": "all 64 encoded states are enumerated exactly once",
+      "passed": true
+    },
+    {
+      "detail": {
+        "NEITHER": 24,
+        "PHYSICAL_AND_AUXILIARY_VALID": 5,
+        "PHYSICAL_ONLY": 35
+      },
+      "name": "category partition matches the hand-derived fixture",
+      "passed": true
+    },
+    {
+      "detail": {
+        "count": 40,
+        "mass": 0.625
+      },
+      "name": "uniform physical-feasibility mass is 40/64",
+      "passed": true
+    },
+    {
+      "detail": {
+        "count": 5,
+        "mass": 0.078125
+      },
+      "name": "uniform auxiliary-consistency mass is 5/64",
+      "passed": true
+    },
+    {
+      "name": "auxiliary consistency is a strict subset of physical feasibility",
+      "passed": true
+    },
+    {
+      "detail": {
+        "counts": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "name": "each feasible decision has one consistent slack and each overloaded decision has none",
+      "passed": true
+    },
+    {
+      "name": "report fields preserve separate names and exact residuals",
+      "passed": true
+    },
+    {
+      "detail": {
+        "rejected": 5
+      },
+      "name": "malformed auxiliary definitions fail closed",
+      "passed": true
+    }
+  ],
+  "command": "python src/verify_application_metrics.py",
+  "config": {
+    "auxiliary_weights": [
+      1,
+      2,
+      4
+    ],
+    "capacity": 5,
+    "demands": [
+      2,
+      3,
+      4
+    ]
+  },
+  "data": "Fixed synthetic three-load fixture; no external dataset",
+  "executed_at_utc": "2026-11-11T11:23:51.202676+00:00",
+  "limitations": [
+    "One deterministic synthetic capacity constraint only.",
+    "Uniform mass is a counting diagnostic, not a circuit or optimizer result.",
+    "No resilience physics, uncertainty, objective quality, quantum execution, or advantage is tested."
+  ],
+  "python": "3.12.14",
+  "randomness": "None; exhaustive deterministic enumeration",
+  "rows": [
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": -5,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        0,
+        0,
+        0
+      ],
+      "index": 0,
+      "load": 0,
+      "physical_feasible": true,
+      "slack": 0
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": -3,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        1,
+        0,
+        0
+      ],
+      "index": 1,
+      "load": 2,
+      "physical_feasible": true,
+      "slack": 0
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": -2,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        0,
+        1,
+        0
+      ],
+      "index": 2,
+      "load": 3,
+      "physical_feasible": true,
+      "slack": 0
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent": true,
+      "auxiliary_residual": 0,
+      "category": "PHYSICAL_AND_AUXILIARY_VALID",
+      "decision_bits": [
+        1,
+        1,
+        0
+      ],
+      "index": 3,
+      "load": 5,
+      "physical_feasible": true,
+      "slack": 0
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": -1,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        0,
+        0,
+        1
+      ],
+      "index": 4,
+      "load": 4,
+      "physical_feasible": true,
+      "slack": 0
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 1,
+      "category": "NEITHER",
+      "decision_bits": [
+        1,
+        0,
+        1
+      ],
+      "index": 5,
+      "load": 6,
+      "physical_feasible": false,
+      "slack": 0
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 2,
+      "category": "NEITHER",
+      "decision_bits": [
+        0,
+        1,
+        1
+      ],
+      "index": 6,
+      "load": 7,
+      "physical_feasible": false,
+      "slack": 0
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 4,
+      "category": "NEITHER",
+      "decision_bits": [
+        1,
+        1,
+        1
+      ],
+      "index": 7,
+      "load": 9,
+      "physical_feasible": false,
+      "slack": 0
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": -4,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        0,
+        0,
+        0
+      ],
+      "index": 8,
+      "load": 0,
+      "physical_feasible": true,
+      "slack": 1
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": -2,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        1,
+        0,
+        0
+      ],
+      "index": 9,
+      "load": 2,
+      "physical_feasible": true,
+      "slack": 1
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": -1,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        0,
+        1,
+        0
+      ],
+      "index": 10,
+      "load": 3,
+      "physical_feasible": true,
+      "slack": 1
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 1,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        1,
+        1,
+        0
+      ],
+      "index": 11,
+      "load": 5,
+      "physical_feasible": true,
+      "slack": 1
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent": true,
+      "auxiliary_residual": 0,
+      "category": "PHYSICAL_AND_AUXILIARY_VALID",
+      "decision_bits": [
+        0,
+        0,
+        1
+      ],
+      "index": 12,
+      "load": 4,
+      "physical_feasible": true,
+      "slack": 1
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 2,
+      "category": "NEITHER",
+      "decision_bits": [
+        1,
+        0,
+        1
+      ],
+      "index": 13,
+      "load": 6,
+      "physical_feasible": false,
+      "slack": 1
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 3,
+      "category": "NEITHER",
+      "decision_bits": [
+        0,
+        1,
+        1
+      ],
+      "index": 14,
+      "load": 7,
+      "physical_feasible": false,
+      "slack": 1
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 5,
+      "category": "NEITHER",
+      "decision_bits": [
+        1,
+        1,
+        1
+      ],
+      "index": 15,
+      "load": 9,
+      "physical_feasible": false,
+      "slack": 1
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": -3,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        0,
+        0,
+        0
+      ],
+      "index": 16,
+      "load": 0,
+      "physical_feasible": true,
+      "slack": 2
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": -1,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        1,
+        0,
+        0
+      ],
+      "index": 17,
+      "load": 2,
+      "physical_feasible": true,
+      "slack": 2
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent": true,
+      "auxiliary_residual": 0,
+      "category": "PHYSICAL_AND_AUXILIARY_VALID",
+      "decision_bits": [
+        0,
+        1,
+        0
+      ],
+      "index": 18,
+      "load": 3,
+      "physical_feasible": true,
+      "slack": 2
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 2,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        1,
+        1,
+        0
+      ],
+      "index": 19,
+      "load": 5,
+      "physical_feasible": true,
+      "slack": 2
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 1,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        0,
+        0,
+        1
+      ],
+      "index": 20,
+      "load": 4,
+      "physical_feasible": true,
+      "slack": 2
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 3,
+      "category": "NEITHER",
+      "decision_bits": [
+        1,
+        0,
+        1
+      ],
+      "index": 21,
+      "load": 6,
+      "physical_feasible": false,
+      "slack": 2
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 4,
+      "category": "NEITHER",
+      "decision_bits": [
+        0,
+        1,
+        1
+      ],
+      "index": 22,
+      "load": 7,
+      "physical_feasible": false,
+      "slack": 2
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 6,
+      "category": "NEITHER",
+      "decision_bits": [
+        1,
+        1,
+        1
+      ],
+      "index": 23,
+      "load": 9,
+      "physical_feasible": false,
+      "slack": 2
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": -2,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        0,
+        0,
+        0
+      ],
+      "index": 24,
+      "load": 0,
+      "physical_feasible": true,
+      "slack": 3
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent": true,
+      "auxiliary_residual": 0,
+      "category": "PHYSICAL_AND_AUXILIARY_VALID",
+      "decision_bits": [
+        1,
+        0,
+        0
+      ],
+      "index": 25,
+      "load": 2,
+      "physical_feasible": true,
+      "slack": 3
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 1,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        0,
+        1,
+        0
+      ],
+      "index": 26,
+      "load": 3,
+      "physical_feasible": true,
+      "slack": 3
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 3,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        1,
+        1,
+        0
+      ],
+      "index": 27,
+      "load": 5,
+      "physical_feasible": true,
+      "slack": 3
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 2,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        0,
+        0,
+        1
+      ],
+      "index": 28,
+      "load": 4,
+      "physical_feasible": true,
+      "slack": 3
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 4,
+      "category": "NEITHER",
+      "decision_bits": [
+        1,
+        0,
+        1
+      ],
+      "index": 29,
+      "load": 6,
+      "physical_feasible": false,
+      "slack": 3
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 5,
+      "category": "NEITHER",
+      "decision_bits": [
+        0,
+        1,
+        1
+      ],
+      "index": 30,
+      "load": 7,
+      "physical_feasible": false,
+      "slack": 3
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 7,
+      "category": "NEITHER",
+      "decision_bits": [
+        1,
+        1,
+        1
+      ],
+      "index": 31,
+      "load": 9,
+      "physical_feasible": false,
+      "slack": 3
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": -1,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        0,
+        0,
+        0
+      ],
+      "index": 32,
+      "load": 0,
+      "physical_feasible": true,
+      "slack": 4
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 1,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        1,
+        0,
+        0
+      ],
+      "index": 33,
+      "load": 2,
+      "physical_feasible": true,
+      "slack": 4
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 2,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        0,
+        1,
+        0
+      ],
+      "index": 34,
+      "load": 3,
+      "physical_feasible": true,
+      "slack": 4
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 4,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        1,
+        1,
+        0
+      ],
+      "index": 35,
+      "load": 5,
+      "physical_feasible": true,
+      "slack": 4
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 3,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        0,
+        0,
+        1
+      ],
+      "index": 36,
+      "load": 4,
+      "physical_feasible": true,
+      "slack": 4
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 5,
+      "category": "NEITHER",
+      "decision_bits": [
+        1,
+        0,
+        1
+      ],
+      "index": 37,
+      "load": 6,
+      "physical_feasible": false,
+      "slack": 4
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 6,
+      "category": "NEITHER",
+      "decision_bits": [
+        0,
+        1,
+        1
+      ],
+      "index": 38,
+      "load": 7,
+      "physical_feasible": false,
+      "slack": 4
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 8,
+      "category": "NEITHER",
+      "decision_bits": [
+        1,
+        1,
+        1
+      ],
+      "index": 39,
+      "load": 9,
+      "physical_feasible": false,
+      "slack": 4
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent": true,
+      "auxiliary_residual": 0,
+      "category": "PHYSICAL_AND_AUXILIARY_VALID",
+      "decision_bits": [
+        0,
+        0,
+        0
+      ],
+      "index": 40,
+      "load": 0,
+      "physical_feasible": true,
+      "slack": 5
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 2,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        1,
+        0,
+        0
+      ],
+      "index": 41,
+      "load": 2,
+      "physical_feasible": true,
+      "slack": 5
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 3,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        0,
+        1,
+        0
+      ],
+      "index": 42,
+      "load": 3,
+      "physical_feasible": true,
+      "slack": 5
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 5,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        1,
+        1,
+        0
+      ],
+      "index": 43,
+      "load": 5,
+      "physical_feasible": true,
+      "slack": 5
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 4,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        0,
+        0,
+        1
+      ],
+      "index": 44,
+      "load": 4,
+      "physical_feasible": true,
+      "slack": 5
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 6,
+      "category": "NEITHER",
+      "decision_bits": [
+        1,
+        0,
+        1
+      ],
+      "index": 45,
+      "load": 6,
+      "physical_feasible": false,
+      "slack": 5
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 7,
+      "category": "NEITHER",
+      "decision_bits": [
+        0,
+        1,
+        1
+      ],
+      "index": 46,
+      "load": 7,
+      "physical_feasible": false,
+      "slack": 5
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 9,
+      "category": "NEITHER",
+      "decision_bits": [
+        1,
+        1,
+        1
+      ],
+      "index": 47,
+      "load": 9,
+      "physical_feasible": false,
+      "slack": 5
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 1,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        0,
+        0,
+        0
+      ],
+      "index": 48,
+      "load": 0,
+      "physical_feasible": true,
+      "slack": 6
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 3,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        1,
+        0,
+        0
+      ],
+      "index": 49,
+      "load": 2,
+      "physical_feasible": true,
+      "slack": 6
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 4,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        0,
+        1,
+        0
+      ],
+      "index": 50,
+      "load": 3,
+      "physical_feasible": true,
+      "slack": 6
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 6,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        1,
+        1,
+        0
+      ],
+      "index": 51,
+      "load": 5,
+      "physical_feasible": true,
+      "slack": 6
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 5,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        0,
+        0,
+        1
+      ],
+      "index": 52,
+      "load": 4,
+      "physical_feasible": true,
+      "slack": 6
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 7,
+      "category": "NEITHER",
+      "decision_bits": [
+        1,
+        0,
+        1
+      ],
+      "index": 53,
+      "load": 6,
+      "physical_feasible": false,
+      "slack": 6
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 8,
+      "category": "NEITHER",
+      "decision_bits": [
+        0,
+        1,
+        1
+      ],
+      "index": 54,
+      "load": 7,
+      "physical_feasible": false,
+      "slack": 6
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 10,
+      "category": "NEITHER",
+      "decision_bits": [
+        1,
+        1,
+        1
+      ],
+      "index": 55,
+      "load": 9,
+      "physical_feasible": false,
+      "slack": 6
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 2,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        0,
+        0,
+        0
+      ],
+      "index": 56,
+      "load": 0,
+      "physical_feasible": true,
+      "slack": 7
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 4,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        1,
+        0,
+        0
+      ],
+      "index": 57,
+      "load": 2,
+      "physical_feasible": true,
+      "slack": 7
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 5,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        0,
+        1,
+        0
+      ],
+      "index": 58,
+      "load": 3,
+      "physical_feasible": true,
+      "slack": 7
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 7,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        1,
+        1,
+        0
+      ],
+      "index": 59,
+      "load": 5,
+      "physical_feasible": true,
+      "slack": 7
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 6,
+      "category": "PHYSICAL_ONLY",
+      "decision_bits": [
+        0,
+        0,
+        1
+      ],
+      "index": 60,
+      "load": 4,
+      "physical_feasible": true,
+      "slack": 7
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 8,
+      "category": "NEITHER",
+      "decision_bits": [
+        1,
+        0,
+        1
+      ],
+      "index": 61,
+      "load": 6,
+      "physical_feasible": false,
+      "slack": 7
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 9,
+      "category": "NEITHER",
+      "decision_bits": [
+        0,
+        1,
+        1
+      ],
+      "index": 62,
+      "load": 7,
+      "physical_feasible": false,
+      "slack": 7
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent": false,
+      "auxiliary_residual": 11,
+      "category": "NEITHER",
+      "decision_bits": [
+        1,
+        1,
+        1
+      ],
+      "index": 63,
+      "load": 9,
+      "physical_feasible": false,
+      "slack": 7
+    }
+  ],
+  "schema_version": 1,
+  "scope": "DEVELOPMENT_TEST_OUTSIDE_FROZEN_MUTATION_PILOT",
+  "source_sha256": "c8835f799b08b84692175722d1d328f775e1388375babf0a1bc78c88680817b3",
+  "status": "EXECUTED_DEVELOPMENT_APPLICATION_METRIC_AUDIT",
+  "summary": {
+    "auxiliary_consistent_states": 5,
+    "category_counts": {
+      "NEITHER": 24,
+      "PHYSICAL_AND_AUXILIARY_VALID": 5,
+      "PHYSICAL_ONLY": 35
+    },
+    "checks_passed": 8,
+    "checks_total": 8,
+    "encoded_states_examined": 64,
+    "hardware_jobs": 0,
+    "physical_feasible_states": 40,
+    "pilot_baseline_reserved": false,
+    "protocol_formulation_passes_executed": 0,
+    "protocol_mutants_executed": 0,
+    "sdk_statevectors_executed": 0,
+    "search_evaluations": 0,
+    "shots": 0
+  }
+}
