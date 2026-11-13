@@ -4,7 +4,7 @@
   "end_date": "2027-09-21",
   "simulation_timezone": "Europe/Oslo",
   "delivery_timezone": "Asia/Manila",
-  "last_completed_date": "2026-11-11",
+  "last_completed_date": "2026-11-13",
   "completed_dates": [
     "2026-09-22",
     "2026-09-23",
@@ -30,10 +30,11 @@
     "2026-11-04",
     "2026-11-05",
     "2026-11-10",
-    "2026-11-11"
+    "2026-11-11",
+    "2026-11-13"
   ],
   "phase": "onboarding and independent verification",
-  "next_task": "November 12: derive and test a distribution-level aggregator with explicit normalized synthetic weights; preserve physical, auxiliary and joint masses separately, and keep the mutation pilot blocked and unexecuted.",
+  "next_task": "November 16: consolidate the decision, per-state and distribution layers into an application-oracle contract; choose and pre-register the nonnegative-demand monotonicity property for Tuesday development tests without authorizing the mutation pilot.",
   "simulated_deadlines": [
     "2027-02-26",
     "2027-06-25",
@@ -59,7 +60,7 @@
   ],
   "catchup_created_date": "2026-09-27",
   "catchup_reason": "Explicit user request to run the entire missed workweek; all new execution occurred on September 27.",
-  "latest_evidence": "results/2026-11-11-application-metrics.json",
+  "latest_evidence": "results/2026-11-13-distribution-metrics.json",
   "publication_recovered_dates": [
     "2026-09-30"
   ],
@@ -75,9 +76,10 @@
     "2026-10-30",
     "2026-11-03",
     "2026-11-06",
-    "2026-11-09"
+    "2026-11-09",
+    "2026-11-12"
   ],
-  "recovery_note": "September 30 local work recovered and re-executed October 5; first publication October 5. Missing dates remain incomplete. October 13–14 package not recovered; interruption logs created October 15; new R14 implementation executed October 15, not backdated. October 28-30 have no journals or evidence and were recorded as incomplete on November 2; no reconstruction was claimed. November 3 has no journal or execution evidence and was recorded incomplete on November 4; its adapter task was completed as current November 4 work, not backdated. November 6 and 9 have no journals or execution evidence and were recorded incomplete on November 10; November 7-8 were ordinary rest days.",
+  "recovery_note": "September 30 local work recovered and re-executed October 5; first publication October 5. Missing dates remain incomplete. October 13–14 package not recovered; interruption logs created October 15; new R14 implementation executed October 15, not backdated. October 28-30 have no journals or evidence and were recorded as incomplete on November 2; no reconstruction was claimed. November 3 has no journal or execution evidence and was recorded incomplete on November 4; its adapter task was completed as current November 4 work, not backdated. November 6 and 9 have no journals or execution evidence and were recorded incomplete on November 10; November 7-8 were ordinary rest days. November 12 has no journal, commit or execution evidence and was recorded incomplete on November 13; its distribution-aggregation task was completed as current November 13 work, not backdated.",
   "literature_status": "R06 IN PROGRESS: direct full-text extraction completed for Quito and QDiff; manuscript v0.5 incorporates their oracle boundary. Backward/forward citation chaining and broader novelty comparison remain incomplete.",
   "pilot_protocol": {
     "path": "docs/baseline-protocol-v1.md",
@@ -214,6 +216,22 @@
       "AUXILIARY_ONLY": 0,
       "NEITHER": 24
     },
+    "pilot_baseline_reserved": false,
+    "protocol_formulation_passes_executed": 0,
+    "protocol_mutants_executed": 0,
+    "sdk_statevectors_executed": 0
+  },
+  "distribution_metric_aggregation": {
+    "status": "EXECUTED_DEVELOPMENT_AUDIT_OUTSIDE_MUTATION_PILOT",
+    "implementation": "src/distribution_metrics.py",
+    "verification": "src/verify_distribution_metrics.py",
+    "documentation": "docs/distribution-metric-aggregation.md",
+    "result": "results/2026-11-13-distribution-metrics.json",
+    "verified_date": "2026-11-13",
+    "checks_passed": 8,
+    "support_size": 64,
+    "synthetic_distributions_tested": 4,
+    "malformed_cases_rejected": 7,
     "pilot_baseline_reserved": false,
     "protocol_formulation_passes_executed": 0,
     "protocol_mutants_executed": 0,

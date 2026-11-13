@@ -1,0 +1,147 @@
+{
+  "checks": [
+    {
+      "detail": {
+        "auxiliary_consistent_mass": 0.078125,
+        "category_mass": {
+          "AUXILIARY_ONLY": 0.0,
+          "NEITHER": 0.375,
+          "PHYSICAL_AND_AUXILIARY_VALID": 0.078125,
+          "PHYSICAL_ONLY": 0.546875
+        },
+        "joint_valid_mass": 0.078125,
+        "physical_feasible_mass": 0.625,
+        "probability_sum": 1.0,
+        "support_size": 64
+      },
+      "name": "uniform distribution reproduces physical mass 40/64",
+      "passed": true
+    },
+    {
+      "name": "uniform distribution reproduces auxiliary and joint mass 5/64",
+      "passed": true
+    },
+    {
+      "name": "joint-valid point mass reports all three masses as one",
+      "passed": true
+    },
+    {
+      "name": "physical-only point mass keeps auxiliary and joint at zero",
+      "passed": true
+    },
+    {
+      "detail": {
+        "auxiliary_consistent_mass": 0.25,
+        "category_mass": {
+          "AUXILIARY_ONLY": 0.0,
+          "NEITHER": 0.25,
+          "PHYSICAL_AND_AUXILIARY_VALID": 0.25,
+          "PHYSICAL_ONLY": 0.5
+        },
+        "joint_valid_mass": 0.25,
+        "physical_feasible_mass": 0.75,
+        "probability_sum": 1.0,
+        "support_size": 64
+      },
+      "name": "three-point analytic mixture preserves separate masses",
+      "passed": true
+    },
+    {
+      "name": "category masses partition every tested distribution",
+      "passed": true
+    },
+    {
+      "detail": {
+        "rejected": 7
+      },
+      "name": "seven malformed distributions and supports fail closed",
+      "passed": true
+    },
+    {
+      "name": "all tested masses remain within probability bounds",
+      "passed": true
+    }
+  ],
+  "command": "python src/verify_distribution_metrics.py",
+  "data": "Four explicit synthetic distributions over the fixed 64-state fixture; no external dataset",
+  "distributions": {
+    "joint_point_mass": {
+      "auxiliary_consistent_mass": 1.0,
+      "category_mass": {
+        "AUXILIARY_ONLY": 0.0,
+        "NEITHER": 0.0,
+        "PHYSICAL_AND_AUXILIARY_VALID": 1.0,
+        "PHYSICAL_ONLY": 0.0
+      },
+      "joint_valid_mass": 1.0,
+      "physical_feasible_mass": 1.0,
+      "probability_sum": 1.0,
+      "support_size": 64
+    },
+    "physical_only_point_mass": {
+      "auxiliary_consistent_mass": 0.0,
+      "category_mass": {
+        "AUXILIARY_ONLY": 0.0,
+        "NEITHER": 0.0,
+        "PHYSICAL_AND_AUXILIARY_VALID": 0.0,
+        "PHYSICAL_ONLY": 1.0
+      },
+      "joint_valid_mass": 0.0,
+      "physical_feasible_mass": 1.0,
+      "probability_sum": 1.0,
+      "support_size": 64
+    },
+    "three_point_mixture": {
+      "auxiliary_consistent_mass": 0.25,
+      "category_mass": {
+        "AUXILIARY_ONLY": 0.0,
+        "NEITHER": 0.25,
+        "PHYSICAL_AND_AUXILIARY_VALID": 0.25,
+        "PHYSICAL_ONLY": 0.5
+      },
+      "joint_valid_mass": 0.25,
+      "physical_feasible_mass": 0.75,
+      "probability_sum": 1.0,
+      "support_size": 64
+    },
+    "uniform": {
+      "auxiliary_consistent_mass": 0.078125,
+      "category_mass": {
+        "AUXILIARY_ONLY": 0.0,
+        "NEITHER": 0.375,
+        "PHYSICAL_AND_AUXILIARY_VALID": 0.078125,
+        "PHYSICAL_ONLY": 0.546875
+      },
+      "joint_valid_mass": 0.078125,
+      "physical_feasible_mass": 0.625,
+      "probability_sum": 1.0,
+      "support_size": 64
+    }
+  },
+  "executed_at_utc": "2026-11-13T11:18:18.733253+00:00",
+  "limitations": [
+    "Weights are constructed synthetic distributions, not circuit outputs or measurements.",
+    "Only one static capacity fixture is represented.",
+    "No objective quality, uncertainty, resilience physics, optimizer, or quantum advantage is evaluated."
+  ],
+  "python": "3.12.14",
+  "randomness": "None; deterministic distributions and exhaustive support",
+  "schema_version": 1,
+  "scope": "DEVELOPMENT_TEST_OUTSIDE_FROZEN_MUTATION_PILOT",
+  "source_sha256": "d2aaf68c375ecb290d80181f23570f3705ddc2efd534942c2990aa23688f54d6",
+  "status": "EXECUTED_DEVELOPMENT_DISTRIBUTION_METRIC_AUDIT",
+  "summary": {
+    "checks_passed": 8,
+    "checks_total": 8,
+    "hardware_jobs": 0,
+    "malformed_cases_rejected": 7,
+    "pilot_baseline_reserved": false,
+    "protocol_formulation_passes_executed": 0,
+    "protocol_mutants_executed": 0,
+    "sdk_statevectors_executed": 0,
+    "search_evaluations": 0,
+    "shots": 0,
+    "support_size": 64,
+    "synthetic_distributions_tested": 4
+  }
+}
