@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "contract_id": "application-oracle-v1",
+  "status": "FROZEN_FOR_DEVELOPMENT_TESTS",
+  "frozen_date": "2026-11-16",
+  "scope": "DEVELOPMENT_ONLY_OUTSIDE_FROZEN_MUTATION_PILOT",
+  "layers": [
+    {
+      "id": "decision_physical",
+      "implementation": "src/independent_feasibility.py:evaluate",
+      "question": "Does the selected nonnegative load fit capacity?",
+      "trust_boundary": "Does not read auxiliary bits, energy, circuits or distributions"
+    },
+    {
+      "id": "encoded_state",
+      "implementation": "src/application_metrics.py:evaluate_state",
+      "question": "Are physical feasibility and auxiliary consistency separately reported?",
+      "trust_boundary": "Category is descriptive and cannot replace either source verdict"
+    },
+    {
+      "id": "distribution",
+      "implementation": "src/distribution_metrics.py:aggregate",
+      "question": "What mass does an explicit validated distribution assign to each verdict?",
+      "trust_boundary": "Never infers weights from the number or order of rows"
+    }
+  ],
+  "cross_layer_invariants": [
+    "physical verdict is invariant to auxiliary-bit assignment",
+    "category agrees with physical and auxiliary source verdicts",
+    "distribution support is complete, unique and ordered",
+    "explicit probabilities are finite, nonnegative and normalized",
+    "physical, auxiliary and joint masses remain separately named"
+  ],
+  "preregistered_property": {
+    "id": "P01_NONNEGATIVE_DEMAND_MONOTONICITY",
+    "status": "PLANNED_UNEXECUTED",
+    "statement": "For fixed nonnegative demands and capacity, if binary decision x is componentwise no greater than y, then load(y) is no less than load(x) and overload(y) is no less than overload(x). If y is feasible, x must also be feasible.",
+    "preconditions": [
+      "x and y are binary vectors of equal nonzero length",
+      "x_i <= y_i for every component",
+      "demand vector is fixed and contains nonnegative integers",
+      "capacity is fixed and is a nonnegative integer"
+    ],
+    "excluded_claims": [
+      "auxiliary consistency is monotone",
+      "objective value is monotone",
+      "the converse feasibility implication holds",
+      "the property holds for negative demands or changing capacity"
+    ],
+    "development_fixture": {
+      "demands": [2, 3, 4],
+      "capacity": 5,
+      "ordered_pairs_max": 27,
+      "pair_count_derivation": "Each of three components permits (0,0), (0,1), or (1,1): 3^3 = 27, including identity pairs."
+    },
+    "planned_checks": [
+      "enumerate exactly 27 componentwise ordered pairs",
+      "load is nondecreasing for every pair",
+      "overload is nondecreasing for every pair",
+      "feasibility is downward closed for every pair",
+      "at least one strict load increase is observed",
+      "negative-demand and changing-capacity examples are rejected as outside preconditions"
+    ]
+  },
+  "resource_boundary": {
+    "protocol_formulation_passes_authorized": 0,
+    "protocol_mutants_authorized": 0,
+    "sdk_statevectors_authorized": 0,
+    "search_evaluations_authorized": 0,
+    "shots_authorized": 0,
+    "hardware_jobs_authorized": 0,
+    "pilot_baseline_reservation_authorized": false
+  },
+  "limitations": [
+    "One static synthetic capacity inequality only.",
+    "The preregistered property is not executed by freezing or validating this contract.",
+    "No power flow, restoration, contingency, uncertainty, objective quality or quantum advantage is addressed."
+  ]
+}

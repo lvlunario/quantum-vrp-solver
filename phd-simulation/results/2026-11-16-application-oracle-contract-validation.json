@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "name": "schema, identifier and frozen status are exact",
+      "passed": true
+    },
+    {
+      "detail": {
+        "layers": [
+          "decision_physical",
+          "encoded_state",
+          "distribution"
+        ]
+      },
+      "name": "three layers are ordered and separately named",
+      "passed": true
+    },
+    {
+      "name": "all referenced implementations exist",
+      "passed": true
+    },
+    {
+      "name": "P01 remains explicitly planned and unexecuted",
+      "passed": true
+    },
+    {
+      "name": "synthetic fixture and 27-pair bound are frozen",
+      "passed": true
+    },
+    {
+      "name": "preconditions, excluded claims and planned checks are complete",
+      "passed": true
+    },
+    {
+      "name": "all scientific execution authorizations remain zero or false",
+      "passed": true
+    },
+    {
+      "detail": {
+        "rejected": 5
+      },
+      "name": "five contract mutations fail closed",
+      "passed": true
+    }
+  ],
+  "command": "python src/validate_application_oracle_contract.py",
+  "contract_sha256": "243ea1a294f5731b8fe8a1f101eb29008f19cd71b690e951e2fb45a744651176",
+  "executed_at_utc": "2026-11-16T11:30:31.539174+00:00",
+  "limitations": [
+    "This validates a contract and its fail-closed boundary; it does not execute P01.",
+    "Implementation existence is checked, not full semantic equivalence across layers.",
+    "No scientific or quantum execution is authorized by a passing validation."
+  ],
+  "python": "3.12.14",
+  "schema_version": 1,
+  "scope": "DEVELOPMENT_ONLY_OUTSIDE_FROZEN_MUTATION_PILOT",
+  "source_sha256": "8b5ecda64f2aa55090c6b131bcc7848a64d5aa63d8dc16d97eba297a37f70845",
+  "status": "EXECUTED_CONTRACT_VALIDATION_PROPERTY_UNEXECUTED",
+  "summary": {
+    "checks_passed": 8,
+    "checks_total": 8,
+    "contract_mutations_rejected": 5,
+    "hardware_jobs": 0,
+    "monotonicity_pairs_executed": 0,
+    "pilot_baseline_reserved": false,
+    "preregistered_property_status": "PLANNED_UNEXECUTED",
+    "protocol_formulation_passes_executed": 0,
+    "protocol_mutants_executed": 0,
+    "sdk_statevectors_executed": 0,
+    "search_evaluations": 0,
+    "shots": 0
+  },
+  "validated_contract": {
+    "layer_ids": [
+      "decision_physical",
+      "encoded_state",
+      "distribution"
+    ],
+    "ordered_pairs_max": 27,
+    "property_status": "PLANNED_UNEXECUTED",
+    "resource_boundary": {
+      "hardware_jobs_authorized": 0,
+      "pilot_baseline_reservation_authorized": false,
+      "protocol_formulation_passes_authorized": 0,
+      "protocol_mutants_authorized": 0,
+      "sdk_statevectors_authorized": 0,
+      "search_evaluations_authorized": 0,
+      "shots_authorized": 0
+    }
+  }
+}
