@@ -1,0 +1,695 @@
+{
+  "checks": [
+    {
+      "name": "frozen contract identifies P01 as planned and unexecuted before this run",
+      "passed": true
+    },
+    {
+      "name": "exactly 27 componentwise ordered pairs are enumerated",
+      "passed": true
+    },
+    {
+      "detail": {
+        "identity_pairs": 8
+      },
+      "name": "the enumeration contains exactly eight identity pairs",
+      "passed": true
+    },
+    {
+      "name": "load is nondecreasing for every ordered pair",
+      "passed": true
+    },
+    {
+      "name": "overload is nondecreasing for every ordered pair",
+      "passed": true
+    },
+    {
+      "name": "feasibility is downward closed for every ordered pair",
+      "passed": true
+    },
+    {
+      "detail": {
+        "strict_load_increases": 19
+      },
+      "name": "all nineteen nonidentity pairs strictly increase load",
+      "passed": true
+    },
+    {
+      "detail": {
+        "rejected": 2
+      },
+      "name": "both out-of-precondition controls fail closed",
+      "passed": true
+    }
+  ],
+  "command": "python src/verify_monotonicity_p01.py",
+  "contract_sha256": "243ea1a294f5731b8fe8a1f101eb29008f19cd71b690e951e2fb45a744651176",
+  "data": "Fixed synthetic three-load fixture; no external dataset",
+  "executed_at_utc": "2026-11-18T11:36:33.091113+00:00",
+  "limitations": [
+    "P01 passed one exhaustive three-bit synthetic fixture only.",
+    "The result does not cover auxiliary consistency, objective energy or negative demands.",
+    "No resilience physics, uncertainty, optimizer, circuit, hardware or quantum advantage is evaluated."
+  ],
+  "out_of_precondition_controls": [
+    {
+      "name": "negative demand violates the nonnegative-demand precondition",
+      "reason": "demands must be nonnegative integers",
+      "rejected": true
+    },
+    {
+      "name": "changing capacity violates the fixed-capacity precondition",
+      "reason": "capacity must remain fixed",
+      "rejected": true
+    }
+  ],
+  "property": {
+    "capacity": 5,
+    "contract_status_before_execution": "PLANNED_UNEXECUTED",
+    "demands": [
+      2,
+      3,
+      4
+    ],
+    "execution_outcome": "PASSED_ON_FIXED_DEVELOPMENT_FIXTURE",
+    "id": "P01_NONNEGATIVE_DEMAND_MONOTONICITY"
+  },
+  "python": "3.12.14",
+  "randomness": "None; exhaustive deterministic enumeration",
+  "rows": [
+    {
+      "downward_feasibility": true,
+      "feasible_x": true,
+      "feasible_y": true,
+      "load_nondecreasing": true,
+      "load_x": 0,
+      "load_y": 0,
+      "ordinal": 0,
+      "overload_nondecreasing": true,
+      "overload_x": 0,
+      "overload_y": 0,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "downward_feasibility": true,
+      "feasible_x": true,
+      "feasible_y": true,
+      "load_nondecreasing": true,
+      "load_x": 0,
+      "load_y": 4,
+      "ordinal": 1,
+      "overload_nondecreasing": true,
+      "overload_x": 0,
+      "overload_y": 0,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "downward_feasibility": true,
+      "feasible_x": true,
+      "feasible_y": true,
+      "load_nondecreasing": true,
+      "load_x": 4,
+      "load_y": 4,
+      "ordinal": 2,
+      "overload_nondecreasing": true,
+      "overload_x": 0,
+      "overload_y": 0,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "downward_feasibility": true,
+      "feasible_x": true,
+      "feasible_y": true,
+      "load_nondecreasing": true,
+      "load_x": 0,
+      "load_y": 3,
+      "ordinal": 3,
+      "overload_nondecreasing": true,
+      "overload_x": 0,
+      "overload_y": 0,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "downward_feasibility": true,
+      "feasible_x": true,
+      "feasible_y": false,
+      "load_nondecreasing": true,
+      "load_x": 0,
+      "load_y": 7,
+      "ordinal": 4,
+      "overload_nondecreasing": true,
+      "overload_x": 0,
+      "overload_y": 2,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "downward_feasibility": true,
+      "feasible_x": true,
+      "feasible_y": false,
+      "load_nondecreasing": true,
+      "load_x": 4,
+      "load_y": 7,
+      "ordinal": 5,
+      "overload_nondecreasing": true,
+      "overload_x": 0,
+      "overload_y": 2,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "downward_feasibility": true,
+      "feasible_x": true,
+      "feasible_y": true,
+      "load_nondecreasing": true,
+      "load_x": 3,
+      "load_y": 3,
+      "ordinal": 6,
+      "overload_nondecreasing": true,
+      "overload_x": 0,
+      "overload_y": 0,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "downward_feasibility": true,
+      "feasible_x": true,
+      "feasible_y": false,
+      "load_nondecreasing": true,
+      "load_x": 3,
+      "load_y": 7,
+      "ordinal": 7,
+      "overload_nondecreasing": true,
+      "overload_x": 0,
+      "overload_y": 2,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "downward_feasibility": true,
+      "feasible_x": false,
+      "feasible_y": false,
+      "load_nondecreasing": true,
+      "load_x": 7,
+      "load_y": 7,
+      "ordinal": 8,
+      "overload_nondecreasing": true,
+      "overload_x": 2,
+      "overload_y": 2,
+      "x": [
+        0,
+        1,
+        1
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "downward_feasibility": true,
+      "feasible_x": true,
+      "feasible_y": true,
+      "load_nondecreasing": true,
+      "load_x": 0,
+      "load_y": 2,
+      "ordinal": 9,
+      "overload_nondecreasing": true,
+      "overload_x": 0,
+      "overload_y": 0,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "downward_feasibility": true,
+      "feasible_x": true,
+      "feasible_y": false,
+      "load_nondecreasing": true,
+      "load_x": 0,
+      "load_y": 6,
+      "ordinal": 10,
+      "overload_nondecreasing": true,
+      "overload_x": 0,
+      "overload_y": 1,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "downward_feasibility": true,
+      "feasible_x": true,
+      "feasible_y": false,
+      "load_nondecreasing": true,
+      "load_x": 4,
+      "load_y": 6,
+      "ordinal": 11,
+      "overload_nondecreasing": true,
+      "overload_x": 0,
+      "overload_y": 1,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "downward_feasibility": true,
+      "feasible_x": true,
+      "feasible_y": true,
+      "load_nondecreasing": true,
+      "load_x": 0,
+      "load_y": 5,
+      "ordinal": 12,
+      "overload_nondecreasing": true,
+      "overload_x": 0,
+      "overload_y": 0,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "downward_feasibility": true,
+      "feasible_x": true,
+      "feasible_y": false,
+      "load_nondecreasing": true,
+      "load_x": 0,
+      "load_y": 9,
+      "ordinal": 13,
+      "overload_nondecreasing": true,
+      "overload_x": 0,
+      "overload_y": 4,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "downward_feasibility": true,
+      "feasible_x": true,
+      "feasible_y": false,
+      "load_nondecreasing": true,
+      "load_x": 4,
+      "load_y": 9,
+      "ordinal": 14,
+      "overload_nondecreasing": true,
+      "overload_x": 0,
+      "overload_y": 4,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "downward_feasibility": true,
+      "feasible_x": true,
+      "feasible_y": true,
+      "load_nondecreasing": true,
+      "load_x": 3,
+      "load_y": 5,
+      "ordinal": 15,
+      "overload_nondecreasing": true,
+      "overload_x": 0,
+      "overload_y": 0,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "downward_feasibility": true,
+      "feasible_x": true,
+      "feasible_y": false,
+      "load_nondecreasing": true,
+      "load_x": 3,
+      "load_y": 9,
+      "ordinal": 16,
+      "overload_nondecreasing": true,
+      "overload_x": 0,
+      "overload_y": 4,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "downward_feasibility": true,
+      "feasible_x": false,
+      "feasible_y": false,
+      "load_nondecreasing": true,
+      "load_x": 7,
+      "load_y": 9,
+      "ordinal": 17,
+      "overload_nondecreasing": true,
+      "overload_x": 2,
+      "overload_y": 4,
+      "x": [
+        0,
+        1,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "downward_feasibility": true,
+      "feasible_x": true,
+      "feasible_y": true,
+      "load_nondecreasing": true,
+      "load_x": 2,
+      "load_y": 2,
+      "ordinal": 18,
+      "overload_nondecreasing": true,
+      "overload_x": 0,
+      "overload_y": 0,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "downward_feasibility": true,
+      "feasible_x": true,
+      "feasible_y": false,
+      "load_nondecreasing": true,
+      "load_x": 2,
+      "load_y": 6,
+      "ordinal": 19,
+      "overload_nondecreasing": true,
+      "overload_x": 0,
+      "overload_y": 1,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "downward_feasibility": true,
+      "feasible_x": false,
+      "feasible_y": false,
+      "load_nondecreasing": true,
+      "load_x": 6,
+      "load_y": 6,
+      "ordinal": 20,
+      "overload_nondecreasing": true,
+      "overload_x": 1,
+      "overload_y": 1,
+      "x": [
+        1,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "downward_feasibility": true,
+      "feasible_x": true,
+      "feasible_y": true,
+      "load_nondecreasing": true,
+      "load_x": 2,
+      "load_y": 5,
+      "ordinal": 21,
+      "overload_nondecreasing": true,
+      "overload_x": 0,
+      "overload_y": 0,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "downward_feasibility": true,
+      "feasible_x": true,
+      "feasible_y": false,
+      "load_nondecreasing": true,
+      "load_x": 2,
+      "load_y": 9,
+      "ordinal": 22,
+      "overload_nondecreasing": true,
+      "overload_x": 0,
+      "overload_y": 4,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "downward_feasibility": true,
+      "feasible_x": false,
+      "feasible_y": false,
+      "load_nondecreasing": true,
+      "load_x": 6,
+      "load_y": 9,
+      "ordinal": 23,
+      "overload_nondecreasing": true,
+      "overload_x": 1,
+      "overload_y": 4,
+      "x": [
+        1,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "downward_feasibility": true,
+      "feasible_x": true,
+      "feasible_y": true,
+      "load_nondecreasing": true,
+      "load_x": 5,
+      "load_y": 5,
+      "ordinal": 24,
+      "overload_nondecreasing": true,
+      "overload_x": 0,
+      "overload_y": 0,
+      "x": [
+        1,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "downward_feasibility": true,
+      "feasible_x": true,
+      "feasible_y": false,
+      "load_nondecreasing": true,
+      "load_x": 5,
+      "load_y": 9,
+      "ordinal": 25,
+      "overload_nondecreasing": true,
+      "overload_x": 0,
+      "overload_y": 4,
+      "x": [
+        1,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "downward_feasibility": true,
+      "feasible_x": false,
+      "feasible_y": false,
+      "load_nondecreasing": true,
+      "load_x": 9,
+      "load_y": 9,
+      "ordinal": 26,
+      "overload_nondecreasing": true,
+      "overload_x": 4,
+      "overload_y": 4,
+      "x": [
+        1,
+        1,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "scope": "DEVELOPMENT_TEST_OUTSIDE_FROZEN_MUTATION_PILOT",
+  "source_sha256": "2e1d6aaca8fcc9027d37590719f8d276437d1e83ea2a87bd91762382f70c5370",
+  "status": "EXECUTED_DEVELOPMENT_P01_PASSED",
+  "summary": {
+    "checks_passed": 8,
+    "checks_total": 8,
+    "hardware_jobs": 0,
+    "identity_pairs": 8,
+    "in_scope_counterexamples": 0,
+    "ordered_pairs_executed": 27,
+    "out_of_precondition_controls_rejected": 2,
+    "pilot_baseline_reserved": false,
+    "protocol_formulation_passes_executed": 0,
+    "protocol_mutants_executed": 0,
+    "sdk_statevectors_executed": 0,
+    "search_evaluations": 0,
+    "shots": 0,
+    "strict_load_increases": 19
+  }
+}
