@@ -1,0 +1,6476 @@
+{
+  "checks": [
+    {
+      "name": "exactly 216 ordered-decision fixed-slack cases are enumerated",
+      "passed": true
+    },
+    {
+      "detail": {
+        "auxiliary_bits": [
+          1,
+          0,
+          1
+        ],
+        "auxiliary_consistent_x": true,
+        "auxiliary_consistent_y": false,
+        "load_x": 0,
+        "load_y": 2,
+        "overload_x": 0,
+        "overload_y": 0,
+        "physical_feasible_x": true,
+        "physical_feasible_y": true,
+        "residual_x": 0,
+        "residual_y": 2,
+        "slack": 5,
+        "x": [
+          0,
+          0,
+          0
+        ],
+        "y": [
+          1,
+          0,
+          0
+        ]
+      },
+      "name": "slack-five witness changes auxiliary consistency true to false",
+      "passed": true
+    },
+    {
+      "detail": {
+        "auxiliary_bits": [
+          1,
+          1,
+          0
+        ],
+        "auxiliary_consistent_x": false,
+        "auxiliary_consistent_y": true,
+        "load_x": 0,
+        "load_y": 2,
+        "overload_x": 0,
+        "overload_y": 0,
+        "physical_feasible_x": true,
+        "physical_feasible_y": true,
+        "residual_x": -2,
+        "residual_y": 0,
+        "slack": 3,
+        "x": [
+          0,
+          0,
+          0
+        ],
+        "y": [
+          1,
+          0,
+          0
+        ]
+      },
+      "name": "slack-three witness changes auxiliary consistency false to true",
+      "passed": true
+    },
+    {
+      "name": "both witnesses keep x and y physically feasible",
+      "passed": true
+    },
+    {
+      "detail": {
+        "false_to_false": 188,
+        "false_to_true": 6,
+        "true_to_false": 17,
+        "true_to_true": 5
+      },
+      "name": "both directions of auxiliary-consistency transition occur exhaustively",
+      "passed": true
+    },
+    {
+      "name": "all 64 identity cases preserve auxiliary consistency",
+      "passed": true
+    },
+    {
+      "name": "physical P01 remains valid on every projected pair",
+      "passed": true
+    },
+    {
+      "name": "transition counts partition all 216 cases",
+      "passed": true
+    }
+  ],
+  "claim_boundary": {
+    "auxiliary_monotonicity": "REFUTED_IN_BOTH_DIRECTIONS_UNDER_FIXED_SLACK",
+    "interpretation": "The auxiliary equality indicator is not an order-preserving proxy for physical feasibility.",
+    "physical_p01": "PASSED_ON_PROJECTED_27_ORDERED_DECISION_PAIRS"
+  },
+  "command": "python src/verify_auxiliary_nonmonotonicity.py",
+  "config": {
+    "auxiliary_weights": [
+      1,
+      2,
+      4
+    ],
+    "capacity": 5,
+    "demands": [
+      2,
+      3,
+      4
+    ]
+  },
+  "data": "Fixed synthetic three-load fixture; no external dataset",
+  "executed_at_utc": "2026-11-19T11:16:35.370773+00:00",
+  "limitations": [
+    "The result concerns one fixed synthetic equality encoding only.",
+    "Auxiliary nonmonotonicity does not refute physical P01.",
+    "No objective, uncertainty, resilience physics, circuit, optimizer, hardware or quantum advantage is evaluated."
+  ],
+  "minimal_witnesses": {
+    "false_to_true": {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": true,
+      "load_x": 0,
+      "load_y": 2,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -2,
+      "residual_y": 0,
+      "slack": 3,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        0
+      ]
+    },
+    "true_to_false": {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": true,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 2,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 0,
+      "residual_y": 2,
+      "slack": 5,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        0
+      ]
+    }
+  },
+  "python": "3.12.14",
+  "randomness": "None; exhaustive deterministic enumeration",
+  "rows": [
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 0,
+      "ordinal": 0,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -5,
+      "residual_y": -5,
+      "slack": 0,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 4,
+      "ordinal": 1,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -5,
+      "residual_y": -1,
+      "slack": 0,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 4,
+      "load_y": 4,
+      "ordinal": 2,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -1,
+      "residual_y": -1,
+      "slack": 0,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 3,
+      "ordinal": 3,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -5,
+      "residual_y": -2,
+      "slack": 0,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 7,
+      "ordinal": 4,
+      "overload_x": 0,
+      "overload_y": 2,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": -5,
+      "residual_y": 2,
+      "slack": 0,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 4,
+      "load_y": 7,
+      "ordinal": 5,
+      "overload_x": 0,
+      "overload_y": 2,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": -1,
+      "residual_y": 2,
+      "slack": 0,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 3,
+      "load_y": 3,
+      "ordinal": 6,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -2,
+      "residual_y": -2,
+      "slack": 0,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 3,
+      "load_y": 7,
+      "ordinal": 7,
+      "overload_x": 0,
+      "overload_y": 2,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": -2,
+      "residual_y": 2,
+      "slack": 0,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 7,
+      "load_y": 7,
+      "ordinal": 8,
+      "overload_x": 2,
+      "overload_y": 2,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 2,
+      "residual_y": 2,
+      "slack": 0,
+      "x": [
+        0,
+        1,
+        1
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 2,
+      "ordinal": 9,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -5,
+      "residual_y": -3,
+      "slack": 0,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 6,
+      "ordinal": 10,
+      "overload_x": 0,
+      "overload_y": 1,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": -5,
+      "residual_y": 1,
+      "slack": 0,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 4,
+      "load_y": 6,
+      "ordinal": 11,
+      "overload_x": 0,
+      "overload_y": 1,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": -1,
+      "residual_y": 1,
+      "slack": 0,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": true,
+      "load_x": 0,
+      "load_y": 5,
+      "ordinal": 12,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -5,
+      "residual_y": 0,
+      "slack": 0,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 9,
+      "ordinal": 13,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": -5,
+      "residual_y": 4,
+      "slack": 0,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 4,
+      "load_y": 9,
+      "ordinal": 14,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": -1,
+      "residual_y": 4,
+      "slack": 0,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": true,
+      "load_x": 3,
+      "load_y": 5,
+      "ordinal": 15,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -2,
+      "residual_y": 0,
+      "slack": 0,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 3,
+      "load_y": 9,
+      "ordinal": 16,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": -2,
+      "residual_y": 4,
+      "slack": 0,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 7,
+      "load_y": 9,
+      "ordinal": 17,
+      "overload_x": 2,
+      "overload_y": 4,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 2,
+      "residual_y": 4,
+      "slack": 0,
+      "x": [
+        0,
+        1,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 2,
+      "load_y": 2,
+      "ordinal": 18,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -3,
+      "residual_y": -3,
+      "slack": 0,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 2,
+      "load_y": 6,
+      "ordinal": 19,
+      "overload_x": 0,
+      "overload_y": 1,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": -3,
+      "residual_y": 1,
+      "slack": 0,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 6,
+      "load_y": 6,
+      "ordinal": 20,
+      "overload_x": 1,
+      "overload_y": 1,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 1,
+      "residual_y": 1,
+      "slack": 0,
+      "x": [
+        1,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": true,
+      "load_x": 2,
+      "load_y": 5,
+      "ordinal": 21,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -3,
+      "residual_y": 0,
+      "slack": 0,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 2,
+      "load_y": 9,
+      "ordinal": 22,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": -3,
+      "residual_y": 4,
+      "slack": 0,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 6,
+      "load_y": 9,
+      "ordinal": 23,
+      "overload_x": 1,
+      "overload_y": 4,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 1,
+      "residual_y": 4,
+      "slack": 0,
+      "x": [
+        1,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": true,
+      "auxiliary_consistent_y": true,
+      "load_x": 5,
+      "load_y": 5,
+      "ordinal": 24,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 0,
+      "residual_y": 0,
+      "slack": 0,
+      "x": [
+        1,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": true,
+      "auxiliary_consistent_y": false,
+      "load_x": 5,
+      "load_y": 9,
+      "ordinal": 25,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 0,
+      "residual_y": 4,
+      "slack": 0,
+      "x": [
+        1,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 9,
+      "load_y": 9,
+      "ordinal": 26,
+      "overload_x": 4,
+      "overload_y": 4,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 4,
+      "residual_y": 4,
+      "slack": 0,
+      "x": [
+        1,
+        1,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 0,
+      "ordinal": 27,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -4,
+      "residual_y": -4,
+      "slack": 1,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": true,
+      "load_x": 0,
+      "load_y": 4,
+      "ordinal": 28,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -4,
+      "residual_y": 0,
+      "slack": 1,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": true,
+      "auxiliary_consistent_y": true,
+      "load_x": 4,
+      "load_y": 4,
+      "ordinal": 29,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 0,
+      "residual_y": 0,
+      "slack": 1,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 3,
+      "ordinal": 30,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -4,
+      "residual_y": -1,
+      "slack": 1,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 7,
+      "ordinal": 31,
+      "overload_x": 0,
+      "overload_y": 2,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": -4,
+      "residual_y": 3,
+      "slack": 1,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": true,
+      "auxiliary_consistent_y": false,
+      "load_x": 4,
+      "load_y": 7,
+      "ordinal": 32,
+      "overload_x": 0,
+      "overload_y": 2,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 0,
+      "residual_y": 3,
+      "slack": 1,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 3,
+      "load_y": 3,
+      "ordinal": 33,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -1,
+      "residual_y": -1,
+      "slack": 1,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 3,
+      "load_y": 7,
+      "ordinal": 34,
+      "overload_x": 0,
+      "overload_y": 2,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": -1,
+      "residual_y": 3,
+      "slack": 1,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 7,
+      "load_y": 7,
+      "ordinal": 35,
+      "overload_x": 2,
+      "overload_y": 2,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 3,
+      "residual_y": 3,
+      "slack": 1,
+      "x": [
+        0,
+        1,
+        1
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 2,
+      "ordinal": 36,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -4,
+      "residual_y": -2,
+      "slack": 1,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 6,
+      "ordinal": 37,
+      "overload_x": 0,
+      "overload_y": 1,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": -4,
+      "residual_y": 2,
+      "slack": 1,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": true,
+      "auxiliary_consistent_y": false,
+      "load_x": 4,
+      "load_y": 6,
+      "ordinal": 38,
+      "overload_x": 0,
+      "overload_y": 1,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 0,
+      "residual_y": 2,
+      "slack": 1,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 5,
+      "ordinal": 39,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -4,
+      "residual_y": 1,
+      "slack": 1,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 9,
+      "ordinal": 40,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": -4,
+      "residual_y": 5,
+      "slack": 1,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": true,
+      "auxiliary_consistent_y": false,
+      "load_x": 4,
+      "load_y": 9,
+      "ordinal": 41,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 0,
+      "residual_y": 5,
+      "slack": 1,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 3,
+      "load_y": 5,
+      "ordinal": 42,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -1,
+      "residual_y": 1,
+      "slack": 1,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 3,
+      "load_y": 9,
+      "ordinal": 43,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": -1,
+      "residual_y": 5,
+      "slack": 1,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 7,
+      "load_y": 9,
+      "ordinal": 44,
+      "overload_x": 2,
+      "overload_y": 4,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 3,
+      "residual_y": 5,
+      "slack": 1,
+      "x": [
+        0,
+        1,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 2,
+      "load_y": 2,
+      "ordinal": 45,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -2,
+      "residual_y": -2,
+      "slack": 1,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 2,
+      "load_y": 6,
+      "ordinal": 46,
+      "overload_x": 0,
+      "overload_y": 1,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": -2,
+      "residual_y": 2,
+      "slack": 1,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 6,
+      "load_y": 6,
+      "ordinal": 47,
+      "overload_x": 1,
+      "overload_y": 1,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 2,
+      "residual_y": 2,
+      "slack": 1,
+      "x": [
+        1,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 2,
+      "load_y": 5,
+      "ordinal": 48,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -2,
+      "residual_y": 1,
+      "slack": 1,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 2,
+      "load_y": 9,
+      "ordinal": 49,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": -2,
+      "residual_y": 5,
+      "slack": 1,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 6,
+      "load_y": 9,
+      "ordinal": 50,
+      "overload_x": 1,
+      "overload_y": 4,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 2,
+      "residual_y": 5,
+      "slack": 1,
+      "x": [
+        1,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 5,
+      "load_y": 5,
+      "ordinal": 51,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 1,
+      "residual_y": 1,
+      "slack": 1,
+      "x": [
+        1,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 5,
+      "load_y": 9,
+      "ordinal": 52,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 1,
+      "residual_y": 5,
+      "slack": 1,
+      "x": [
+        1,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 9,
+      "load_y": 9,
+      "ordinal": 53,
+      "overload_x": 4,
+      "overload_y": 4,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 5,
+      "residual_y": 5,
+      "slack": 1,
+      "x": [
+        1,
+        1,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 0,
+      "ordinal": 54,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -3,
+      "residual_y": -3,
+      "slack": 2,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 4,
+      "ordinal": 55,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -3,
+      "residual_y": 1,
+      "slack": 2,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 4,
+      "load_y": 4,
+      "ordinal": 56,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 1,
+      "residual_y": 1,
+      "slack": 2,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": true,
+      "load_x": 0,
+      "load_y": 3,
+      "ordinal": 57,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -3,
+      "residual_y": 0,
+      "slack": 2,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 7,
+      "ordinal": 58,
+      "overload_x": 0,
+      "overload_y": 2,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": -3,
+      "residual_y": 4,
+      "slack": 2,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 4,
+      "load_y": 7,
+      "ordinal": 59,
+      "overload_x": 0,
+      "overload_y": 2,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 1,
+      "residual_y": 4,
+      "slack": 2,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": true,
+      "auxiliary_consistent_y": true,
+      "load_x": 3,
+      "load_y": 3,
+      "ordinal": 60,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 0,
+      "residual_y": 0,
+      "slack": 2,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": true,
+      "auxiliary_consistent_y": false,
+      "load_x": 3,
+      "load_y": 7,
+      "ordinal": 61,
+      "overload_x": 0,
+      "overload_y": 2,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 0,
+      "residual_y": 4,
+      "slack": 2,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 7,
+      "load_y": 7,
+      "ordinal": 62,
+      "overload_x": 2,
+      "overload_y": 2,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 4,
+      "residual_y": 4,
+      "slack": 2,
+      "x": [
+        0,
+        1,
+        1
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 2,
+      "ordinal": 63,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -3,
+      "residual_y": -1,
+      "slack": 2,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 6,
+      "ordinal": 64,
+      "overload_x": 0,
+      "overload_y": 1,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": -3,
+      "residual_y": 3,
+      "slack": 2,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 4,
+      "load_y": 6,
+      "ordinal": 65,
+      "overload_x": 0,
+      "overload_y": 1,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 1,
+      "residual_y": 3,
+      "slack": 2,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 5,
+      "ordinal": 66,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -3,
+      "residual_y": 2,
+      "slack": 2,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 9,
+      "ordinal": 67,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": -3,
+      "residual_y": 6,
+      "slack": 2,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 4,
+      "load_y": 9,
+      "ordinal": 68,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 1,
+      "residual_y": 6,
+      "slack": 2,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": true,
+      "auxiliary_consistent_y": false,
+      "load_x": 3,
+      "load_y": 5,
+      "ordinal": 69,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 0,
+      "residual_y": 2,
+      "slack": 2,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": true,
+      "auxiliary_consistent_y": false,
+      "load_x": 3,
+      "load_y": 9,
+      "ordinal": 70,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 0,
+      "residual_y": 6,
+      "slack": 2,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 7,
+      "load_y": 9,
+      "ordinal": 71,
+      "overload_x": 2,
+      "overload_y": 4,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 4,
+      "residual_y": 6,
+      "slack": 2,
+      "x": [
+        0,
+        1,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 2,
+      "load_y": 2,
+      "ordinal": 72,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -1,
+      "residual_y": -1,
+      "slack": 2,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 2,
+      "load_y": 6,
+      "ordinal": 73,
+      "overload_x": 0,
+      "overload_y": 1,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": -1,
+      "residual_y": 3,
+      "slack": 2,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 6,
+      "load_y": 6,
+      "ordinal": 74,
+      "overload_x": 1,
+      "overload_y": 1,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 3,
+      "residual_y": 3,
+      "slack": 2,
+      "x": [
+        1,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 2,
+      "load_y": 5,
+      "ordinal": 75,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -1,
+      "residual_y": 2,
+      "slack": 2,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 2,
+      "load_y": 9,
+      "ordinal": 76,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": -1,
+      "residual_y": 6,
+      "slack": 2,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 6,
+      "load_y": 9,
+      "ordinal": 77,
+      "overload_x": 1,
+      "overload_y": 4,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 3,
+      "residual_y": 6,
+      "slack": 2,
+      "x": [
+        1,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 5,
+      "load_y": 5,
+      "ordinal": 78,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 2,
+      "residual_y": 2,
+      "slack": 2,
+      "x": [
+        1,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 5,
+      "load_y": 9,
+      "ordinal": 79,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 2,
+      "residual_y": 6,
+      "slack": 2,
+      "x": [
+        1,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 9,
+      "load_y": 9,
+      "ordinal": 80,
+      "overload_x": 4,
+      "overload_y": 4,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 6,
+      "residual_y": 6,
+      "slack": 2,
+      "x": [
+        1,
+        1,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 0,
+      "ordinal": 81,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -2,
+      "residual_y": -2,
+      "slack": 3,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 4,
+      "ordinal": 82,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -2,
+      "residual_y": 2,
+      "slack": 3,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 4,
+      "load_y": 4,
+      "ordinal": 83,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 2,
+      "residual_y": 2,
+      "slack": 3,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 3,
+      "ordinal": 84,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -2,
+      "residual_y": 1,
+      "slack": 3,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 7,
+      "ordinal": 85,
+      "overload_x": 0,
+      "overload_y": 2,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": -2,
+      "residual_y": 5,
+      "slack": 3,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 4,
+      "load_y": 7,
+      "ordinal": 86,
+      "overload_x": 0,
+      "overload_y": 2,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 2,
+      "residual_y": 5,
+      "slack": 3,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 3,
+      "load_y": 3,
+      "ordinal": 87,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 1,
+      "residual_y": 1,
+      "slack": 3,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 3,
+      "load_y": 7,
+      "ordinal": 88,
+      "overload_x": 0,
+      "overload_y": 2,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 1,
+      "residual_y": 5,
+      "slack": 3,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 7,
+      "load_y": 7,
+      "ordinal": 89,
+      "overload_x": 2,
+      "overload_y": 2,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 5,
+      "residual_y": 5,
+      "slack": 3,
+      "x": [
+        0,
+        1,
+        1
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": true,
+      "load_x": 0,
+      "load_y": 2,
+      "ordinal": 90,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -2,
+      "residual_y": 0,
+      "slack": 3,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 6,
+      "ordinal": 91,
+      "overload_x": 0,
+      "overload_y": 1,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": -2,
+      "residual_y": 4,
+      "slack": 3,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 4,
+      "load_y": 6,
+      "ordinal": 92,
+      "overload_x": 0,
+      "overload_y": 1,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 2,
+      "residual_y": 4,
+      "slack": 3,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 5,
+      "ordinal": 93,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -2,
+      "residual_y": 3,
+      "slack": 3,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 9,
+      "ordinal": 94,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": -2,
+      "residual_y": 7,
+      "slack": 3,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 4,
+      "load_y": 9,
+      "ordinal": 95,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 2,
+      "residual_y": 7,
+      "slack": 3,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 3,
+      "load_y": 5,
+      "ordinal": 96,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 1,
+      "residual_y": 3,
+      "slack": 3,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 3,
+      "load_y": 9,
+      "ordinal": 97,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 1,
+      "residual_y": 7,
+      "slack": 3,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 7,
+      "load_y": 9,
+      "ordinal": 98,
+      "overload_x": 2,
+      "overload_y": 4,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 5,
+      "residual_y": 7,
+      "slack": 3,
+      "x": [
+        0,
+        1,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": true,
+      "auxiliary_consistent_y": true,
+      "load_x": 2,
+      "load_y": 2,
+      "ordinal": 99,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 0,
+      "residual_y": 0,
+      "slack": 3,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": true,
+      "auxiliary_consistent_y": false,
+      "load_x": 2,
+      "load_y": 6,
+      "ordinal": 100,
+      "overload_x": 0,
+      "overload_y": 1,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 0,
+      "residual_y": 4,
+      "slack": 3,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 6,
+      "load_y": 6,
+      "ordinal": 101,
+      "overload_x": 1,
+      "overload_y": 1,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 4,
+      "residual_y": 4,
+      "slack": 3,
+      "x": [
+        1,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": true,
+      "auxiliary_consistent_y": false,
+      "load_x": 2,
+      "load_y": 5,
+      "ordinal": 102,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 0,
+      "residual_y": 3,
+      "slack": 3,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": true,
+      "auxiliary_consistent_y": false,
+      "load_x": 2,
+      "load_y": 9,
+      "ordinal": 103,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 0,
+      "residual_y": 7,
+      "slack": 3,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 6,
+      "load_y": 9,
+      "ordinal": 104,
+      "overload_x": 1,
+      "overload_y": 4,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 4,
+      "residual_y": 7,
+      "slack": 3,
+      "x": [
+        1,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 5,
+      "load_y": 5,
+      "ordinal": 105,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 3,
+      "residual_y": 3,
+      "slack": 3,
+      "x": [
+        1,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 5,
+      "load_y": 9,
+      "ordinal": 106,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 3,
+      "residual_y": 7,
+      "slack": 3,
+      "x": [
+        1,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        0
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 9,
+      "load_y": 9,
+      "ordinal": 107,
+      "overload_x": 4,
+      "overload_y": 4,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 7,
+      "residual_y": 7,
+      "slack": 3,
+      "x": [
+        1,
+        1,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 0,
+      "ordinal": 108,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -1,
+      "residual_y": -1,
+      "slack": 4,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 4,
+      "ordinal": 109,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -1,
+      "residual_y": 3,
+      "slack": 4,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 4,
+      "load_y": 4,
+      "ordinal": 110,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 3,
+      "residual_y": 3,
+      "slack": 4,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 3,
+      "ordinal": 111,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -1,
+      "residual_y": 2,
+      "slack": 4,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 7,
+      "ordinal": 112,
+      "overload_x": 0,
+      "overload_y": 2,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": -1,
+      "residual_y": 6,
+      "slack": 4,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 4,
+      "load_y": 7,
+      "ordinal": 113,
+      "overload_x": 0,
+      "overload_y": 2,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 3,
+      "residual_y": 6,
+      "slack": 4,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 3,
+      "load_y": 3,
+      "ordinal": 114,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 2,
+      "residual_y": 2,
+      "slack": 4,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 3,
+      "load_y": 7,
+      "ordinal": 115,
+      "overload_x": 0,
+      "overload_y": 2,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 2,
+      "residual_y": 6,
+      "slack": 4,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 7,
+      "load_y": 7,
+      "ordinal": 116,
+      "overload_x": 2,
+      "overload_y": 2,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 6,
+      "residual_y": 6,
+      "slack": 4,
+      "x": [
+        0,
+        1,
+        1
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 2,
+      "ordinal": 117,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -1,
+      "residual_y": 1,
+      "slack": 4,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 6,
+      "ordinal": 118,
+      "overload_x": 0,
+      "overload_y": 1,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": -1,
+      "residual_y": 5,
+      "slack": 4,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 4,
+      "load_y": 6,
+      "ordinal": 119,
+      "overload_x": 0,
+      "overload_y": 1,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 3,
+      "residual_y": 5,
+      "slack": 4,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 5,
+      "ordinal": 120,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": -1,
+      "residual_y": 4,
+      "slack": 4,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 9,
+      "ordinal": 121,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": -1,
+      "residual_y": 8,
+      "slack": 4,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 4,
+      "load_y": 9,
+      "ordinal": 122,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 3,
+      "residual_y": 8,
+      "slack": 4,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 3,
+      "load_y": 5,
+      "ordinal": 123,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 2,
+      "residual_y": 4,
+      "slack": 4,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 3,
+      "load_y": 9,
+      "ordinal": 124,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 2,
+      "residual_y": 8,
+      "slack": 4,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 7,
+      "load_y": 9,
+      "ordinal": 125,
+      "overload_x": 2,
+      "overload_y": 4,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 6,
+      "residual_y": 8,
+      "slack": 4,
+      "x": [
+        0,
+        1,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 2,
+      "load_y": 2,
+      "ordinal": 126,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 1,
+      "residual_y": 1,
+      "slack": 4,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 2,
+      "load_y": 6,
+      "ordinal": 127,
+      "overload_x": 0,
+      "overload_y": 1,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 1,
+      "residual_y": 5,
+      "slack": 4,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 6,
+      "load_y": 6,
+      "ordinal": 128,
+      "overload_x": 1,
+      "overload_y": 1,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 5,
+      "residual_y": 5,
+      "slack": 4,
+      "x": [
+        1,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 2,
+      "load_y": 5,
+      "ordinal": 129,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 1,
+      "residual_y": 4,
+      "slack": 4,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 2,
+      "load_y": 9,
+      "ordinal": 130,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 1,
+      "residual_y": 8,
+      "slack": 4,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 6,
+      "load_y": 9,
+      "ordinal": 131,
+      "overload_x": 1,
+      "overload_y": 4,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 5,
+      "residual_y": 8,
+      "slack": 4,
+      "x": [
+        1,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 5,
+      "load_y": 5,
+      "ordinal": 132,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 4,
+      "residual_y": 4,
+      "slack": 4,
+      "x": [
+        1,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 5,
+      "load_y": 9,
+      "ordinal": 133,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 4,
+      "residual_y": 8,
+      "slack": 4,
+      "x": [
+        1,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 9,
+      "load_y": 9,
+      "ordinal": 134,
+      "overload_x": 4,
+      "overload_y": 4,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 8,
+      "residual_y": 8,
+      "slack": 4,
+      "x": [
+        1,
+        1,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": true,
+      "auxiliary_consistent_y": true,
+      "load_x": 0,
+      "load_y": 0,
+      "ordinal": 135,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 0,
+      "residual_y": 0,
+      "slack": 5,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": true,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 4,
+      "ordinal": 136,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 0,
+      "residual_y": 4,
+      "slack": 5,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 4,
+      "load_y": 4,
+      "ordinal": 137,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 4,
+      "residual_y": 4,
+      "slack": 5,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": true,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 3,
+      "ordinal": 138,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 0,
+      "residual_y": 3,
+      "slack": 5,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": true,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 7,
+      "ordinal": 139,
+      "overload_x": 0,
+      "overload_y": 2,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 0,
+      "residual_y": 7,
+      "slack": 5,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 4,
+      "load_y": 7,
+      "ordinal": 140,
+      "overload_x": 0,
+      "overload_y": 2,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 4,
+      "residual_y": 7,
+      "slack": 5,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 3,
+      "load_y": 3,
+      "ordinal": 141,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 3,
+      "residual_y": 3,
+      "slack": 5,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 3,
+      "load_y": 7,
+      "ordinal": 142,
+      "overload_x": 0,
+      "overload_y": 2,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 3,
+      "residual_y": 7,
+      "slack": 5,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 7,
+      "load_y": 7,
+      "ordinal": 143,
+      "overload_x": 2,
+      "overload_y": 2,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 7,
+      "residual_y": 7,
+      "slack": 5,
+      "x": [
+        0,
+        1,
+        1
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": true,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 2,
+      "ordinal": 144,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 0,
+      "residual_y": 2,
+      "slack": 5,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": true,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 6,
+      "ordinal": 145,
+      "overload_x": 0,
+      "overload_y": 1,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 0,
+      "residual_y": 6,
+      "slack": 5,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 4,
+      "load_y": 6,
+      "ordinal": 146,
+      "overload_x": 0,
+      "overload_y": 1,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 4,
+      "residual_y": 6,
+      "slack": 5,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": true,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 5,
+      "ordinal": 147,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 0,
+      "residual_y": 5,
+      "slack": 5,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": true,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 9,
+      "ordinal": 148,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 0,
+      "residual_y": 9,
+      "slack": 5,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 4,
+      "load_y": 9,
+      "ordinal": 149,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 4,
+      "residual_y": 9,
+      "slack": 5,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 3,
+      "load_y": 5,
+      "ordinal": 150,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 3,
+      "residual_y": 5,
+      "slack": 5,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 3,
+      "load_y": 9,
+      "ordinal": 151,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 3,
+      "residual_y": 9,
+      "slack": 5,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 7,
+      "load_y": 9,
+      "ordinal": 152,
+      "overload_x": 2,
+      "overload_y": 4,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 7,
+      "residual_y": 9,
+      "slack": 5,
+      "x": [
+        0,
+        1,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 2,
+      "load_y": 2,
+      "ordinal": 153,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 2,
+      "residual_y": 2,
+      "slack": 5,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 2,
+      "load_y": 6,
+      "ordinal": 154,
+      "overload_x": 0,
+      "overload_y": 1,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 2,
+      "residual_y": 6,
+      "slack": 5,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 6,
+      "load_y": 6,
+      "ordinal": 155,
+      "overload_x": 1,
+      "overload_y": 1,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 6,
+      "residual_y": 6,
+      "slack": 5,
+      "x": [
+        1,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 2,
+      "load_y": 5,
+      "ordinal": 156,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 2,
+      "residual_y": 5,
+      "slack": 5,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 2,
+      "load_y": 9,
+      "ordinal": 157,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 2,
+      "residual_y": 9,
+      "slack": 5,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 6,
+      "load_y": 9,
+      "ordinal": 158,
+      "overload_x": 1,
+      "overload_y": 4,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 6,
+      "residual_y": 9,
+      "slack": 5,
+      "x": [
+        1,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 5,
+      "load_y": 5,
+      "ordinal": 159,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 5,
+      "residual_y": 5,
+      "slack": 5,
+      "x": [
+        1,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 5,
+      "load_y": 9,
+      "ordinal": 160,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 5,
+      "residual_y": 9,
+      "slack": 5,
+      "x": [
+        1,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        0,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 9,
+      "load_y": 9,
+      "ordinal": 161,
+      "overload_x": 4,
+      "overload_y": 4,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 9,
+      "residual_y": 9,
+      "slack": 5,
+      "x": [
+        1,
+        1,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 0,
+      "ordinal": 162,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 1,
+      "residual_y": 1,
+      "slack": 6,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 4,
+      "ordinal": 163,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 1,
+      "residual_y": 5,
+      "slack": 6,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 4,
+      "load_y": 4,
+      "ordinal": 164,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 5,
+      "residual_y": 5,
+      "slack": 6,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 3,
+      "ordinal": 165,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 1,
+      "residual_y": 4,
+      "slack": 6,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 7,
+      "ordinal": 166,
+      "overload_x": 0,
+      "overload_y": 2,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 1,
+      "residual_y": 8,
+      "slack": 6,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 4,
+      "load_y": 7,
+      "ordinal": 167,
+      "overload_x": 0,
+      "overload_y": 2,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 5,
+      "residual_y": 8,
+      "slack": 6,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 3,
+      "load_y": 3,
+      "ordinal": 168,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 4,
+      "residual_y": 4,
+      "slack": 6,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 3,
+      "load_y": 7,
+      "ordinal": 169,
+      "overload_x": 0,
+      "overload_y": 2,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 4,
+      "residual_y": 8,
+      "slack": 6,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 7,
+      "load_y": 7,
+      "ordinal": 170,
+      "overload_x": 2,
+      "overload_y": 2,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 8,
+      "residual_y": 8,
+      "slack": 6,
+      "x": [
+        0,
+        1,
+        1
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 2,
+      "ordinal": 171,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 1,
+      "residual_y": 3,
+      "slack": 6,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 6,
+      "ordinal": 172,
+      "overload_x": 0,
+      "overload_y": 1,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 1,
+      "residual_y": 7,
+      "slack": 6,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 4,
+      "load_y": 6,
+      "ordinal": 173,
+      "overload_x": 0,
+      "overload_y": 1,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 5,
+      "residual_y": 7,
+      "slack": 6,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 5,
+      "ordinal": 174,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 1,
+      "residual_y": 6,
+      "slack": 6,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 9,
+      "ordinal": 175,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 1,
+      "residual_y": 10,
+      "slack": 6,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 4,
+      "load_y": 9,
+      "ordinal": 176,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 5,
+      "residual_y": 10,
+      "slack": 6,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 3,
+      "load_y": 5,
+      "ordinal": 177,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 4,
+      "residual_y": 6,
+      "slack": 6,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 3,
+      "load_y": 9,
+      "ordinal": 178,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 4,
+      "residual_y": 10,
+      "slack": 6,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 7,
+      "load_y": 9,
+      "ordinal": 179,
+      "overload_x": 2,
+      "overload_y": 4,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 8,
+      "residual_y": 10,
+      "slack": 6,
+      "x": [
+        0,
+        1,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 2,
+      "load_y": 2,
+      "ordinal": 180,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 3,
+      "residual_y": 3,
+      "slack": 6,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 2,
+      "load_y": 6,
+      "ordinal": 181,
+      "overload_x": 0,
+      "overload_y": 1,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 3,
+      "residual_y": 7,
+      "slack": 6,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 6,
+      "load_y": 6,
+      "ordinal": 182,
+      "overload_x": 1,
+      "overload_y": 1,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 7,
+      "residual_y": 7,
+      "slack": 6,
+      "x": [
+        1,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 2,
+      "load_y": 5,
+      "ordinal": 183,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 3,
+      "residual_y": 6,
+      "slack": 6,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 2,
+      "load_y": 9,
+      "ordinal": 184,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 3,
+      "residual_y": 10,
+      "slack": 6,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 6,
+      "load_y": 9,
+      "ordinal": 185,
+      "overload_x": 1,
+      "overload_y": 4,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 7,
+      "residual_y": 10,
+      "slack": 6,
+      "x": [
+        1,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 5,
+      "load_y": 5,
+      "ordinal": 186,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 6,
+      "residual_y": 6,
+      "slack": 6,
+      "x": [
+        1,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 5,
+      "load_y": 9,
+      "ordinal": 187,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 6,
+      "residual_y": 10,
+      "slack": 6,
+      "x": [
+        1,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        0,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 9,
+      "load_y": 9,
+      "ordinal": 188,
+      "overload_x": 4,
+      "overload_y": 4,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 10,
+      "residual_y": 10,
+      "slack": 6,
+      "x": [
+        1,
+        1,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 0,
+      "ordinal": 189,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 2,
+      "residual_y": 2,
+      "slack": 7,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 4,
+      "ordinal": 190,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 2,
+      "residual_y": 6,
+      "slack": 7,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 4,
+      "load_y": 4,
+      "ordinal": 191,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 6,
+      "residual_y": 6,
+      "slack": 7,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 3,
+      "ordinal": 192,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 2,
+      "residual_y": 5,
+      "slack": 7,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 7,
+      "ordinal": 193,
+      "overload_x": 0,
+      "overload_y": 2,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 2,
+      "residual_y": 9,
+      "slack": 7,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 4,
+      "load_y": 7,
+      "ordinal": 194,
+      "overload_x": 0,
+      "overload_y": 2,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 6,
+      "residual_y": 9,
+      "slack": 7,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 3,
+      "load_y": 3,
+      "ordinal": 195,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 5,
+      "residual_y": 5,
+      "slack": 7,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 3,
+      "load_y": 7,
+      "ordinal": 196,
+      "overload_x": 0,
+      "overload_y": 2,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 5,
+      "residual_y": 9,
+      "slack": 7,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 7,
+      "load_y": 7,
+      "ordinal": 197,
+      "overload_x": 2,
+      "overload_y": 2,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 9,
+      "residual_y": 9,
+      "slack": 7,
+      "x": [
+        0,
+        1,
+        1
+      ],
+      "y": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 2,
+      "ordinal": 198,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 2,
+      "residual_y": 4,
+      "slack": 7,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 6,
+      "ordinal": 199,
+      "overload_x": 0,
+      "overload_y": 1,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 2,
+      "residual_y": 8,
+      "slack": 7,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 4,
+      "load_y": 6,
+      "ordinal": 200,
+      "overload_x": 0,
+      "overload_y": 1,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 6,
+      "residual_y": 8,
+      "slack": 7,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 5,
+      "ordinal": 201,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 2,
+      "residual_y": 7,
+      "slack": 7,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 0,
+      "load_y": 9,
+      "ordinal": 202,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 2,
+      "residual_y": 11,
+      "slack": 7,
+      "x": [
+        0,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 4,
+      "load_y": 9,
+      "ordinal": 203,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 6,
+      "residual_y": 11,
+      "slack": 7,
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 3,
+      "load_y": 5,
+      "ordinal": 204,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 5,
+      "residual_y": 7,
+      "slack": 7,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 3,
+      "load_y": 9,
+      "ordinal": 205,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 5,
+      "residual_y": 11,
+      "slack": 7,
+      "x": [
+        0,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 7,
+      "load_y": 9,
+      "ordinal": 206,
+      "overload_x": 2,
+      "overload_y": 4,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 9,
+      "residual_y": 11,
+      "slack": 7,
+      "x": [
+        0,
+        1,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 2,
+      "load_y": 2,
+      "ordinal": 207,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 4,
+      "residual_y": 4,
+      "slack": 7,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 2,
+      "load_y": 6,
+      "ordinal": 208,
+      "overload_x": 0,
+      "overload_y": 1,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 4,
+      "residual_y": 8,
+      "slack": 7,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 6,
+      "load_y": 6,
+      "ordinal": 209,
+      "overload_x": 1,
+      "overload_y": 1,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 8,
+      "residual_y": 8,
+      "slack": 7,
+      "x": [
+        1,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 2,
+      "load_y": 5,
+      "ordinal": 210,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 4,
+      "residual_y": 7,
+      "slack": 7,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 2,
+      "load_y": 9,
+      "ordinal": 211,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 4,
+      "residual_y": 11,
+      "slack": 7,
+      "x": [
+        1,
+        0,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 6,
+      "load_y": 9,
+      "ordinal": 212,
+      "overload_x": 1,
+      "overload_y": 4,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 8,
+      "residual_y": 11,
+      "slack": 7,
+      "x": [
+        1,
+        0,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 5,
+      "load_y": 5,
+      "ordinal": 213,
+      "overload_x": 0,
+      "overload_y": 0,
+      "physical_feasible_x": true,
+      "physical_feasible_y": true,
+      "residual_x": 7,
+      "residual_y": 7,
+      "slack": 7,
+      "x": [
+        1,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 5,
+      "load_y": 9,
+      "ordinal": 214,
+      "overload_x": 0,
+      "overload_y": 4,
+      "physical_feasible_x": true,
+      "physical_feasible_y": false,
+      "residual_x": 7,
+      "residual_y": 11,
+      "slack": 7,
+      "x": [
+        1,
+        1,
+        0
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "auxiliary_bits": [
+        1,
+        1,
+        1
+      ],
+      "auxiliary_consistent_x": false,
+      "auxiliary_consistent_y": false,
+      "load_x": 9,
+      "load_y": 9,
+      "ordinal": 215,
+      "overload_x": 4,
+      "overload_y": 4,
+      "physical_feasible_x": false,
+      "physical_feasible_y": false,
+      "residual_x": 11,
+      "residual_y": 11,
+      "slack": 7,
+      "x": [
+        1,
+        1,
+        1
+      ],
+      "y": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "scope": "DEVELOPMENT_TEST_OUTSIDE_FROZEN_MUTATION_PILOT",
+  "source_sha256": "37079aa9339aa727293d33d67e85d4f8418d87eeb9e9f0b40706b052db48d238",
+  "status": "EXECUTED_DEVELOPMENT_AUXILIARY_NONMONOTONICITY_CONFIRMED",
+  "summary": {
+    "cases_executed": 216,
+    "checks_passed": 8,
+    "checks_total": 8,
+    "fixed_slack_assignments": 8,
+    "hardware_jobs": 0,
+    "identity_cases": 64,
+    "ordered_decision_pairs": 27,
+    "physical_p01_violations": 0,
+    "pilot_baseline_reserved": false,
+    "protocol_formulation_passes_executed": 0,
+    "protocol_mutants_executed": 0,
+    "sdk_statevectors_executed": 0,
+    "search_evaluations": 0,
+    "shots": 0,
+    "transition_counts": {
+      "false_to_false": 188,
+      "false_to_true": 6,
+      "true_to_false": 17,
+      "true_to_true": 5
+    }
+  }
+}

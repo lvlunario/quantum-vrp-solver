@@ -4,7 +4,7 @@
   "end_date": "2027-09-21",
   "simulation_timezone": "Europe/Oslo",
   "delivery_timezone": "Asia/Manila",
-  "last_completed_date": "2026-11-18",
+  "last_completed_date": "2026-11-19",
   "completed_dates": [
     "2026-09-22",
     "2026-09-23",
@@ -33,10 +33,11 @@
     "2026-11-11",
     "2026-11-13",
     "2026-11-16",
-    "2026-11-18"
+    "2026-11-18",
+    "2026-11-19"
   ],
   "phase": "onboarding and independent verification",
-  "next_task": "November 19: derive and execute a minimal development counterexample showing that auxiliary consistency is not monotone when decisions change under fixed slack; keep it separate from P01 and do not authorize the mutation pilot.",
+  "next_task": "November 20: write a compact metamorphic-property boundary matrix reconciling physical P01 with auxiliary nonmonotonicity, then freeze—but do not execute—P02 simultaneous decision-demand permutation invariance.",
   "simulated_deadlines": [
     "2027-02-26",
     "2027-06-25",
@@ -62,7 +63,7 @@
   ],
   "catchup_created_date": "2026-09-27",
   "catchup_reason": "Explicit user request to run the entire missed workweek; all new execution occurred on September 27.",
-  "latest_evidence": "results/2026-11-18-p01-monotonicity.json",
+  "latest_evidence": "results/2026-11-19-auxiliary-nonmonotonicity.json",
   "publication_recovered_dates": [
     "2026-09-30"
   ],
@@ -271,6 +272,29 @@
     "strict_load_increases": 19,
     "in_scope_counterexamples": 0,
     "out_of_precondition_controls_rejected": 2,
+    "pilot_baseline_reserved": false,
+    "protocol_formulation_passes_executed": 0,
+    "protocol_mutants_executed": 0,
+    "sdk_statevectors_executed": 0
+  },
+  "auxiliary_nonmonotonicity": {
+    "status": "EXECUTED_DEVELOPMENT_COUNTEREXAMPLE_CONFIRMED",
+    "implementation": "src/verify_auxiliary_nonmonotonicity.py",
+    "documentation": "docs/auxiliary-nonmonotonicity.md",
+    "result": "results/2026-11-19-auxiliary-nonmonotonicity.json",
+    "executed_date": "2026-11-19",
+    "checks_passed": 8,
+    "cases_executed": 216,
+    "ordered_decision_pairs": 27,
+    "fixed_slack_assignments": 8,
+    "identity_cases": 64,
+    "transition_counts": {
+      "false_to_false": 188,
+      "false_to_true": 6,
+      "true_to_false": 17,
+      "true_to_true": 5
+    },
+    "physical_p01_violations": 0,
     "pilot_baseline_reserved": false,
     "protocol_formulation_passes_executed": 0,
     "protocol_mutants_executed": 0,
