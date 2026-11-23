@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "property_id": "P02_SIMULTANEOUS_DECISION_DEMAND_PERMUTATION_INVARIANCE",
+  "status": "PLANNED_UNEXECUTED",
+  "frozen_date": "2026-11-23",
+  "scope": "DEVELOPMENT_ONLY_OUTSIDE_FROZEN_MUTATION_PILOT",
+  "statement": "For fixed capacity, applying the same coordinate permutation to a binary decision vector and its matching nonnegative demand vector preserves load, overload and physical feasibility.",
+  "preconditions": [
+    "decision and demand vectors have the same positive length",
+    "decision values are integers in {0,1}",
+    "demand values are nonnegative integers",
+    "capacity is a fixed nonnegative integer",
+    "the transform is one bijection applied identically to both vectors"
+  ],
+  "transform_convention": {
+    "definition": "For permutation p, transformed[j] = original[p[j]] for both decision and demand vectors.",
+    "pairing_rule": "A decision bit and its matching demand must move together."
+  },
+  "development_fixture": {
+    "demands": [2, 3, 4],
+    "capacity": 5,
+    "decision_domain": "all 2^3 = 8 binary vectors in lexicographic product order",
+    "permutation_domain": "all 3! = 6 coordinate permutations in lexicographic order",
+    "planned_case_count": 48,
+    "identity_cases": 8,
+    "nonidentity_cases": 40
+  },
+  "preserved_metrics": [
+    "load",
+    "overload",
+    "physical_feasibility"
+  ],
+  "excluded_claims": [
+    "auxiliary consistency is preserved when slack-bit meanings are permuted or changed",
+    "QUBO energy is invariant under arbitrary variable or coefficient reordering",
+    "circuit statevector indexing is invariant",
+    "optimizer output quality is invariant",
+    "permuting only decisions or only demands preserves load"
+  ],
+  "planned_checks": [
+    "enumerate exactly 48 decision-permutation cases",
+    "retain exactly 8 identity and 40 nonidentity cases",
+    "load is equal before and after every simultaneous permutation",
+    "overload is equal before and after every simultaneous permutation",
+    "physical feasibility is equal before and after every simultaneous permutation",
+    "decision-only and demand-only transforms are rejected as outside preconditions",
+    "retain every case and any counterexample"
+  ],
+  "resource_boundary": {
+    "property_cases_authorized_by_freeze": 0,
+    "protocol_formulation_passes_authorized": 0,
+    "protocol_mutants_authorized": 0,
+    "sdk_statevectors_authorized": 0,
+    "search_evaluations_authorized": 0,
+    "shots_authorized": 0,
+    "hardware_jobs_authorized": 0,
+    "pilot_baseline_reservation_authorized": false
+  },
+  "limitations": [
+    "Freezing and validating this contract does not execute P02.",
+    "The future audit is limited to one static three-item synthetic capacity fixture.",
+    "The property is a relabeling symmetry of a dot product, not evidence of quantum advantage or real-microgrid performance."
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "story_date": "2026-11-23",
+  "execution": {
+    "executed_at_utc": "2026-11-23T11:47:38.411608+00:00",
+    "python_version": "3.12.14",
+    "source_sha256": "9fcf1d4604d7a9930de88bec95c9f57f0975b877c2fe066952a066e1e7d986ea",
+    "contract_sha256": "4dd524728e15a8d89c0066c9164c15405240ab90bf0ba331e4720450504234ec",
+    "command": "python3 phd-simulation/src/validate_p02_permutation_contract.py"
+  },
+  "status": "CONTRACT_VALIDATED_PROPERTY_PLANNED_UNEXECUTED",
+  "checks": [
+    {
+      "name": "identity_and_schema",
+      "passed": true
+    },
+    {
+      "name": "planned_status",
+      "passed": true
+    },
+    {
+      "name": "fixed_fixture",
+      "passed": true
+    },
+    {
+      "name": "planned_case_count",
+      "passed": true
+    },
+    {
+      "name": "identity_partition",
+      "passed": true
+    },
+    {
+      "name": "preserved_metrics",
+      "passed": true
+    },
+    {
+      "name": "boundary_exclusions",
+      "passed": true
+    },
+    {
+      "name": "zero_resource_authorization",
+      "passed": true
+    }
+  ],
+  "checks_passed": 8,
+  "contract_mutations": [
+    {
+      "name": "executed_status",
+      "rejected": true,
+      "errors": [
+        "status must remain PLANNED_UNEXECUTED"
+      ]
+    },
+    {
+      "name": "wrong_case_count",
+      "rejected": true,
+      "errors": [
+        "planned count must equal 8 decisions times 6 permutations"
+      ]
+    },
+    {
+      "name": "missing_auxiliary_exclusion",
+      "rejected": true,
+      "errors": [
+        "required boundary exclusion missing"
+      ]
+    },
+    {
+      "name": "changed_metric",
+      "rejected": true,
+      "errors": [
+        "preserved metrics changed"
+      ]
+    },
+    {
+      "name": "authorized_property_cases",
+      "rejected": true,
+      "errors": [
+        "resource boundary is not zero/false"
+      ]
+    }
+  ],
+  "contract_mutations_rejected": 5,
+  "property_execution": {
+    "p02_cases_executed": 0,
+    "identity_cases_executed": 0,
+    "nonidentity_cases_executed": 0,
+    "counterexamples_observed": null
+  },
+  "resource_counters": {
+    "protocol_formulation_passes": 0,
+    "protocol_mutants": 0,
+    "sdk_statevectors": 0,
+    "search_evaluations": 0,
+    "shots": 0,
+    "hardware_jobs": 0,
+    "pilot_baseline_reserved": false
+  },
+  "limitations": [
+    "This execution validates only the P02 contract structure and fail-closed boundary.",
+    "No P02 decision-permutation case was generated or evaluated.",
+    "No claim is made about quantum advantage or a real microgrid."
+  ]
+}
