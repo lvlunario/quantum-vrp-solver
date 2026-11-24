@@ -1,0 +1,2181 @@
+{
+  "story_date": "2026-11-24",
+  "status": "EXECUTED_DEVELOPMENT_FIXTURE_PASSED",
+  "execution": {
+    "executed_at_utc": "2026-11-24T11:07:53.065419+00:00",
+    "python_version": "3.12.14",
+    "command": "python3 phd-simulation/src/verify_permutation_p02.py",
+    "source_sha256": "09aa47ea4f68ec1dc3125ff70e4775906ecc6e9676255d70bbff55b56d7e23fa",
+    "contract_sha256": "4dd524728e15a8d89c0066c9164c15405240ab90bf0ba331e4720450504234ec",
+    "independent_oracle_sha256": "bfa727118846b27c08da34cae6f910da0f5edd1c94c859ab9190a10453376a3a",
+    "data_provenance": "Deterministic synthetic fixture frozen in p02-permutation-contract-v1.json; no external data."
+  },
+  "fixture": {
+    "demands": [
+      2,
+      3,
+      4
+    ],
+    "capacity": 5,
+    "decision_generation": "itertools.product((0,1), repeat=3)",
+    "permutation_generation": "itertools.permutations(range(3))"
+  },
+  "summary": {
+    "cases_executed": 48,
+    "identity_cases": 8,
+    "nonidentity_cases": 40,
+    "in_scope_counterexamples": 0,
+    "out_of_precondition_controls_rejected": 2,
+    "checks_passed": 8
+  },
+  "checks": [
+    {
+      "name": "exact_case_count",
+      "passed": true
+    },
+    {
+      "name": "identity_partition",
+      "passed": true
+    },
+    {
+      "name": "complete_unique_surface",
+      "passed": true
+    },
+    {
+      "name": "load_invariance",
+      "passed": true
+    },
+    {
+      "name": "overload_invariance",
+      "passed": true
+    },
+    {
+      "name": "physical_feasibility_invariance",
+      "passed": true
+    },
+    {
+      "name": "one_sided_controls_rejected",
+      "passed": true
+    },
+    {
+      "name": "one_sided_controls_are_material",
+      "passed": true
+    }
+  ],
+  "rejected_controls": [
+    {
+      "name": "decision_only_swap_0_2",
+      "rejected": true,
+      "reason": "P02 requires the same permutation for decision and matching demand",
+      "attempted_decision_permutation": [
+        2,
+        1,
+        0
+      ],
+      "attempted_demand_permutation": [
+        0,
+        1,
+        2
+      ],
+      "original_load": 2,
+      "naive_transformed_load": 4
+    },
+    {
+      "name": "demand_only_swap_0_2",
+      "rejected": true,
+      "reason": "P02 requires the same permutation for decision and matching demand",
+      "attempted_decision_permutation": [
+        0,
+        1,
+        2
+      ],
+      "attempted_demand_permutation": [
+        2,
+        1,
+        0
+      ],
+      "original_load": 2,
+      "naive_transformed_load": 4
+    }
+  ],
+  "rows": [
+    {
+      "decision": [
+        0,
+        0,
+        0
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        0,
+        1,
+        2
+      ],
+      "transformed_decision": [
+        0,
+        0,
+        0
+      ],
+      "transformed_demands": [
+        2,
+        3,
+        4
+      ],
+      "before": {
+        "load": 0,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "after": {
+        "load": 0,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        0,
+        0,
+        0
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        0,
+        2,
+        1
+      ],
+      "transformed_decision": [
+        0,
+        0,
+        0
+      ],
+      "transformed_demands": [
+        2,
+        4,
+        3
+      ],
+      "before": {
+        "load": 0,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "after": {
+        "load": 0,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        0,
+        0,
+        0
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        1,
+        0,
+        2
+      ],
+      "transformed_decision": [
+        0,
+        0,
+        0
+      ],
+      "transformed_demands": [
+        3,
+        2,
+        4
+      ],
+      "before": {
+        "load": 0,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "after": {
+        "load": 0,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        0,
+        0,
+        0
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        1,
+        2,
+        0
+      ],
+      "transformed_decision": [
+        0,
+        0,
+        0
+      ],
+      "transformed_demands": [
+        3,
+        4,
+        2
+      ],
+      "before": {
+        "load": 0,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "after": {
+        "load": 0,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        0,
+        0,
+        0
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        2,
+        0,
+        1
+      ],
+      "transformed_decision": [
+        0,
+        0,
+        0
+      ],
+      "transformed_demands": [
+        4,
+        2,
+        3
+      ],
+      "before": {
+        "load": 0,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "after": {
+        "load": 0,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        0,
+        0,
+        0
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        2,
+        1,
+        0
+      ],
+      "transformed_decision": [
+        0,
+        0,
+        0
+      ],
+      "transformed_demands": [
+        4,
+        3,
+        2
+      ],
+      "before": {
+        "load": 0,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "after": {
+        "load": 0,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        0,
+        0,
+        1
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        0,
+        1,
+        2
+      ],
+      "transformed_decision": [
+        0,
+        0,
+        1
+      ],
+      "transformed_demands": [
+        2,
+        3,
+        4
+      ],
+      "before": {
+        "load": 4,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "after": {
+        "load": 4,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        0,
+        0,
+        1
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        0,
+        2,
+        1
+      ],
+      "transformed_decision": [
+        0,
+        1,
+        0
+      ],
+      "transformed_demands": [
+        2,
+        4,
+        3
+      ],
+      "before": {
+        "load": 4,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "after": {
+        "load": 4,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        0,
+        0,
+        1
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        1,
+        0,
+        2
+      ],
+      "transformed_decision": [
+        0,
+        0,
+        1
+      ],
+      "transformed_demands": [
+        3,
+        2,
+        4
+      ],
+      "before": {
+        "load": 4,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "after": {
+        "load": 4,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        0,
+        0,
+        1
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        1,
+        2,
+        0
+      ],
+      "transformed_decision": [
+        0,
+        1,
+        0
+      ],
+      "transformed_demands": [
+        3,
+        4,
+        2
+      ],
+      "before": {
+        "load": 4,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "after": {
+        "load": 4,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        0,
+        0,
+        1
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        2,
+        0,
+        1
+      ],
+      "transformed_decision": [
+        1,
+        0,
+        0
+      ],
+      "transformed_demands": [
+        4,
+        2,
+        3
+      ],
+      "before": {
+        "load": 4,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "after": {
+        "load": 4,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        0,
+        0,
+        1
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        2,
+        1,
+        0
+      ],
+      "transformed_decision": [
+        1,
+        0,
+        0
+      ],
+      "transformed_demands": [
+        4,
+        3,
+        2
+      ],
+      "before": {
+        "load": 4,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "after": {
+        "load": 4,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        0,
+        1,
+        0
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        0,
+        1,
+        2
+      ],
+      "transformed_decision": [
+        0,
+        1,
+        0
+      ],
+      "transformed_demands": [
+        2,
+        3,
+        4
+      ],
+      "before": {
+        "load": 3,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "after": {
+        "load": 3,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        0,
+        1,
+        0
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        0,
+        2,
+        1
+      ],
+      "transformed_decision": [
+        0,
+        0,
+        1
+      ],
+      "transformed_demands": [
+        2,
+        4,
+        3
+      ],
+      "before": {
+        "load": 3,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "after": {
+        "load": 3,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        0,
+        1,
+        0
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        1,
+        0,
+        2
+      ],
+      "transformed_decision": [
+        1,
+        0,
+        0
+      ],
+      "transformed_demands": [
+        3,
+        2,
+        4
+      ],
+      "before": {
+        "load": 3,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "after": {
+        "load": 3,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        0,
+        1,
+        0
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        1,
+        2,
+        0
+      ],
+      "transformed_decision": [
+        1,
+        0,
+        0
+      ],
+      "transformed_demands": [
+        3,
+        4,
+        2
+      ],
+      "before": {
+        "load": 3,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "after": {
+        "load": 3,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        0,
+        1,
+        0
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        2,
+        0,
+        1
+      ],
+      "transformed_decision": [
+        0,
+        0,
+        1
+      ],
+      "transformed_demands": [
+        4,
+        2,
+        3
+      ],
+      "before": {
+        "load": 3,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "after": {
+        "load": 3,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        0,
+        1,
+        0
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        2,
+        1,
+        0
+      ],
+      "transformed_decision": [
+        0,
+        1,
+        0
+      ],
+      "transformed_demands": [
+        4,
+        3,
+        2
+      ],
+      "before": {
+        "load": 3,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "after": {
+        "load": 3,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        0,
+        1,
+        1
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        0,
+        1,
+        2
+      ],
+      "transformed_decision": [
+        0,
+        1,
+        1
+      ],
+      "transformed_demands": [
+        2,
+        3,
+        4
+      ],
+      "before": {
+        "load": 7,
+        "overload": 2,
+        "physical_feasibility": false
+      },
+      "after": {
+        "load": 7,
+        "overload": 2,
+        "physical_feasibility": false
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        0,
+        1,
+        1
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        0,
+        2,
+        1
+      ],
+      "transformed_decision": [
+        0,
+        1,
+        1
+      ],
+      "transformed_demands": [
+        2,
+        4,
+        3
+      ],
+      "before": {
+        "load": 7,
+        "overload": 2,
+        "physical_feasibility": false
+      },
+      "after": {
+        "load": 7,
+        "overload": 2,
+        "physical_feasibility": false
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        0,
+        1,
+        1
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        1,
+        0,
+        2
+      ],
+      "transformed_decision": [
+        1,
+        0,
+        1
+      ],
+      "transformed_demands": [
+        3,
+        2,
+        4
+      ],
+      "before": {
+        "load": 7,
+        "overload": 2,
+        "physical_feasibility": false
+      },
+      "after": {
+        "load": 7,
+        "overload": 2,
+        "physical_feasibility": false
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        0,
+        1,
+        1
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        1,
+        2,
+        0
+      ],
+      "transformed_decision": [
+        1,
+        1,
+        0
+      ],
+      "transformed_demands": [
+        3,
+        4,
+        2
+      ],
+      "before": {
+        "load": 7,
+        "overload": 2,
+        "physical_feasibility": false
+      },
+      "after": {
+        "load": 7,
+        "overload": 2,
+        "physical_feasibility": false
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        0,
+        1,
+        1
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        2,
+        0,
+        1
+      ],
+      "transformed_decision": [
+        1,
+        0,
+        1
+      ],
+      "transformed_demands": [
+        4,
+        2,
+        3
+      ],
+      "before": {
+        "load": 7,
+        "overload": 2,
+        "physical_feasibility": false
+      },
+      "after": {
+        "load": 7,
+        "overload": 2,
+        "physical_feasibility": false
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        0,
+        1,
+        1
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        2,
+        1,
+        0
+      ],
+      "transformed_decision": [
+        1,
+        1,
+        0
+      ],
+      "transformed_demands": [
+        4,
+        3,
+        2
+      ],
+      "before": {
+        "load": 7,
+        "overload": 2,
+        "physical_feasibility": false
+      },
+      "after": {
+        "load": 7,
+        "overload": 2,
+        "physical_feasibility": false
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        1,
+        0,
+        0
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        0,
+        1,
+        2
+      ],
+      "transformed_decision": [
+        1,
+        0,
+        0
+      ],
+      "transformed_demands": [
+        2,
+        3,
+        4
+      ],
+      "before": {
+        "load": 2,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "after": {
+        "load": 2,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        1,
+        0,
+        0
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        0,
+        2,
+        1
+      ],
+      "transformed_decision": [
+        1,
+        0,
+        0
+      ],
+      "transformed_demands": [
+        2,
+        4,
+        3
+      ],
+      "before": {
+        "load": 2,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "after": {
+        "load": 2,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        1,
+        0,
+        0
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        1,
+        0,
+        2
+      ],
+      "transformed_decision": [
+        0,
+        1,
+        0
+      ],
+      "transformed_demands": [
+        3,
+        2,
+        4
+      ],
+      "before": {
+        "load": 2,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "after": {
+        "load": 2,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        1,
+        0,
+        0
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        1,
+        2,
+        0
+      ],
+      "transformed_decision": [
+        0,
+        0,
+        1
+      ],
+      "transformed_demands": [
+        3,
+        4,
+        2
+      ],
+      "before": {
+        "load": 2,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "after": {
+        "load": 2,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        1,
+        0,
+        0
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        2,
+        0,
+        1
+      ],
+      "transformed_decision": [
+        0,
+        1,
+        0
+      ],
+      "transformed_demands": [
+        4,
+        2,
+        3
+      ],
+      "before": {
+        "load": 2,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "after": {
+        "load": 2,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        1,
+        0,
+        0
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        2,
+        1,
+        0
+      ],
+      "transformed_decision": [
+        0,
+        0,
+        1
+      ],
+      "transformed_demands": [
+        4,
+        3,
+        2
+      ],
+      "before": {
+        "load": 2,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "after": {
+        "load": 2,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        1,
+        0,
+        1
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        0,
+        1,
+        2
+      ],
+      "transformed_decision": [
+        1,
+        0,
+        1
+      ],
+      "transformed_demands": [
+        2,
+        3,
+        4
+      ],
+      "before": {
+        "load": 6,
+        "overload": 1,
+        "physical_feasibility": false
+      },
+      "after": {
+        "load": 6,
+        "overload": 1,
+        "physical_feasibility": false
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        1,
+        0,
+        1
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        0,
+        2,
+        1
+      ],
+      "transformed_decision": [
+        1,
+        1,
+        0
+      ],
+      "transformed_demands": [
+        2,
+        4,
+        3
+      ],
+      "before": {
+        "load": 6,
+        "overload": 1,
+        "physical_feasibility": false
+      },
+      "after": {
+        "load": 6,
+        "overload": 1,
+        "physical_feasibility": false
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        1,
+        0,
+        1
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        1,
+        0,
+        2
+      ],
+      "transformed_decision": [
+        0,
+        1,
+        1
+      ],
+      "transformed_demands": [
+        3,
+        2,
+        4
+      ],
+      "before": {
+        "load": 6,
+        "overload": 1,
+        "physical_feasibility": false
+      },
+      "after": {
+        "load": 6,
+        "overload": 1,
+        "physical_feasibility": false
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        1,
+        0,
+        1
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        1,
+        2,
+        0
+      ],
+      "transformed_decision": [
+        0,
+        1,
+        1
+      ],
+      "transformed_demands": [
+        3,
+        4,
+        2
+      ],
+      "before": {
+        "load": 6,
+        "overload": 1,
+        "physical_feasibility": false
+      },
+      "after": {
+        "load": 6,
+        "overload": 1,
+        "physical_feasibility": false
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        1,
+        0,
+        1
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        2,
+        0,
+        1
+      ],
+      "transformed_decision": [
+        1,
+        1,
+        0
+      ],
+      "transformed_demands": [
+        4,
+        2,
+        3
+      ],
+      "before": {
+        "load": 6,
+        "overload": 1,
+        "physical_feasibility": false
+      },
+      "after": {
+        "load": 6,
+        "overload": 1,
+        "physical_feasibility": false
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        1,
+        0,
+        1
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        2,
+        1,
+        0
+      ],
+      "transformed_decision": [
+        1,
+        0,
+        1
+      ],
+      "transformed_demands": [
+        4,
+        3,
+        2
+      ],
+      "before": {
+        "load": 6,
+        "overload": 1,
+        "physical_feasibility": false
+      },
+      "after": {
+        "load": 6,
+        "overload": 1,
+        "physical_feasibility": false
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        1,
+        1,
+        0
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        0,
+        1,
+        2
+      ],
+      "transformed_decision": [
+        1,
+        1,
+        0
+      ],
+      "transformed_demands": [
+        2,
+        3,
+        4
+      ],
+      "before": {
+        "load": 5,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "after": {
+        "load": 5,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        1,
+        1,
+        0
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        0,
+        2,
+        1
+      ],
+      "transformed_decision": [
+        1,
+        0,
+        1
+      ],
+      "transformed_demands": [
+        2,
+        4,
+        3
+      ],
+      "before": {
+        "load": 5,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "after": {
+        "load": 5,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        1,
+        1,
+        0
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        1,
+        0,
+        2
+      ],
+      "transformed_decision": [
+        1,
+        1,
+        0
+      ],
+      "transformed_demands": [
+        3,
+        2,
+        4
+      ],
+      "before": {
+        "load": 5,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "after": {
+        "load": 5,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        1,
+        1,
+        0
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        1,
+        2,
+        0
+      ],
+      "transformed_decision": [
+        1,
+        0,
+        1
+      ],
+      "transformed_demands": [
+        3,
+        4,
+        2
+      ],
+      "before": {
+        "load": 5,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "after": {
+        "load": 5,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        1,
+        1,
+        0
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        2,
+        0,
+        1
+      ],
+      "transformed_decision": [
+        0,
+        1,
+        1
+      ],
+      "transformed_demands": [
+        4,
+        2,
+        3
+      ],
+      "before": {
+        "load": 5,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "after": {
+        "load": 5,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        1,
+        1,
+        0
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        2,
+        1,
+        0
+      ],
+      "transformed_decision": [
+        0,
+        1,
+        1
+      ],
+      "transformed_demands": [
+        4,
+        3,
+        2
+      ],
+      "before": {
+        "load": 5,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "after": {
+        "load": 5,
+        "overload": 0,
+        "physical_feasibility": true
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        1,
+        1,
+        1
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        0,
+        1,
+        2
+      ],
+      "transformed_decision": [
+        1,
+        1,
+        1
+      ],
+      "transformed_demands": [
+        2,
+        3,
+        4
+      ],
+      "before": {
+        "load": 9,
+        "overload": 4,
+        "physical_feasibility": false
+      },
+      "after": {
+        "load": 9,
+        "overload": 4,
+        "physical_feasibility": false
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        1,
+        1,
+        1
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        0,
+        2,
+        1
+      ],
+      "transformed_decision": [
+        1,
+        1,
+        1
+      ],
+      "transformed_demands": [
+        2,
+        4,
+        3
+      ],
+      "before": {
+        "load": 9,
+        "overload": 4,
+        "physical_feasibility": false
+      },
+      "after": {
+        "load": 9,
+        "overload": 4,
+        "physical_feasibility": false
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        1,
+        1,
+        1
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        1,
+        0,
+        2
+      ],
+      "transformed_decision": [
+        1,
+        1,
+        1
+      ],
+      "transformed_demands": [
+        3,
+        2,
+        4
+      ],
+      "before": {
+        "load": 9,
+        "overload": 4,
+        "physical_feasibility": false
+      },
+      "after": {
+        "load": 9,
+        "overload": 4,
+        "physical_feasibility": false
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        1,
+        1,
+        1
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        1,
+        2,
+        0
+      ],
+      "transformed_decision": [
+        1,
+        1,
+        1
+      ],
+      "transformed_demands": [
+        3,
+        4,
+        2
+      ],
+      "before": {
+        "load": 9,
+        "overload": 4,
+        "physical_feasibility": false
+      },
+      "after": {
+        "load": 9,
+        "overload": 4,
+        "physical_feasibility": false
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        1,
+        1,
+        1
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        2,
+        0,
+        1
+      ],
+      "transformed_decision": [
+        1,
+        1,
+        1
+      ],
+      "transformed_demands": [
+        4,
+        2,
+        3
+      ],
+      "before": {
+        "load": 9,
+        "overload": 4,
+        "physical_feasibility": false
+      },
+      "after": {
+        "load": 9,
+        "overload": 4,
+        "physical_feasibility": false
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    },
+    {
+      "decision": [
+        1,
+        1,
+        1
+      ],
+      "demands": [
+        2,
+        3,
+        4
+      ],
+      "capacity": 5,
+      "permutation": [
+        2,
+        1,
+        0
+      ],
+      "transformed_decision": [
+        1,
+        1,
+        1
+      ],
+      "transformed_demands": [
+        4,
+        3,
+        2
+      ],
+      "before": {
+        "load": 9,
+        "overload": 4,
+        "physical_feasibility": false
+      },
+      "after": {
+        "load": 9,
+        "overload": 4,
+        "physical_feasibility": false
+      },
+      "properties": {
+        "load_equal": true,
+        "overload_equal": true,
+        "physical_feasibility_equal": true
+      }
+    }
+  ],
+  "resource_counters": {
+    "protocol_formulation_passes": 0,
+    "protocol_mutants": 0,
+    "sdk_statevectors": 0,
+    "search_evaluations": 0,
+    "shots": 0,
+    "hardware_jobs": 0,
+    "pilot_baseline_reserved": false
+  },
+  "limitations": [
+    "Development evidence for one three-item deterministic synthetic fixture.",
+    "The result checks a physical dot-product relabeling only; it does not cover auxiliary-bit, QUBO-variable, circuit-index or optimizer invariance.",
+    "No power flow, restoration, uncertainty, real microgrid or quantum advantage is addressed."
+  ]
+}
