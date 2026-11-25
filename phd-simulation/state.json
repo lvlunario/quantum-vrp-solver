@@ -4,7 +4,7 @@
   "end_date": "2027-09-21",
   "simulation_timezone": "Europe/Oslo",
   "delivery_timezone": "Asia/Manila",
-  "last_completed_date": "2026-11-24",
+  "last_completed_date": "2026-11-25",
   "completed_dates": [
     "2026-09-22",
     "2026-09-23",
@@ -36,10 +36,11 @@
     "2026-11-18",
     "2026-11-19",
     "2026-11-23",
-    "2026-11-24"
+    "2026-11-24",
+    "2026-11-25"
   ],
   "phase": "onboarding and independent verification",
-  "next_task": "November 25: extend the fault-to-oracle catalog with P01/P02 metamorphic faults and route each to a detecting layer; do not execute the blocked frozen mutation pilot.",
+  "next_task": "November 26: formalize and validate a fault-catalog schema covering fault class, precondition, minimum detecting layer, known blind layer and evidence status using synthetic records only; keep MF06/MF08 and M01-M12 unexecuted.",
   "simulated_deadlines": [
     "2027-02-26",
     "2027-06-25",
@@ -65,7 +66,7 @@
   ],
   "catchup_created_date": "2026-09-27",
   "catchup_reason": "Explicit user request to run the entire missed workweek; all new execution occurred on September 27.",
-  "latest_evidence": "results/2026-11-24-p02-permutation.json",
+  "latest_evidence": "results/2026-11-25-metamorphic-fault-routing.json",
   "publication_recovered_dates": [
     "2026-09-30"
   ],
@@ -324,5 +325,23 @@
     "protocol_mutants_executed": 0,
     "sdk_statevectors_executed": 0,
     "search_evaluations": 0
+  },
+  "metamorphic_fault_routing": {
+    "status": "ROUTING_VALIDATED_NO_MUTANTS_EXECUTED",
+    "catalog": "docs/metamorphic-fault-catalog-v1.json",
+    "documentation": "docs/metamorphic-fault-routing.md",
+    "validator": "src/validate_metamorphic_fault_catalog.py",
+    "result": "results/2026-11-25-metamorphic-fault-routing.json",
+    "validated_date": "2026-11-25",
+    "faults_routed": 8,
+    "existing_evidence_confirmed": 6,
+    "prospective_routes_unexecuted": 2,
+    "checks_passed": 9,
+    "invalid_catalog_mutations_rejected": 6,
+    "catalog_fault_executions": 0,
+    "protocol_mutants_executed": 0,
+    "sdk_statevectors_executed": 0,
+    "search_evaluations": 0,
+    "pilot_baseline_reserved": false
   }
 }

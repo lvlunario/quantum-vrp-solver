@@ -76,3 +76,15 @@ computational-basis probability check while being rejected by the exact
 statevector layer. All entries are **PLANNED/UNEXECUTED**. The table fixes the
 expected killing layer before observations and does not constitute a mutation
 score.
+
+
+## 2026-11-25 metamorphic/application extension
+
+Eight MF routes now extend this matrix through P01, P02 and application-
+metric boundaries. They are versioned in
+[metamorphic-fault-catalog-v1.json](metamorphic-fault-catalog-v1.json) and
+explained in [metamorphic-fault-routing.md](metamorphic-fault-routing.md).
+Six routes are grounded in existing retained development evidence; MF06 and
+MF08 remain prospective and unexecuted. The executed catalog validator passed
+nine checks and rejected six malformed catalogs. This did not execute any
+catalog fault or M01–M12 mutant and does not produce a mutation score.

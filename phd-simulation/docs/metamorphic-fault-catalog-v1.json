@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "catalog_id": "metamorphic-application-faults-v1",
+  "status": "ROUTING_VALIDATED_NO_MUTANTS_EXECUTED",
+  "frozen_date": "2026-11-25",
+  "scope": "DEVELOPMENT_CATALOG_OUTSIDE_FROZEN_MUTATION_PILOT",
+  "allowed_layers": [
+    "G0_TRANSFORM_PRECONDITION",
+    "L4_PHYSICAL_APPLICATION_ORACLE",
+    "L4_AUXILIARY_BOUNDARY_ORACLE",
+    "L4_METRIC_SEPARATION_ORACLE",
+    "G0_SCOPE_CONTRACT"
+  ],
+  "faults": [
+    {
+      "id": "MF01_NEGATIVE_DEMAND_ADMITTED",
+      "source_property": "P01",
+      "fault": "A monotonicity comparison accepts a negative demand coefficient.",
+      "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+      "expected_outcome": "REJECT_BEFORE_PROPERTY_EVALUATION",
+      "evidence_status": "CONFIRMED_EXISTING_DEVELOPMENT_EVIDENCE",
+      "evidence": "results/2026-11-18-p01-monotonicity.json",
+      "pilot_mutant": false
+    },
+    {
+      "id": "MF02_CAPACITY_CHANGES_BETWEEN_PAIR",
+      "source_property": "P01",
+      "fault": "The two sides of a P01 comparison use different capacities.",
+      "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+      "expected_outcome": "REJECT_BEFORE_PROPERTY_EVALUATION",
+      "evidence_status": "CONFIRMED_EXISTING_DEVELOPMENT_EVIDENCE",
+      "evidence": "results/2026-11-18-p01-monotonicity.json",
+      "pilot_mutant": false
+    },
+    {
+      "id": "MF03_AUXILIARY_FLAG_ASSUMED_MONOTONE",
+      "source_property": "P01",
+      "fault": "Physical P01 is incorrectly promoted to the auxiliary equality indicator.",
+      "minimum_detecting_layer": "L4_AUXILIARY_BOUNDARY_ORACLE",
+      "expected_outcome": "REJECT_BY_BIDIRECTIONAL_COUNTEREXAMPLES",
+      "evidence_status": "CONFIRMED_EXISTING_DEVELOPMENT_EVIDENCE",
+      "evidence": "results/2026-11-19-auxiliary-nonmonotonicity.json",
+      "pilot_mutant": false
+    },
+    {
+      "id": "MF04_DECISION_ONLY_PERMUTATION",
+      "source_property": "P02",
+      "fault": "A coordinate permutation is applied to the decision but not its matching demands.",
+      "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+      "expected_outcome": "REJECT_BEFORE_PROPERTY_EVALUATION",
+      "evidence_status": "CONFIRMED_EXISTING_DEVELOPMENT_EVIDENCE",
+      "evidence": "results/2026-11-24-p02-permutation.json",
+      "pilot_mutant": false
+    },
+    {
+      "id": "MF05_DEMAND_ONLY_PERMUTATION",
+      "source_property": "P02",
+      "fault": "A coordinate permutation is applied to demands but not the matching decision.",
+      "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+      "expected_outcome": "REJECT_BEFORE_PROPERTY_EVALUATION",
+      "evidence_status": "CONFIRMED_EXISTING_DEVELOPMENT_EVIDENCE",
+      "evidence": "results/2026-11-24-p02-permutation.json",
+      "pilot_mutant": false
+    },
+    {
+      "id": "MF06_NONBIJECTIVE_COORDINATE_MAP",
+      "source_property": "P02",
+      "fault": "A duplicate or missing coordinate is accepted as a permutation.",
+      "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+      "expected_outcome": "REJECT_BEFORE_PROPERTY_EVALUATION",
+      "evidence_status": "ROUTED_PROSPECTIVE_NOT_EXECUTED_AS_FAULT",
+      "evidence": null,
+      "pilot_mutant": false
+    },
+    {
+      "id": "MF07_PHYSICAL_AUXILIARY_METRICS_COLLAPSED",
+      "source_property": "APPLICATION_BOUNDARY",
+      "fault": "Physical feasibility and auxiliary consistency are collapsed into one validity label.",
+      "minimum_detecting_layer": "L4_METRIC_SEPARATION_ORACLE",
+      "expected_outcome": "REJECT_BY_SEPARATE_DENOMINATORS_AND_CATEGORIES",
+      "evidence_status": "CONFIRMED_EXISTING_DEVELOPMENT_EVIDENCE",
+      "evidence": "results/2026-11-11-application-metrics.json",
+      "pilot_mutant": false
+    },
+    {
+      "id": "MF08_P02_PROMOTED_TO_ENCODING_OR_CIRCUIT",
+      "source_property": "P02",
+      "fault": "Physical dot-product relabeling is claimed to prove auxiliary, QUBO or statevector reindexing invariance.",
+      "minimum_detecting_layer": "G0_SCOPE_CONTRACT",
+      "expected_outcome": "REJECT_AS_OUTSIDE_PROPERTY_SCOPE",
+      "evidence_status": "ROUTED_PROSPECTIVE_NOT_EXECUTED_AS_FAULT",
+      "evidence": null,
+      "pilot_mutant": false
+    }
+  ],
+  "resource_boundary": {
+    "catalog_fault_executions": 0,
+    "protocol_formulation_passes": 0,
+    "protocol_mutants": 0,
+    "sdk_statevectors": 0,
+    "search_evaluations": 0,
+    "shots": 0,
+    "hardware_jobs": 0,
+    "pilot_baseline_reserved": false
+  },
+  "limitations": [
+    "Catalog validation checks routing and existing evidence assertions; it is not a mutation run or mutation score.",
+    "MF06 and MF08 remain prospective routing decisions with no executed fault evidence.",
+    "The catalog is limited to the current synthetic application-oracle boundary."
+  ]
+}
