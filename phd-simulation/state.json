@@ -4,7 +4,7 @@
   "end_date": "2027-09-21",
   "simulation_timezone": "Europe/Oslo",
   "delivery_timezone": "Asia/Manila",
-  "last_completed_date": "2026-11-25",
+  "last_completed_date": "2026-11-26",
   "completed_dates": [
     "2026-09-22",
     "2026-09-23",
@@ -37,10 +37,11 @@
     "2026-11-19",
     "2026-11-23",
     "2026-11-24",
-    "2026-11-25"
+    "2026-11-25",
+    "2026-11-26"
   ],
   "phase": "onboarding and independent verification",
-  "next_task": "November 26: formalize and validate a fault-catalog schema covering fault class, precondition, minimum detecting layer, known blind layer and evidence status using synthetic records only; keep MF06/MF08 and M01-M12 unexecuted.",
+  "next_task": "November 27: Friday synthesis; write an educational manuscript subsection connecting P01/P02, scoped fault detectors and the declared-versus-verified evidence boundary. Keep real-catalog migration, MF06/MF08 and M01-M12 unexecuted; explicitly retain the SDK preflight blockers.",
   "simulated_deadlines": [
     "2027-02-26",
     "2027-06-25",
@@ -66,7 +67,7 @@
   ],
   "catchup_created_date": "2026-09-27",
   "catchup_reason": "Explicit user request to run the entire missed workweek; all new execution occurred on September 27.",
-  "latest_evidence": "results/2026-11-25-metamorphic-fault-routing.json",
+  "latest_evidence": "results/2026-11-26-fault-record-schema.json",
   "publication_recovered_dates": [
     "2026-09-30"
   ],
@@ -87,7 +88,7 @@
     "2026-11-17",
     "2026-11-20"
   ],
-  "recovery_note": "September 30 local work recovered and re-executed October 5; first publication October 5. Missing dates remain incomplete. October 13–14 package not recovered; interruption logs created October 15; new R14 implementation executed October 15, not backdated. October 28-30 have no journals or evidence and were recorded as incomplete on November 2; no reconstruction was claimed. November 3 has no journal or execution evidence and was recorded incomplete on November 4; its adapter task was completed as current November 4 work, not backdated. November 6 and 9 have no journals or execution evidence and were recorded incomplete on November 10; November 7-8 were ordinary rest days. November 12 has no journal, commit or execution evidence and was recorded incomplete on November 13; its distribution-aggregation task was completed as current November 13 work, not backdated. November 17 has no journal, commit or execution evidence and was recorded incomplete on November 18; P01 was executed as current November 18 work, not backdated. November 20 has no journal, commit or execution evidence and was recorded incomplete on November 23; its synthesis and P02 contract freeze were completed as current November 23 work, not backdated. November 21-22 were ordinary rest days.",
+  "recovery_note": "September 30 local work recovered and re-executed October 5; first publication October 5. Missing dates remain incomplete. October 13\u201314 package not recovered; interruption logs created October 15; new R14 implementation executed October 15, not backdated. October 28-30 have no journals or evidence and were recorded as incomplete on November 2; no reconstruction was claimed. November 3 has no journal or execution evidence and was recorded incomplete on November 4; its adapter task was completed as current November 4 work, not backdated. November 6 and 9 have no journals or execution evidence and were recorded incomplete on November 10; November 7-8 were ordinary rest days. November 12 has no journal, commit or execution evidence and was recorded incomplete on November 13; its distribution-aggregation task was completed as current November 13 work, not backdated. November 17 has no journal, commit or execution evidence and was recorded incomplete on November 18; P01 was executed as current November 18 work, not backdated. November 20 has no journal, commit or execution evidence and was recorded incomplete on November 23; its synthesis and P02 contract freeze were completed as current November 23 work, not backdated. November 21-22 were ordinary rest days.",
   "literature_status": "R06 IN PROGRESS: direct full-text extraction completed for Quito and QDiff; manuscript v0.5 incorporates their oracle boundary. Backward/forward citation chaining and broader novelty comparison remain incomplete.",
   "pilot_protocol": {
     "path": "docs/baseline-protocol-v1.md",
@@ -338,6 +339,24 @@
     "prospective_routes_unexecuted": 2,
     "checks_passed": 9,
     "invalid_catalog_mutations_rejected": 6,
+    "catalog_fault_executions": 0,
+    "protocol_mutants_executed": 0,
+    "sdk_statevectors_executed": 0,
+    "search_evaluations": 0,
+    "pilot_baseline_reserved": false
+  },
+  "fault_record_schema": {
+    "status": "EXECUTED_SYNTHETIC_SCHEMA_CHECKS_ONLY",
+    "contract": "docs/fault-record-schema-v1.json",
+    "documentation": "docs/fault-record-schema.md",
+    "validator": "src/validate_fault_record_schema.py",
+    "verification": "src/verify_fault_record_schema.py",
+    "result": "results/2026-11-26-fault-record-schema.json",
+    "executed_date": "2026-11-26",
+    "accepted_synthetic_records": 4,
+    "rejected_synthetic_records": 28,
+    "checks_passed": 32,
+    "production_catalog_migrated": false,
     "catalog_fault_executions": 0,
     "protocol_mutants_executed": 0,
     "sdk_statevectors_executed": 0,

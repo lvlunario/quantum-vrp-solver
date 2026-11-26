@@ -1,0 +1,16 @@
+{
+  "schema_id": "fault-record-contract-v1",
+  "format": "PROJECT_SPECIFIC_CONTRACT_NOT_JSON_SCHEMA",
+  "required_fields": ["id", "fault_class", "precondition", "minimum_detecting_layer", "known_blind_layers", "blindness_reason", "evidence_status", "evidence", "pilot_mutant", "resource_boundary"],
+  "fault_classes": ["PRECONDITION", "CROSS_LAYER_INFERENCE", "METRIC_COLLAPSE"],
+  "layers": ["G0_TRANSFORM_PRECONDITION", "G0_SCOPE_CONTRACT", "L4_PHYSICAL_APPLICATION_ORACLE", "L4_AUXILIARY_BOUNDARY_ORACLE", "L4_METRIC_SEPARATION_ORACLE"],
+  "class_detectors": {
+    "PRECONDITION": ["G0_TRANSFORM_PRECONDITION"],
+    "CROSS_LAYER_INFERENCE": ["G0_SCOPE_CONTRACT", "L4_AUXILIARY_BOUNDARY_ORACLE"],
+    "METRIC_COLLAPSE": ["L4_METRIC_SEPARATION_ORACLE"]
+  },
+  "evidence_statuses": ["REFERENCE_DECLARED_NOT_VERIFIED", "PROSPECTIVE_UNEXECUTED"],
+  "resource_counters": ["catalog_fault_executions", "protocol_formulation_passes", "protocol_mutants", "sdk_statevectors", "search_evaluations", "shots", "hardware_jobs"],
+  "baseline_flag": "pilot_baseline_reserved",
+  "limitations": ["Structural acceptance never establishes truth of evidence, detector minimality or a blind-layer claim.", "A blind layer means insufficient evidence for this claim in the stated scope, not universal inability to detect a fault.", "Production catalog migration and semantic evidence resolution are not authorized by this contract."]
+}

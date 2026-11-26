@@ -1,0 +1,938 @@
+{
+  "story_date": "2026-11-26",
+  "status": "EXECUTED_SYNTHETIC_SCHEMA_CHECKS_ONLY",
+  "execution": {
+    "executed_at_utc": "2026-11-26T11:51:17.317958+00:00",
+    "python": "3.12.14",
+    "command": "python3 phd-simulation/src/verify_fault_record_schema.py",
+    "input_data": "Deterministic synthetic records embedded in verifier; no real evidence references resolved.",
+    "sha256": {
+      "docs/fault-record-schema-v1.json": "4e2014efbca481c35da7723a1b91de64559f7ddaaa3f3f7639e2edd8bd7138fa",
+      "src/verify_fault_record_schema.py": "9615bbb1bc4f2b7e51adc3a6b996aa31a9440ffd50c700c69946ee871a696bce",
+      "src/validate_fault_record_schema.py": "9b2b5bea7930a782b78cfb833d1a241b4b8a305e874b79b2f991a33c1c917bf5"
+    }
+  },
+  "summary": {
+    "accepted_synthetic_records": 4,
+    "rejected_synthetic_records": 28,
+    "checks_passed": 32
+  },
+  "accepted": [
+    {
+      "record": {
+        "id": "SYN01",
+        "fault_class": "PRECONDITION",
+        "precondition": "Both sides use the same fixed capacity.",
+        "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+        "known_blind_layers": [
+          "L4_PHYSICAL_APPLICATION_ORACLE"
+        ],
+        "blindness_reason": "Independent single-state reports do not establish a shared pair precondition.",
+        "evidence_status": "PROSPECTIVE_UNEXECUTED",
+        "evidence": null,
+        "pilot_mutant": false,
+        "resource_boundary": {
+          "catalog_fault_executions": 0,
+          "protocol_formulation_passes": 0,
+          "protocol_mutants": 0,
+          "sdk_statevectors": 0,
+          "search_evaluations": 0,
+          "shots": 0,
+          "hardware_jobs": 0,
+          "pilot_baseline_reserved": false
+        }
+      },
+      "errors": []
+    },
+    {
+      "record": {
+        "id": "SYN02",
+        "fault_class": "CROSS_LAYER_INFERENCE",
+        "precondition": "Both sides use the same fixed capacity.",
+        "minimum_detecting_layer": "G0_SCOPE_CONTRACT",
+        "known_blind_layers": [
+          "L4_PHYSICAL_APPLICATION_ORACLE"
+        ],
+        "blindness_reason": "Independent single-state reports do not establish a shared pair precondition.",
+        "evidence_status": "PROSPECTIVE_UNEXECUTED",
+        "evidence": null,
+        "pilot_mutant": false,
+        "resource_boundary": {
+          "catalog_fault_executions": 0,
+          "protocol_formulation_passes": 0,
+          "protocol_mutants": 0,
+          "sdk_statevectors": 0,
+          "search_evaluations": 0,
+          "shots": 0,
+          "hardware_jobs": 0,
+          "pilot_baseline_reserved": false
+        }
+      },
+      "errors": []
+    },
+    {
+      "record": {
+        "id": "SYN03",
+        "fault_class": "METRIC_COLLAPSE",
+        "precondition": "Both sides use the same fixed capacity.",
+        "minimum_detecting_layer": "L4_METRIC_SEPARATION_ORACLE",
+        "known_blind_layers": [
+          "L4_PHYSICAL_APPLICATION_ORACLE"
+        ],
+        "blindness_reason": "Independent single-state reports do not establish a shared pair precondition.",
+        "evidence_status": "PROSPECTIVE_UNEXECUTED",
+        "evidence": null,
+        "pilot_mutant": false,
+        "resource_boundary": {
+          "catalog_fault_executions": 0,
+          "protocol_formulation_passes": 0,
+          "protocol_mutants": 0,
+          "sdk_statevectors": 0,
+          "search_evaluations": 0,
+          "shots": 0,
+          "hardware_jobs": 0,
+          "pilot_baseline_reserved": false
+        }
+      },
+      "errors": []
+    },
+    {
+      "record": {
+        "id": "SYN04",
+        "fault_class": "PRECONDITION",
+        "precondition": "Both sides use the same fixed capacity.",
+        "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+        "known_blind_layers": [
+          "L4_PHYSICAL_APPLICATION_ORACLE"
+        ],
+        "blindness_reason": "Independent single-state reports do not establish a shared pair precondition.",
+        "evidence_status": "REFERENCE_DECLARED_NOT_VERIFIED",
+        "evidence": {
+          "path": "results/synthetic-reference.json",
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "pilot_mutant": false,
+        "resource_boundary": {
+          "catalog_fault_executions": 0,
+          "protocol_formulation_passes": 0,
+          "protocol_mutants": 0,
+          "sdk_statevectors": 0,
+          "search_evaluations": 0,
+          "shots": 0,
+          "hardware_jobs": 0,
+          "pilot_baseline_reserved": false
+        }
+      },
+      "errors": []
+    }
+  ],
+  "rejected": [
+    {
+      "name": "missing_precondition",
+      "record": {
+        "id": "SYN01",
+        "fault_class": "PRECONDITION",
+        "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+        "known_blind_layers": [
+          "L4_PHYSICAL_APPLICATION_ORACLE"
+        ],
+        "blindness_reason": "Independent single-state reports do not establish a shared pair precondition.",
+        "evidence_status": "PROSPECTIVE_UNEXECUTED",
+        "evidence": null,
+        "pilot_mutant": false,
+        "resource_boundary": {
+          "catalog_fault_executions": 0,
+          "protocol_formulation_passes": 0,
+          "protocol_mutants": 0,
+          "sdk_statevectors": 0,
+          "search_evaluations": 0,
+          "shots": 0,
+          "hardware_jobs": 0,
+          "pilot_baseline_reserved": false
+        }
+      },
+      "errors": [
+        "exact record fields required",
+        "precondition must explain the claim"
+      ]
+    },
+    {
+      "name": "blank_precondition",
+      "record": {
+        "id": "SYN01",
+        "fault_class": "PRECONDITION",
+        "precondition": " ",
+        "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+        "known_blind_layers": [
+          "L4_PHYSICAL_APPLICATION_ORACLE"
+        ],
+        "blindness_reason": "Independent single-state reports do not establish a shared pair precondition.",
+        "evidence_status": "PROSPECTIVE_UNEXECUTED",
+        "evidence": null,
+        "pilot_mutant": false,
+        "resource_boundary": {
+          "catalog_fault_executions": 0,
+          "protocol_formulation_passes": 0,
+          "protocol_mutants": 0,
+          "sdk_statevectors": 0,
+          "search_evaluations": 0,
+          "shots": 0,
+          "hardware_jobs": 0,
+          "pilot_baseline_reserved": false
+        }
+      },
+      "errors": [
+        "precondition must explain the claim"
+      ]
+    },
+    {
+      "name": "unknown_field",
+      "record": {
+        "id": "SYN01",
+        "fault_class": "PRECONDITION",
+        "precondition": "Both sides use the same fixed capacity.",
+        "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+        "known_blind_layers": [
+          "L4_PHYSICAL_APPLICATION_ORACLE"
+        ],
+        "blindness_reason": "Independent single-state reports do not establish a shared pair precondition.",
+        "evidence_status": "PROSPECTIVE_UNEXECUTED",
+        "evidence": null,
+        "pilot_mutant": false,
+        "resource_boundary": {
+          "catalog_fault_executions": 0,
+          "protocol_formulation_passes": 0,
+          "protocol_mutants": 0,
+          "sdk_statevectors": 0,
+          "search_evaluations": 0,
+          "shots": 0,
+          "hardware_jobs": 0,
+          "pilot_baseline_reserved": false
+        },
+        "verdict": "KILLED"
+      },
+      "errors": [
+        "exact record fields required"
+      ]
+    },
+    {
+      "name": "real_catalog_id",
+      "record": {
+        "id": "MF06",
+        "fault_class": "PRECONDITION",
+        "precondition": "Both sides use the same fixed capacity.",
+        "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+        "known_blind_layers": [
+          "L4_PHYSICAL_APPLICATION_ORACLE"
+        ],
+        "blindness_reason": "Independent single-state reports do not establish a shared pair precondition.",
+        "evidence_status": "PROSPECTIVE_UNEXECUTED",
+        "evidence": null,
+        "pilot_mutant": false,
+        "resource_boundary": {
+          "catalog_fault_executions": 0,
+          "protocol_formulation_passes": 0,
+          "protocol_mutants": 0,
+          "sdk_statevectors": 0,
+          "search_evaluations": 0,
+          "shots": 0,
+          "hardware_jobs": 0,
+          "pilot_baseline_reserved": false
+        }
+      },
+      "errors": [
+        "synthetic-only identity required"
+      ]
+    },
+    {
+      "name": "unknown_class",
+      "record": {
+        "id": "SYN01",
+        "fault_class": "OTHER",
+        "precondition": "Both sides use the same fixed capacity.",
+        "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+        "known_blind_layers": [
+          "L4_PHYSICAL_APPLICATION_ORACLE"
+        ],
+        "blindness_reason": "Independent single-state reports do not establish a shared pair precondition.",
+        "evidence_status": "PROSPECTIVE_UNEXECUTED",
+        "evidence": null,
+        "pilot_mutant": false,
+        "resource_boundary": {
+          "catalog_fault_executions": 0,
+          "protocol_formulation_passes": 0,
+          "protocol_mutants": 0,
+          "sdk_statevectors": 0,
+          "search_evaluations": 0,
+          "shots": 0,
+          "hardware_jobs": 0,
+          "pilot_baseline_reserved": false
+        }
+      },
+      "errors": [
+        "unknown fault class"
+      ]
+    },
+    {
+      "name": "unknown_detector",
+      "record": {
+        "id": "SYN01",
+        "fault_class": "PRECONDITION",
+        "precondition": "Both sides use the same fixed capacity.",
+        "minimum_detecting_layer": "L9",
+        "known_blind_layers": [
+          "L4_PHYSICAL_APPLICATION_ORACLE"
+        ],
+        "blindness_reason": "Independent single-state reports do not establish a shared pair precondition.",
+        "evidence_status": "PROSPECTIVE_UNEXECUTED",
+        "evidence": null,
+        "pilot_mutant": false,
+        "resource_boundary": {
+          "catalog_fault_executions": 0,
+          "protocol_formulation_passes": 0,
+          "protocol_mutants": 0,
+          "sdk_statevectors": 0,
+          "search_evaluations": 0,
+          "shots": 0,
+          "hardware_jobs": 0,
+          "pilot_baseline_reserved": false
+        }
+      },
+      "errors": [
+        "detector incompatible with fault class",
+        "unknown detector"
+      ]
+    },
+    {
+      "name": "wrong_class_detector",
+      "record": {
+        "id": "SYN01",
+        "fault_class": "PRECONDITION",
+        "precondition": "Both sides use the same fixed capacity.",
+        "minimum_detecting_layer": "G0_SCOPE_CONTRACT",
+        "known_blind_layers": [
+          "L4_PHYSICAL_APPLICATION_ORACLE"
+        ],
+        "blindness_reason": "Independent single-state reports do not establish a shared pair precondition.",
+        "evidence_status": "PROSPECTIVE_UNEXECUTED",
+        "evidence": null,
+        "pilot_mutant": false,
+        "resource_boundary": {
+          "catalog_fault_executions": 0,
+          "protocol_formulation_passes": 0,
+          "protocol_mutants": 0,
+          "sdk_statevectors": 0,
+          "search_evaluations": 0,
+          "shots": 0,
+          "hardware_jobs": 0,
+          "pilot_baseline_reserved": false
+        }
+      },
+      "errors": [
+        "detector incompatible with fault class"
+      ]
+    },
+    {
+      "name": "missing_blind_list",
+      "record": {
+        "id": "SYN01",
+        "fault_class": "PRECONDITION",
+        "precondition": "Both sides use the same fixed capacity.",
+        "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+        "blindness_reason": "Independent single-state reports do not establish a shared pair precondition.",
+        "evidence_status": "PROSPECTIVE_UNEXECUTED",
+        "evidence": null,
+        "pilot_mutant": false,
+        "resource_boundary": {
+          "catalog_fault_executions": 0,
+          "protocol_formulation_passes": 0,
+          "protocol_mutants": 0,
+          "sdk_statevectors": 0,
+          "search_evaluations": 0,
+          "shots": 0,
+          "hardware_jobs": 0,
+          "pilot_baseline_reserved": false
+        }
+      },
+      "errors": [
+        "exact record fields required",
+        "explicit nonempty blind-layer list required"
+      ]
+    },
+    {
+      "name": "empty_blind_list",
+      "record": {
+        "id": "SYN01",
+        "fault_class": "PRECONDITION",
+        "precondition": "Both sides use the same fixed capacity.",
+        "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+        "known_blind_layers": [],
+        "blindness_reason": "Independent single-state reports do not establish a shared pair precondition.",
+        "evidence_status": "PROSPECTIVE_UNEXECUTED",
+        "evidence": null,
+        "pilot_mutant": false,
+        "resource_boundary": {
+          "catalog_fault_executions": 0,
+          "protocol_formulation_passes": 0,
+          "protocol_mutants": 0,
+          "sdk_statevectors": 0,
+          "search_evaluations": 0,
+          "shots": 0,
+          "hardware_jobs": 0,
+          "pilot_baseline_reserved": false
+        }
+      },
+      "errors": [
+        "explicit nonempty blind-layer list required"
+      ]
+    },
+    {
+      "name": "unknown_blind_layer",
+      "record": {
+        "id": "SYN01",
+        "fault_class": "PRECONDITION",
+        "precondition": "Both sides use the same fixed capacity.",
+        "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+        "known_blind_layers": [
+          "L9"
+        ],
+        "blindness_reason": "Independent single-state reports do not establish a shared pair precondition.",
+        "evidence_status": "PROSPECTIVE_UNEXECUTED",
+        "evidence": null,
+        "pilot_mutant": false,
+        "resource_boundary": {
+          "catalog_fault_executions": 0,
+          "protocol_formulation_passes": 0,
+          "protocol_mutants": 0,
+          "sdk_statevectors": 0,
+          "search_evaluations": 0,
+          "shots": 0,
+          "hardware_jobs": 0,
+          "pilot_baseline_reserved": false
+        }
+      },
+      "errors": [
+        "unknown blind layer"
+      ]
+    },
+    {
+      "name": "duplicate_blind_layer",
+      "record": {
+        "id": "SYN01",
+        "fault_class": "PRECONDITION",
+        "precondition": "Both sides use the same fixed capacity.",
+        "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+        "known_blind_layers": [
+          "L4_PHYSICAL_APPLICATION_ORACLE",
+          "L4_PHYSICAL_APPLICATION_ORACLE"
+        ],
+        "blindness_reason": "Independent single-state reports do not establish a shared pair precondition.",
+        "evidence_status": "PROSPECTIVE_UNEXECUTED",
+        "evidence": null,
+        "pilot_mutant": false,
+        "resource_boundary": {
+          "catalog_fault_executions": 0,
+          "protocol_formulation_passes": 0,
+          "protocol_mutants": 0,
+          "sdk_statevectors": 0,
+          "search_evaluations": 0,
+          "shots": 0,
+          "hardware_jobs": 0,
+          "pilot_baseline_reserved": false
+        }
+      },
+      "errors": [
+        "duplicate or contradictory blind layer"
+      ]
+    },
+    {
+      "name": "detector_also_blind",
+      "record": {
+        "id": "SYN01",
+        "fault_class": "PRECONDITION",
+        "precondition": "Both sides use the same fixed capacity.",
+        "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+        "known_blind_layers": [
+          "G0_TRANSFORM_PRECONDITION"
+        ],
+        "blindness_reason": "Independent single-state reports do not establish a shared pair precondition.",
+        "evidence_status": "PROSPECTIVE_UNEXECUTED",
+        "evidence": null,
+        "pilot_mutant": false,
+        "resource_boundary": {
+          "catalog_fault_executions": 0,
+          "protocol_formulation_passes": 0,
+          "protocol_mutants": 0,
+          "sdk_statevectors": 0,
+          "search_evaluations": 0,
+          "shots": 0,
+          "hardware_jobs": 0,
+          "pilot_baseline_reserved": false
+        }
+      },
+      "errors": [
+        "duplicate or contradictory blind layer"
+      ]
+    },
+    {
+      "name": "blank_blind_reason",
+      "record": {
+        "id": "SYN01",
+        "fault_class": "PRECONDITION",
+        "precondition": "Both sides use the same fixed capacity.",
+        "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+        "known_blind_layers": [
+          "L4_PHYSICAL_APPLICATION_ORACLE"
+        ],
+        "blindness_reason": "",
+        "evidence_status": "PROSPECTIVE_UNEXECUTED",
+        "evidence": null,
+        "pilot_mutant": false,
+        "resource_boundary": {
+          "catalog_fault_executions": 0,
+          "protocol_formulation_passes": 0,
+          "protocol_mutants": 0,
+          "sdk_statevectors": 0,
+          "search_evaluations": 0,
+          "shots": 0,
+          "hardware_jobs": 0,
+          "pilot_baseline_reserved": false
+        }
+      },
+      "errors": [
+        "blindness_reason must explain the claim"
+      ]
+    },
+    {
+      "name": "false_confirmation",
+      "record": {
+        "id": "SYN01",
+        "fault_class": "PRECONDITION",
+        "precondition": "Both sides use the same fixed capacity.",
+        "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+        "known_blind_layers": [
+          "L4_PHYSICAL_APPLICATION_ORACLE"
+        ],
+        "blindness_reason": "Independent single-state reports do not establish a shared pair precondition.",
+        "evidence_status": "CONFIRMED",
+        "evidence": null,
+        "pilot_mutant": false,
+        "resource_boundary": {
+          "catalog_fault_executions": 0,
+          "protocol_formulation_passes": 0,
+          "protocol_mutants": 0,
+          "sdk_statevectors": 0,
+          "search_evaluations": 0,
+          "shots": 0,
+          "hardware_jobs": 0,
+          "pilot_baseline_reserved": false
+        }
+      },
+      "errors": [
+        "unsupported evidence status"
+      ]
+    },
+    {
+      "name": "prospective_with_evidence",
+      "record": {
+        "id": "SYN01",
+        "fault_class": "PRECONDITION",
+        "precondition": "Both sides use the same fixed capacity.",
+        "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+        "known_blind_layers": [
+          "L4_PHYSICAL_APPLICATION_ORACLE"
+        ],
+        "blindness_reason": "Independent single-state reports do not establish a shared pair precondition.",
+        "evidence_status": "PROSPECTIVE_UNEXECUTED",
+        "evidence": {
+          "path": "results/synthetic-reference.json",
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "pilot_mutant": false,
+        "resource_boundary": {
+          "catalog_fault_executions": 0,
+          "protocol_formulation_passes": 0,
+          "protocol_mutants": 0,
+          "sdk_statevectors": 0,
+          "search_evaluations": 0,
+          "shots": 0,
+          "hardware_jobs": 0,
+          "pilot_baseline_reserved": false
+        }
+      },
+      "errors": [
+        "prospective record must not claim evidence"
+      ]
+    },
+    {
+      "name": "declared_without_reference",
+      "record": {
+        "id": "SYN01",
+        "fault_class": "PRECONDITION",
+        "precondition": "Both sides use the same fixed capacity.",
+        "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+        "known_blind_layers": [
+          "L4_PHYSICAL_APPLICATION_ORACLE"
+        ],
+        "blindness_reason": "Independent single-state reports do not establish a shared pair precondition.",
+        "evidence_status": "REFERENCE_DECLARED_NOT_VERIFIED",
+        "evidence": null,
+        "pilot_mutant": false,
+        "resource_boundary": {
+          "catalog_fault_executions": 0,
+          "protocol_formulation_passes": 0,
+          "protocol_mutants": 0,
+          "sdk_statevectors": 0,
+          "search_evaluations": 0,
+          "shots": 0,
+          "hardware_jobs": 0,
+          "pilot_baseline_reserved": false
+        }
+      },
+      "errors": [
+        "reference needs path and digest"
+      ]
+    },
+    {
+      "name": "pilot_overlap",
+      "record": {
+        "id": "SYN01",
+        "fault_class": "PRECONDITION",
+        "precondition": "Both sides use the same fixed capacity.",
+        "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+        "known_blind_layers": [
+          "L4_PHYSICAL_APPLICATION_ORACLE"
+        ],
+        "blindness_reason": "Independent single-state reports do not establish a shared pair precondition.",
+        "evidence_status": "PROSPECTIVE_UNEXECUTED",
+        "evidence": null,
+        "pilot_mutant": true,
+        "resource_boundary": {
+          "catalog_fault_executions": 0,
+          "protocol_formulation_passes": 0,
+          "protocol_mutants": 0,
+          "sdk_statevectors": 0,
+          "search_evaluations": 0,
+          "shots": 0,
+          "hardware_jobs": 0,
+          "pilot_baseline_reserved": false
+        }
+      },
+      "errors": [
+        "pilot overlap prohibited"
+      ]
+    },
+    {
+      "name": "empty_resources",
+      "record": {
+        "id": "SYN01",
+        "fault_class": "PRECONDITION",
+        "precondition": "Both sides use the same fixed capacity.",
+        "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+        "known_blind_layers": [
+          "L4_PHYSICAL_APPLICATION_ORACLE"
+        ],
+        "blindness_reason": "Independent single-state reports do not establish a shared pair precondition.",
+        "evidence_status": "PROSPECTIVE_UNEXECUTED",
+        "evidence": null,
+        "pilot_mutant": false,
+        "resource_boundary": {}
+      },
+      "errors": [
+        "complete exact resource boundary required"
+      ]
+    },
+    {
+      "name": "missing_counter",
+      "record": {
+        "id": "SYN01",
+        "fault_class": "PRECONDITION",
+        "precondition": "Both sides use the same fixed capacity.",
+        "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+        "known_blind_layers": [
+          "L4_PHYSICAL_APPLICATION_ORACLE"
+        ],
+        "blindness_reason": "Independent single-state reports do not establish a shared pair precondition.",
+        "evidence_status": "PROSPECTIVE_UNEXECUTED",
+        "evidence": null,
+        "pilot_mutant": false,
+        "resource_boundary": {
+          "catalog_fault_executions": 0,
+          "protocol_formulation_passes": 0,
+          "protocol_mutants": 0,
+          "sdk_statevectors": 0,
+          "search_evaluations": 0,
+          "hardware_jobs": 0,
+          "pilot_baseline_reserved": false
+        }
+      },
+      "errors": [
+        "complete exact resource boundary required"
+      ]
+    },
+    {
+      "name": "unknown_counter",
+      "record": {
+        "id": "SYN01",
+        "fault_class": "PRECONDITION",
+        "precondition": "Both sides use the same fixed capacity.",
+        "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+        "known_blind_layers": [
+          "L4_PHYSICAL_APPLICATION_ORACLE"
+        ],
+        "blindness_reason": "Independent single-state reports do not establish a shared pair precondition.",
+        "evidence_status": "PROSPECTIVE_UNEXECUTED",
+        "evidence": null,
+        "pilot_mutant": false,
+        "resource_boundary": {
+          "catalog_fault_executions": 0,
+          "protocol_formulation_passes": 0,
+          "protocol_mutants": 0,
+          "sdk_statevectors": 0,
+          "search_evaluations": 0,
+          "shots": 0,
+          "hardware_jobs": 0,
+          "pilot_baseline_reserved": false,
+          "other": 0
+        }
+      },
+      "errors": [
+        "complete exact resource boundary required"
+      ]
+    },
+    {
+      "name": "boolean_counter",
+      "record": {
+        "id": "SYN01",
+        "fault_class": "PRECONDITION",
+        "precondition": "Both sides use the same fixed capacity.",
+        "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+        "known_blind_layers": [
+          "L4_PHYSICAL_APPLICATION_ORACLE"
+        ],
+        "blindness_reason": "Independent single-state reports do not establish a shared pair precondition.",
+        "evidence_status": "PROSPECTIVE_UNEXECUTED",
+        "evidence": null,
+        "pilot_mutant": false,
+        "resource_boundary": {
+          "catalog_fault_executions": 0,
+          "protocol_formulation_passes": 0,
+          "protocol_mutants": 0,
+          "sdk_statevectors": 0,
+          "search_evaluations": 0,
+          "shots": false,
+          "hardware_jobs": 0,
+          "pilot_baseline_reserved": false
+        }
+      },
+      "errors": [
+        "shots must be integer zero"
+      ]
+    },
+    {
+      "name": "float_counter",
+      "record": {
+        "id": "SYN01",
+        "fault_class": "PRECONDITION",
+        "precondition": "Both sides use the same fixed capacity.",
+        "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+        "known_blind_layers": [
+          "L4_PHYSICAL_APPLICATION_ORACLE"
+        ],
+        "blindness_reason": "Independent single-state reports do not establish a shared pair precondition.",
+        "evidence_status": "PROSPECTIVE_UNEXECUTED",
+        "evidence": null,
+        "pilot_mutant": false,
+        "resource_boundary": {
+          "catalog_fault_executions": 0,
+          "protocol_formulation_passes": 0,
+          "protocol_mutants": 0,
+          "sdk_statevectors": 0,
+          "search_evaluations": 0,
+          "shots": 0.0,
+          "hardware_jobs": 0,
+          "pilot_baseline_reserved": false
+        }
+      },
+      "errors": [
+        "shots must be integer zero"
+      ]
+    },
+    {
+      "name": "nonzero_counter",
+      "record": {
+        "id": "SYN01",
+        "fault_class": "PRECONDITION",
+        "precondition": "Both sides use the same fixed capacity.",
+        "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+        "known_blind_layers": [
+          "L4_PHYSICAL_APPLICATION_ORACLE"
+        ],
+        "blindness_reason": "Independent single-state reports do not establish a shared pair precondition.",
+        "evidence_status": "PROSPECTIVE_UNEXECUTED",
+        "evidence": null,
+        "pilot_mutant": false,
+        "resource_boundary": {
+          "catalog_fault_executions": 0,
+          "protocol_formulation_passes": 0,
+          "protocol_mutants": 0,
+          "sdk_statevectors": 0,
+          "search_evaluations": 0,
+          "shots": 1,
+          "hardware_jobs": 0,
+          "pilot_baseline_reserved": false
+        }
+      },
+      "errors": [
+        "shots must be integer zero"
+      ]
+    },
+    {
+      "name": "baseline_integer_zero",
+      "record": {
+        "id": "SYN01",
+        "fault_class": "PRECONDITION",
+        "precondition": "Both sides use the same fixed capacity.",
+        "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+        "known_blind_layers": [
+          "L4_PHYSICAL_APPLICATION_ORACLE"
+        ],
+        "blindness_reason": "Independent single-state reports do not establish a shared pair precondition.",
+        "evidence_status": "PROSPECTIVE_UNEXECUTED",
+        "evidence": null,
+        "pilot_mutant": false,
+        "resource_boundary": {
+          "catalog_fault_executions": 0,
+          "protocol_formulation_passes": 0,
+          "protocol_mutants": 0,
+          "sdk_statevectors": 0,
+          "search_evaluations": 0,
+          "shots": 0,
+          "hardware_jobs": 0,
+          "pilot_baseline_reserved": 0
+        }
+      },
+      "errors": [
+        "baseline reservation prohibited"
+      ]
+    },
+    {
+      "name": "path_traversal",
+      "record": {
+        "id": "SYN04",
+        "fault_class": "PRECONDITION",
+        "precondition": "Both sides use the same fixed capacity.",
+        "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+        "known_blind_layers": [
+          "L4_PHYSICAL_APPLICATION_ORACLE"
+        ],
+        "blindness_reason": "Independent single-state reports do not establish a shared pair precondition.",
+        "evidence_status": "REFERENCE_DECLARED_NOT_VERIFIED",
+        "evidence": {
+          "path": "../secret.json",
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "pilot_mutant": false,
+        "resource_boundary": {
+          "catalog_fault_executions": 0,
+          "protocol_formulation_passes": 0,
+          "protocol_mutants": 0,
+          "sdk_statevectors": 0,
+          "search_evaluations": 0,
+          "shots": 0,
+          "hardware_jobs": 0,
+          "pilot_baseline_reserved": false
+        }
+      },
+      "errors": [
+        "synthetic local reference required"
+      ]
+    },
+    {
+      "name": "absolute_path",
+      "record": {
+        "id": "SYN04",
+        "fault_class": "PRECONDITION",
+        "precondition": "Both sides use the same fixed capacity.",
+        "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+        "known_blind_layers": [
+          "L4_PHYSICAL_APPLICATION_ORACLE"
+        ],
+        "blindness_reason": "Independent single-state reports do not establish a shared pair precondition.",
+        "evidence_status": "REFERENCE_DECLARED_NOT_VERIFIED",
+        "evidence": {
+          "path": "/tmp/file.json",
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "pilot_mutant": false,
+        "resource_boundary": {
+          "catalog_fault_executions": 0,
+          "protocol_formulation_passes": 0,
+          "protocol_mutants": 0,
+          "sdk_statevectors": 0,
+          "search_evaluations": 0,
+          "shots": 0,
+          "hardware_jobs": 0,
+          "pilot_baseline_reserved": false
+        }
+      },
+      "errors": [
+        "synthetic local reference required"
+      ]
+    },
+    {
+      "name": "bad_digest",
+      "record": {
+        "id": "SYN04",
+        "fault_class": "PRECONDITION",
+        "precondition": "Both sides use the same fixed capacity.",
+        "minimum_detecting_layer": "G0_TRANSFORM_PRECONDITION",
+        "known_blind_layers": [
+          "L4_PHYSICAL_APPLICATION_ORACLE"
+        ],
+        "blindness_reason": "Independent single-state reports do not establish a shared pair precondition.",
+        "evidence_status": "REFERENCE_DECLARED_NOT_VERIFIED",
+        "evidence": {
+          "path": "results/synthetic-reference.json",
+          "sha256": "bad"
+        },
+        "pilot_mutant": false,
+        "resource_boundary": {
+          "catalog_fault_executions": 0,
+          "protocol_formulation_passes": 0,
+          "protocol_mutants": 0,
+          "sdk_statevectors": 0,
+          "search_evaluations": 0,
+          "shots": 0,
+          "hardware_jobs": 0,
+          "pilot_baseline_reserved": false
+        }
+      },
+      "errors": [
+        "invalid reference digest"
+      ]
+    },
+    {
+      "name": "nonobject",
+      "record": [],
+      "errors": [
+        "record must be an object"
+      ]
+    }
+  ],
+  "resource_counters": {
+    "catalog_fault_executions": 0,
+    "protocol_formulation_passes": 0,
+    "protocol_mutants": 0,
+    "sdk_statevectors": 0,
+    "search_evaluations": 0,
+    "shots": 0,
+    "hardware_jobs": 0,
+    "pilot_baseline_reserved": false
+  },
+  "limitations": [
+    "Structural acceptance never establishes truth of evidence, detector minimality or a blind-layer claim.",
+    "A blind layer means insufficient evidence for this claim in the stated scope, not universal inability to detect a fault.",
+    "Production catalog migration and semantic evidence resolution are not authorized by this contract."
+  ]
+}
