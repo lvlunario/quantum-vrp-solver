@@ -4,7 +4,7 @@
   "end_date": "2027-09-21",
   "simulation_timezone": "Europe/Oslo",
   "delivery_timezone": "Asia/Manila",
-  "last_completed_date": "2026-11-26",
+  "last_completed_date": "2026-11-27",
   "completed_dates": [
     "2026-09-22",
     "2026-09-23",
@@ -38,10 +38,11 @@
     "2026-11-23",
     "2026-11-24",
     "2026-11-25",
-    "2026-11-26"
+    "2026-11-26",
+    "2026-11-27"
   ],
   "phase": "onboarding and independent verification",
-  "next_task": "November 27: Friday synthesis; write an educational manuscript subsection connecting P01/P02, scoped fault detectors and the declared-versus-verified evidence boundary. Keep real-catalog migration, MF06/MF08 and M01-M12 unexecuted; explicitly retain the SDK preflight blockers.",
+  "next_task": "November 30: design a bounded MF01–MF08 real-catalog migration table with scoped blind layers, byte-resolution and claim-specific evidence checks. Preserve prospective MF06/MF08, blocked M01–M12 and the original catalog; reassess research value before extending infrastructure. November 28–29 are rest.",
   "simulated_deadlines": [
     "2027-02-26",
     "2027-06-25",
@@ -88,7 +89,7 @@
     "2026-11-17",
     "2026-11-20"
   ],
-  "recovery_note": "September 30 local work recovered and re-executed October 5; first publication October 5. Missing dates remain incomplete. October 13\u201314 package not recovered; interruption logs created October 15; new R14 implementation executed October 15, not backdated. October 28-30 have no journals or evidence and were recorded as incomplete on November 2; no reconstruction was claimed. November 3 has no journal or execution evidence and was recorded incomplete on November 4; its adapter task was completed as current November 4 work, not backdated. November 6 and 9 have no journals or execution evidence and were recorded incomplete on November 10; November 7-8 were ordinary rest days. November 12 has no journal, commit or execution evidence and was recorded incomplete on November 13; its distribution-aggregation task was completed as current November 13 work, not backdated. November 17 has no journal, commit or execution evidence and was recorded incomplete on November 18; P01 was executed as current November 18 work, not backdated. November 20 has no journal, commit or execution evidence and was recorded incomplete on November 23; its synthesis and P02 contract freeze were completed as current November 23 work, not backdated. November 21-22 were ordinary rest days.",
+  "recovery_note": "September 30 local work recovered and re-executed October 5; first publication October 5. Missing dates remain incomplete. October 13–14 package not recovered; interruption logs created October 15; new R14 implementation executed October 15, not backdated. October 28-30 have no journals or evidence and were recorded as incomplete on November 2; no reconstruction was claimed. November 3 has no journal or execution evidence and was recorded incomplete on November 4; its adapter task was completed as current November 4 work, not backdated. November 6 and 9 have no journals or execution evidence and were recorded incomplete on November 10; November 7-8 were ordinary rest days. November 12 has no journal, commit or execution evidence and was recorded incomplete on November 13; its distribution-aggregation task was completed as current November 13 work, not backdated. November 17 has no journal, commit or execution evidence and was recorded incomplete on November 18; P01 was executed as current November 18 work, not backdated. November 20 has no journal, commit or execution evidence and was recorded incomplete on November 23; its synthesis and P02 contract freeze were completed as current November 23 work, not backdated. November 21-22 were ordinary rest days.",
   "literature_status": "R06 IN PROGRESS: direct full-text extraction completed for Quito and QDiff; manuscript v0.5 incorporates their oracle boundary. Backward/forward citation chaining and broader novelty comparison remain incomplete.",
   "pilot_protocol": {
     "path": "docs/baseline-protocol-v1.md",
@@ -189,9 +190,9 @@
   },
   "manuscript": {
     "path": "papers/01-verification-protocol.md",
-    "version": "0.5",
+    "version": "0.6",
     "status": "EDUCATIONAL_UNSUBMITTED",
-    "latest_revision_date": "2026-10-23"
+    "latest_revision_date": "2026-11-27"
   },
   "independent_feasibility": {
     "status": "EXECUTED_DEVELOPMENT_AUDIT_OUTSIDE_MUTATION_PILOT",
@@ -362,5 +363,12 @@
     "sdk_statevectors_executed": 0,
     "search_evaluations": 0,
     "pilot_baseline_reserved": false
+  },
+  "latest_artifact": "papers/01-verification-protocol.md",
+  "weekly_review": {
+    "date": "2026-11-27",
+    "path": "docs/weekly-review-2026-11-27.md",
+    "status": "WRITING_AND_RETAINED_EVIDENCE_RECONCILIATION_NO_NEW_EXPERIMENT",
+    "latest_preflight_observation_date": "2026-11-05"
   }
 }

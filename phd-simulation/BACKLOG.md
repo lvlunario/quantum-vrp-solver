@@ -1,3 +1,6 @@
+## November 27 manuscript synthesis and weekly review
+Educational unsubmitted manuscript v0.6 adds P01/P02 derivations, scoped detector and evidence-status boundaries, and a five-row historical evidence table. Two stale unexecuted-search statements were corrected; October 19 procedural acceptance remains NOT MET. No new numerical experiment or environment preflight ran. November 5 remains the latest retained blocked preflight observation; MF06/MF08 and M01–M12 remain unexecuted. See papers/01-verification-protocol.md and docs/weekly-review-2026-11-27.md. Next: November 30 bounded catalog-migration design; November 28–29 rest.
+
 ## November 26 fault-record schema and blind-layer contract
 Four valid synthetic records were accepted and 28 malformed records rejected (32 checks passed). The project-specific contract requires explicit fault class, precondition, detector, scoped blind layers and evidence status. Exact resource keys and types reject empty reports and Boolean/float counters. Reference syntax is deliberately labeled DECLARED_NOT_VERIFIED; the accepted synthetic reference is not real evidence. The November 25 catalog remains unchanged; MF06/MF08 and M01–M12 remain unexecuted. See docs/fault-record-schema.md and results/2026-11-26-fault-record-schema.json. No scientific resources consumed. Next: Friday manuscript synthesis and explicit blocker review; production migration remains planned.
 
@@ -63,7 +66,7 @@ Direct full-text extraction completed for the original Quito ICST study, the Qui
 | R06 | Literature map of quantum testing | In progress | Direct full-text extraction for Quito and QDiff plus a frozen 12-mutant prospective routing table; docs/quantum-testing-literature-map.md and docs/oracle-assumptions-and-mutant-plan.md. Citation chaining and novelty comparison remain open. |
 | R07 | Fault catalog and metamorphic tests | Protocol frozen; execution planned | docs/oracle-assumptions-and-mutant-plan.md and docs/mutation-pilot-protocol-v1.md; all 12 mutants remain UNEXECUTED |
 | R08 | Benchmark protocol and classical solvers | Planned | Fair budget and held-out instance plan |
-| R09 | Paper A complete educational draft | In progress | v0.5 reconciles the exploratory pilot/protocol deviation and adds the layered oracle boundary; broader review still open |
+| R09 | Paper A complete educational draft | In progress | v0.6 adds physical-property derivations and scoped evidence synthesis; historical search-status contradictions corrected; broader review still open |
 | R10 | First-year review | Planned | Report, slides and year-two decision |
 
 R11: Done for the toy — docs/ising-mapping.md and results/2026-10-05-ising-audit.json; all 64 energies and eight checks pass.

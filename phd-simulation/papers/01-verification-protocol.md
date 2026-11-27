@@ -1,5 +1,5 @@
 # A Verification Protocol for Hybrid Quantum Microgrid Optimization
-**Educational working manuscript v0.5. Unsubmitted. Personal project; no institutional affiliation or coauthors claimed.**
+**Educational working manuscript v0.6. Unsubmitted. Personal project; no institutional affiliation or coauthors claimed.**
 
 ## Abstract — preliminary, not a finished research result
 Hybrid quantum optimization pipelines can produce low objective values while violating the engineering requirements their formulations were intended to encode. This working paper proposes a verification protocol separating model equivalence, circuit correctness, decoding and physical feasibility. A three-load synthetic example illustrates why a penalty objective must be checked against an independent constrained oracle. Current evidence consists of exhaustive six-variable formulation audits, ideal six-qubit Qiskit cost-plus-mixer checks, independent exact readout checks, and one exploratory 256-candidate parameter grid whose execution violated its aggregate-budget and retention protocol. Physical feasibility, auxiliary encoding consistency and optimal-load probability are distinguished. A twelve-mutant layered pilot is prospectively specified but unexecuted. Realistic grid applicability and quantum computational advantage have not been verified.
@@ -19,7 +19,7 @@ Three binary decisions (x_i) indicate whether loads are served. Demands are (2,3
 
 The initial toy penalty objective was (E(x)=U(x)+\lambda\max(0,D(x)-5)^2), evaluated as a diagonal oracle over eight assignments. The 27 September catch-up introduced slack (s=y_0+2y_1+4y_2) and verified the six-variable QUBO (E=U+\lambda(D+s-5)^2) algebraically and exhaustively. The QUBO-to-Ising map and bit-order contract were subsequently verified over all 64 states.
 
-The original three-qubit educational sweep used 41 gamma values in ([0,2\pi)) and 41 beta values in ([0,\pi)) for lambda values 0.1, 1 and 4. It reports exact statevector probabilities, not shot estimates. That sweep is distinct from the later six-qubit cost-layer circuit, which was followed by a verified mixer on 12 October and independent readout checks on 15 October, but no six-qubit parameter search.
+The original three-qubit educational sweep used 41 gamma values in ([0,2\pi)) and 41 beta values in ([0,\pi)) for lambda values 0.1, 1 and 4. It reports exact statevector probabilities, not shot estimates. That sweep is distinct from the later six-qubit cost-layer circuit, which was followed by a verified mixer on 12 October and independent readout checks on 15 October, and an exploratory six-qubit parameter search on 19 October with the protocol deviation described in Section 5.
 
 ## 4. Preliminary executed observations
 Serving loads 0 and 1 uses all five capacity units and leaves priority cost 6. At lambda=0.1, serving all loads gives penalty energy 1.6 while exceeding capacity by four units. Thus minimizing the penalty objective can prefer an infeasible decision. At lambda=1, a feasible and an infeasible decision tie at energy 6, so the sufficient strict threshold for all minimizers on this instance is lambda greater than 1.
@@ -67,7 +67,7 @@ Deliberately limiting slack to weights (1,2) changes the all-off reduced energy 
 | Statevector interface | `results/2026-10-07-statevector-acceptance.json` | Nine checks; predicted global phase handled | NumPy oracle |
 | Qiskit cost circuit | `results/2026-10-08-qiskit-cost-circuit.json` | Three angles; nine checks; max error (1.53\times10^{-15}) | Ideal cost layer only |
 
-The staged checks intentionally avoid using the SDK circuit as its own oracle. The mixer acceptance contract is source-grounded in `docs/qaoa-reading-notes.md` and was executed on 12 October (Section 10). Six-qubit parameter search remains **PLANNED/UNEXECUTED**. The manuscript remains educational and unsubmitted.
+The staged checks intentionally avoid using the SDK circuit as its own oracle. The mixer acceptance contract is source-grounded in `docs/qaoa-reading-notes.md` and was executed on 12 October (Section 10). Six-qubit parameter search was subsequently executed on 19 October with procedural acceptance NOT MET (Section 5). The manuscript remains educational and unsubmitted.
 
 ## 10. Mixer, readout and baseline reconciliation — 2026-10-16
 
@@ -89,7 +89,7 @@ Canonical slack is max(0,5-D), and does not repair overloaded load choices. Thes
 ### Interpretation and prospective boundary
 The fixture is already solved by a transparent classical rule, limiting its value as a solver-performance demonstration. Its present value is a tractable verification fixture. In particular, uniformly distributed load choices have identical physical success whether slack is random or canonical, while encoded success differs by a factor of eight. Reporting only an unnamed “success rate” would confound representation with decision quality.
 
-The next pilot will minimize mean E with fixed budget and report physical optimal-load probability and encoded ground-state probability separately. The local protocol is not an external preregistration or independent evaluation: earlier development outputs were already observed. There is no held-out instance and no novelty, realistic resilience, speedup or advantage claim. All research-routine scenes are SIMULATED NARRATIVE; this manuscript is educational and unsubmitted.
+At the October 16 planning point, the next pilot was intended to minimize mean E with fixed budget and report physical optimal-load probability and encoded ground-state probability separately. The local protocol is not an external preregistration or independent evaluation: earlier development outputs were already observed. There is no held-out instance and no novelty, realistic resilience, speedup or advantage claim. All research-routine scenes are SIMULATED NARRATIVE; this manuscript is educational and unsubmitted.
 
 ### Revision record
 v0.4 removes stale statements that the mixer was unexecuted, incorporates R13/R14 with dated evidence, corrects the October 7 evidence filename and adds the prospective pilot boundary. No historical evidence file is overwritten.
@@ -132,3 +132,116 @@ v0.5 reconciles the manuscript with the October 19 exploratory pilot and its
 protocol deviation, incorporates the Quito/QDiff oracle assumptions, and links
 the frozen bounded mutation protocol. No numerical experiment ran for this
 revision, and no mutation outcome or score is claimed.
+
+
+## 12. Application properties and evidence scope — 2026-11-27
+
+### 12.1 Physical predicates before encoding predicates
+
+For the synthetic fixture define D(x)=sum_i d_i x_i, overload
+O(x)=max(0,D(x)-C), and physical feasibility F(x)=[D(x)<=C].
+The auxiliary predicate is A(x,s)=[D(x)+s=C]. These answer different questions:
+F evaluates the original capacity constraint; A also evaluates a particular
+slack assignment. Evidence for A must not silently replace evidence for F.
+
+P01 fixes d_i>=0 and C and orders decisions componentwise, x<=z. Then
+D(z)-D(x)=sum_i d_i(z_i-x_i)>=0. Since the maximum with zero preserves order,
+O(x)<=O(z), and F(z) implies F(x). This is a mathematical implication under
+stated assumptions, not a statement that every software implementation obeys
+it. The November 18 implementation audit retained all 27 ordered pairs on
+the three-decision fixture: eight identities and 19 strict load increases,
+with no in-scope counterexample. Negative-demand and changing-capacity
+controls were rejected. These are historical executions, not new runs today.
+
+At fixed s, equality need not be monotone. With C=5 and s=3, changing load
+from 0 to 2 changes A from false to true; changing load from 2 to 5 changes
+A from true to false. All those load values are realizable using demands
+(2,3,4). This algebraic illustration explains why physical monotonicity
+cannot be promoted to auxiliary consistency. The separate November 19 audit
+retained 216 decision-pair/slack cases and found six false-to-true and
+17 true-to-false transitions, with zero physical P01 violations. These
+counts concern this enumeration, not a probability distribution or circuit.
+
+### 12.2 P02 preserves paired labels
+
+For a bijection pi on coordinates, define x'_i=x_pi(i) and d'_i=d_pi(i).
+Then sum_i d'_i x'_i=sum_i d_pi(i)x_pi(i)=sum_j d_j x_j.
+With unchanged capacity, physical load, overload and feasibility are invariant.
+The same mapping must move both vectors. Reordering only one vector changes
+the item-to-demand relationship even when a particular total happens to agree.
+
+The November 24 development audit retained all eight decisions times six
+permutations: 48 cases, comprising eight identities and 40 nonidentities.
+No in-scope counterexample occurred; two material one-sided transformations
+were rejected before property evaluation. This finite audit checks an
+implementation against the derivation. It does not verify slack-bit,
+QUBO-variable or statevector reindexing. Those require separately specified
+mappings and separate oracles. No circuit inference follows from this result.
+
+### 12.3 Fault routing and evidence states
+
+The November 25 MF catalog separates invalid transformations from incorrect
+cross-layer claims and collapsed metrics. Five precondition faults belong at
+the transform boundary; the auxiliary-inference and metric-collapse faults
+require their corresponding application checks; promoting physical P02 to
+encoding or circuit correctness requires a scope check. Six routes reference
+existing development evidence. MF06 and MF08 remain prospective/unexecuted.
+None of the eight catalog entries is a newly executed scientific mutant.
+
+The November 26 synthetic schema work requires a fault class, precondition,
+detector, scoped blind layers and an explanation. A blind layer means its
+report alone is insufficient for the stated claim, not that it is incapable
+of exposing any symptom. Structural acceptance cannot prove detector minimality.
+
+Four synthetic records were accepted and 28 malformed records rejected.
+One accepted record intentionally names a nonexistent synthetic evidence file
+with an all-zero digest. The status REFERENCE_DECLARED_NOT_VERIFIED is essential:
+a well-formed reference is not verified provenance, and verified provenance
+would still not automatically establish the scientific interpretation.
+Production catalog migration has not occurred.
+
+### 12.4 Traceable observations and limits
+
+All numbers in this table are retained historical results, not fresh
+executions or independent reproductions on November 27.
+
+| Boundary | Retained evidence | Observed result | Claim excluded |
+|---|---|---|---|
+| Physical P01 | [November 18](../results/2026-11-18-p01-monotonicity.json) | 27 ordered pairs; no in-scope counterexample | Auxiliary monotonicity |
+| Auxiliary equality | [November 19](../results/2026-11-19-auxiliary-nonmonotonicity.json) | 216 cases; transitions in both directions | Refutation of physical P01 |
+| Paired-label P02 | [November 24](../results/2026-11-24-p02-permutation.json) | 48 cases; no in-scope counterexample | Circuit reindexing correctness |
+| Fault routing | [November 25](../results/2026-11-25-metamorphic-fault-routing.json) | Six evidence-backed routes; two prospective | Mutation score |
+| Record structure | [November 26](../results/2026-11-26-fault-record-schema.json) | Four accepted; 28 rejected synthetic records | Evidence truth |
+
+The checks address different units and cannot be pooled into a scientific
+detection rate. Tests selected using this fixture are development evidence,
+not held-out validation. No realistic resilient microgrid, network-flow,
+voltage, outage, time-coupling or uncertainty model has been benchmarked here.
+The project's application goal remains ahead of its demonstrated scope.
+
+### 12.5 Blocking conditions and next decision
+
+The latest retained mutation preflight is dated November 5, not today.
+It reports a package-lock mismatch and execution_authorized=false, stopping
+before baseline reservation. Today's writing does not establish the current
+runtime environment and does not clear either gate. M01–M12 remain
+PLANNED/UNEXECUTED, with no mutation score. The October 19 exploratory search
+still has procedural acceptance NOT MET; later engineering work does not
+repair its overwritten first result or aggregate-budget deviation.
+
+Monday's planned work is an explicit real-catalog migration design: map each
+existing route to a scoped blind-layer explanation, define byte-resolution
+and claim-specific checks, and preserve prospective status for MF06/MF08.
+This is a design deliverable, not authorization to execute those faults or
+the SDK pilot. Then reassess whether more catalog work advances a testable
+research question before adding further infrastructure. R06 novelty review
+and R08 broader classical benchmarking remain open.
+
+### Revision record
+
+v0.6 adds application-property derivations, scoped evidence interpretation,
+and a dated observation table. It corrects stale search-status statements in
+Sections 3 and 9 and labels Section 10's prospective wording as historical.
+No new numerical experiment, literature search, real review, collaboration
+or submission occurred for this revision. The manuscript remains educational
+and unsubmitted; all research-routine scenes are SIMULATED NARRATIVE.
